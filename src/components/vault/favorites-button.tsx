@@ -41,7 +41,7 @@ export const FavoritesButton = ({ vault }: VaultPageContainerProps) => {
     return (
       <Button
         variant="outlined"
-        className="ml-[8px] transition-colors [&>svg]:fill-white"
+        className="ml-[8px] transition-colors [&>svg]:fill-slate-800"
       >
         Add to Favorites
         <Star className="ml-2 h-[20px] w-[20px]" />
@@ -52,7 +52,7 @@ export const FavoritesButton = ({ vault }: VaultPageContainerProps) => {
     <Button
       variant="outlined"
       className={cn(
-        'ml-[8px] border-white text-white transition-colors [&>svg]:fill-white',
+        'ml-[8px] border-white text-slate-800 transition-colors [&>svg]:fill-slate-800',
         addedToFavorites ? 'bg-[rgba(255,255,255,0.36)]' : '',
         isExtraSmallDevice ? 'border-none bg-transparent' : '',
       )}

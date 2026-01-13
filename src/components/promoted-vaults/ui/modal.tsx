@@ -106,7 +106,7 @@ export function PromotedVaultsModal({
         </div>
         <div className="flex h-full items-center justify-center">
           <DialogTrigger asChild>
-            <Button className="bg-transparent text-white hover:bg-transparent">
+            <Button className="bg-transparent text-slate-800 hover:bg-transparent">
               <Plus />
             </Button>
           </DialogTrigger>
@@ -123,7 +123,7 @@ export function PromotedVaultsModal({
               <p className="mr-1 cursor-default text-sm font-semibold">
                 Hot Vault
               </p>
-              <Fire className="fill-white" />
+              <Fire className="fill-slate-800" />
             </div>
           </div>
           <SearchInput value={searchTerm} onChange={handleSearchChange} />
@@ -142,7 +142,7 @@ export function PromotedVaultsModal({
             ))}
           </div>
         ) : (
-          <div className="flex h-40 items-center justify-center text-white">
+          <div className="flex h-40 items-center justify-center text-slate-800">
             No Results Found
           </div>
         )}

@@ -106,7 +106,7 @@ export const SortBy = ({ className }: SortByProps) => {
             variant="transparent"
             className="w-full flex-row justify-between border-primary md:w-[170px]"
           >
-            <h2 className="text-[12px] font-medium text-white">
+            <h2 className="text-[12px] font-medium text-slate-800">
               Sort By: <span className="text-[14px] font-semibold text-primary">{sortBy}</span>
             </h2>
             <DropdownArrowSVG

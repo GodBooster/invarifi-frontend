@@ -157,14 +157,14 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
             <div className="mb-4 flex gap-2 text-xs font-medium text-text-grey">
               DEPOSIT FEE
               <TooltipItem>
-                Fee for deposit charged by the provider or Margin Space
+                Fee for deposit charged by the provider or InvariFi
               </TooltipItem>
             </div>
-            <div className="mb-2 flex items-center justify-between text-sm font-medium text-white">
+            <div className="mb-2 flex items-center justify-between text-sm font-medium text-slate-800">
               <p>Current fee</p>
               <p>{isFeesLoading ? '...' : `${feesData?.depositFee}%`}</p>
             </div>
-            <div className="flex items-center justify-between text-sm font-medium text-white">
+            <div className="flex items-center justify-between text-sm font-medium text-slate-800">
               <p>New fee</p>
               <Controller
                 control={control}
@@ -183,14 +183,14 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
             <div className="mb-4 flex gap-2 text-xs font-medium text-text-grey">
               WITHDRAW FEE
               <TooltipItem>
-                Fee for withdrawal charged by the provider or Margin Space
+                Fee for withdrawal charged by the provider or InvariFi
               </TooltipItem>
             </div>
-            <div className="mb-2 flex items-center justify-between text-sm font-medium text-white">
+            <div className="mb-2 flex items-center justify-between text-sm font-medium text-slate-800">
               <p>Current fee</p>
               <p>{isFeesLoading ? '...' : `${feesData?.withdrawFee}%`}</p>
             </div>
-            <div className="flex items-center justify-between text-sm font-medium text-white">
+            <div className="flex items-center justify-between text-sm font-medium text-slate-800">
               <p>New fee</p>
               <Controller
                 control={control}
@@ -211,7 +211,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
           the generated yield only.
         </p>
         <div className="border-b-2 border-dashed border-additional-grey pb-4">
-          <div className="mb-2 text-sm font-semibold text-white">
+          <div className="mb-2 text-sm font-semibold text-slate-800">
             Select filters for this vault
           </div>
           <div className="mb-4 gap-6 lg:flex">

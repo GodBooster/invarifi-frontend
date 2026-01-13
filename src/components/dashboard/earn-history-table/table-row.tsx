@@ -54,7 +54,7 @@ export const EarnHistoryTableRow = ({ cube }: EarnHistoryTableRowProps) => {
         </TableCell>
         <TableCell className="text-center">
           <span className="text-[14px] font-semibold text-[#C6C6C6]">
-            Vaults: <span className="text-white">{cube.vaults.length}</span>
+            Vaults: <span className="text-slate-800">{cube.vaults.length}</span>
           </span>
         </TableCell>
         <TableCell>
@@ -104,7 +104,7 @@ export const EarnHistoryTableRow = ({ cube }: EarnHistoryTableRowProps) => {
         </TableCell>
         <TableCell className="flex items-center justify-end gap-2">
           <Link
-            className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-white transition-colors"
+            className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-slate-800 transition-colors"
             target="_blank"
             href={`/earn/${cube.id}`}
           >

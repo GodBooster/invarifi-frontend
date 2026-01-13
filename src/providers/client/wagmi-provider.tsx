@@ -30,7 +30,7 @@ const metadata = {
   description: appDescription,
   url: getAppUrl(),
   // используем хостed-иконку проекта, чтобы избежать 403 на api.web3modal
-  icons: ['https://earn.marginspace.pw/icons/logo.svg'],
+  icons: ['https://app.invarifi.com/public/logo.svg'],
 } satisfies Parameters<typeof defaultWagmiConfig>[0]['metadata'];
 
 const wagmiConfig = createConfig({

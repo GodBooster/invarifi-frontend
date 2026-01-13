@@ -65,7 +65,7 @@ export const HistoryTableRow = ({ vault }: HistoryTableRowProps) => {
           {open && (
             <span className="text-sm font-semibold text-light-grey">
               Platform:{' '}
-              <span className="text-base font-semibold text-white">
+              <span className="text-base font-semibold text-slate-800">
                 {vault.platformId.toUpperCase()}
               </span>
             </span>
@@ -98,7 +98,7 @@ export const HistoryTableRow = ({ vault }: HistoryTableRowProps) => {
         <TableCell className="flex items-center justify-end gap-6">
           {!vault.isArchived && (
             <Link
-              className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-white transition-colors"
+              className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-slate-800 transition-colors"
               target="_blank"
               href={`/vault/${vault.oracleId}`}
             >

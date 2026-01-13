@@ -394,7 +394,7 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
             onSubmit={handleSubmit(onSubmit)}
             className="fixed flex h-full max-h-[800px] w-full max-w-[545px] flex-col gap-[16px] overflow-y-scroll rounded-[20px] bg-[#272536] p-[24px]"
           >
-            <div className="text-[24px] font-semibold text-white">
+            <div className="text-[24px] font-semibold text-slate-800">
               Create a new strategy
             </div>
             <Controller

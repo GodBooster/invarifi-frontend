@@ -26,7 +26,7 @@ export const Strategy = ({ cube }: StrategyProps) => {
         {/*  target="_blank"*/}
         {/*  className={cn(*/}
         {/*    buttonVariants({ variant: 'default' }),*/}
-        {/*    'border border-white bg-transparent-bg font-semibold text-white hover:border-light-purple hover:bg-transparent-bg',*/}
+        {/*    'border border-white bg-transparent-bg font-semibold text-slate-800 hover:border-light-purple hover:bg-transparent-bg',*/}
         {/*  )}*/}
         {/*>*/}
         {/*  Strategy address <Globe className="ml-2 h-[20px] w-[20px]" />*/}
@@ -36,7 +36,7 @@ export const Strategy = ({ cube }: StrategyProps) => {
           target="_blank"
           className={cn(
             buttonVariants({ variant: 'default' }),
-            'hover:border-primary border border-white bg-transparent-bg font-semibold text-white hover:bg-transparent-bg',
+            'hover:border-primary border border-white bg-transparent-bg font-semibold text-slate-800 hover:bg-transparent-bg',
           )}
         >
           Vault address <Globe className="ml-2 h-[20px] w-[20px]" />
@@ -53,10 +53,10 @@ export const Strategy = ({ cube }: StrategyProps) => {
         for all this is shared among the vault&apos;s users
       </p>
       <div className="flex w-full items-center justify-between rounded-[8px] bg-white px-[16px] py-[8px] md:bg-transparent-bg">
-        <div className="text-[14px] font-semibold leading-[20px] text-text md:text-white">
+        <div className="text-[14px] font-semibold leading-[20px] text-text md:text-slate-800">
           Overall Average APY
         </div>
-        <div className="text-[20px] font-semibold leading-[30px] text-text md:text-white">
+        <div className="text-[20px] font-semibold leading-[30px] text-text md:text-slate-800">
           {apyFormatter(cube.avgAPY)}
         </div>
       </div>

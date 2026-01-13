@@ -16,7 +16,7 @@ export const EthereumButton: FC<{ className?: string }> = ({ className }) => {
   return isMounted && chain ? (
     <div
       className={cn(
-        'bg-transparent inline-flex cursor-pointer items-center justify-center rounded-[10px] border border-primary bg-gradient-to-r from-primary/10 via-primary/5 to-transparent p-2 text-white transition-all hover:border-primary-hover hover:shadow-[0_0_15px_rgba(212,107,48,0.5)]',
+        'bg-transparent inline-flex cursor-pointer items-center justify-center rounded-[10px] border border-primary bg-gradient-to-r from-primary/10 via-primary/5 to-transparent p-2 text-slate-800 transition-all hover:border-primary-hover hover:shadow-[0_0_15px_rgba(212,107,48,0.5)]',
         className,
       )}
       onClick={() => open({ view: 'Networks' })}

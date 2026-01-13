@@ -194,7 +194,7 @@ export function SlippageModal({
             <Button
               type="button"
               onClick={handleSetDefaultClick}
-              className="h-[30px] border border-white bg-[#3E3C4B] px-3 py-1 text-xs font-semibold text-white hover:bg-[#4A485A]"
+              className="h-[30px] border border-white bg-[#3E3C4B] px-3 py-1 text-xs font-semibold text-slate-800 hover:bg-[#4A485A]"
             >
               Set up default
             </Button>

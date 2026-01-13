@@ -269,7 +269,7 @@ export const Filter = ({ className }: FilterProps) => {
             variant="transparent"
             className="w-full flex-row justify-between border-primary md:w-[250px]"
           >
-            <h2 className="text-[15px] font-semibold text-white">
+            <h2 className="text-[15px] font-semibold text-slate-800">
               Filters{' '}
               {Boolean(numberSelected) && (
                 <span className="text-primary">({numberSelected})</span>

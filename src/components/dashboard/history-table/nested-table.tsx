@@ -181,7 +181,7 @@ function NestedHistoryTable({ vault, open }: NestedHistoryTableProps) {
                     key={header.id}
                     className={`${
                       i === 2 || i === 4 ? 'col-span-2' : ''
-                    } text-xs font-medium text-white`}
+                    } text-xs font-medium text-slate-800`}
                   >
                     {header.isPlaceholder
                       ? null

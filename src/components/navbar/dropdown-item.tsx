@@ -20,7 +20,7 @@ export const DropdownItem = ({ item }: DropdownItemProps) => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="link" className="group">
-          <item.icon className="h-[18px] w-[18px] fill-white group-hover:fill-current" />
+          <item.icon className="h-[18px] w-[18px] fill-slate-800 group-hover:fill-current" />
           {item.label ? <span className="ml-2">{item.label}</span> : null}
         </Button>
       </DropdownMenuTrigger>
@@ -29,10 +29,10 @@ export const DropdownItem = ({ item }: DropdownItemProps) => {
           <DropdownMenuItem key={nestedItem.id} asChild>
             <Link
               href={nestedItem.link}
-              className="flex cursor-pointer items-center rounded-sm px-3 py-2 text-sm font-medium text-white hover:bg-white hover:bg-opacity-20"
+              className="flex cursor-pointer items-center rounded-sm px-3 py-2 text-sm font-medium text-slate-800 hover:bg-white hover:bg-opacity-20"
             >
               {nestedItem.icon ? (
-                <nestedItem.icon className="mr-2 h-[18px] w-[18px] fill-white" />
+                <nestedItem.icon className="mr-2 h-[18px] w-[18px] fill-slate-800" />
               ) : null}
               {nestedItem.label}
             </Link>

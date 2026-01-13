@@ -46,10 +46,10 @@ export const ContactUsForm = () => {
       setSubmitting(false);
     }
 
-    // 2) Фоллбэк: открываем письмо на marginespace@gmail.com
+    // 2) Фоллбэк: открываем письмо на ilchukcorporation@gmail.com
     if (typeof window !== 'undefined') {
       window.location.assign(
-        `mailto:marginespace@gmail.com?subject=${encodeURIComponent(name)}&body=${encodeURIComponent(
+        `mailto:ilchukcorporation@gmail.com?subject=${encodeURIComponent(name)}&body=${encodeURIComponent(
           `From: ${email}\n\n${message}`,
         )}`,
       );
@@ -71,12 +71,12 @@ export const ContactUsForm = () => {
               <FormItem>
                 <FormControl>
                   <Input
-                    className="w-full rounded-[8px] border-none bg-white/10 px-3 py-3 text-white placeholder:text-white/60 focus:bg-white/15 md:px-[14px] md:py-[13px]"
+                    className="w-full rounded-[8px] border-none bg-white/10 px-3 py-3 text-slate-800 placeholder:text-slate-800/60 focus:bg-white/15 md:px-[14px] md:py-[13px]"
                     placeholder="Your name"
                     {...field}
                   />
                 </FormControl>
-                <FormMessage className="text-white" />
+                <FormMessage className="text-slate-800" />
               </FormItem>
             )}
           />
@@ -87,12 +87,12 @@ export const ContactUsForm = () => {
               <FormItem>
                 <FormControl>
                   <Input
-                    className="w-full rounded-[8px] border-none bg-white/10 px-3 py-3 text-white placeholder:text-white/60 focus:bg-white/15 md:px-[14px] md:py-[13px]"
+                    className="w-full rounded-[8px] border-none bg-white/10 px-3 py-3 text-slate-800 placeholder:text-slate-800/60 focus:bg-white/15 md:px-[14px] md:py-[13px]"
                     placeholder="Email"
                     {...field}
                   />
                 </FormControl>
-                <FormMessage className="text-white" />
+                <FormMessage className="text-slate-800" />
               </FormItem>
             )}
           />
@@ -103,12 +103,12 @@ export const ContactUsForm = () => {
               <FormItem>
                 <FormControl>
                   <Textarea
-                    className="w-full min-h-[120px] rounded-[8px] border-none bg-white/10 px-3 py-3 text-white placeholder:text-white/60 focus:bg-white/15 md:min-h-[154px] md:px-[14px] md:py-[10px]"
+                    className="w-full min-h-[120px] rounded-[8px] border-none bg-white/10 px-3 py-3 text-slate-800 placeholder:text-slate-800/60 focus:bg-white/15 md:min-h-[154px] md:px-[14px] md:py-[10px]"
                     placeholder="What we can help you with?"
                     {...field}
                   />
                 </FormControl>
-                <FormMessage className="text-white" />
+                <FormMessage className="text-slate-800" />
               </FormItem>
             )}
           />
@@ -132,7 +132,7 @@ export const ContactUsForm = () => {
                       <CheckboxIndicator />
                     </Checkbox>
                   </FormControl>
-                  <div className="m-0 text-[11px] leading-relaxed text-white/80 md:text-[12px]">
+                  <div className="m-0 text-[11px] leading-relaxed text-slate-800/80 md:text-[12px]">
                     By submitting this form, I read the{' '}
                     <Link
                       href="/privacy-policy"
@@ -149,17 +149,17 @@ export const ContactUsForm = () => {
                     </Link>
                   </div>
                 </div>
-                <FormMessage className="text-white" />
+                <FormMessage className="text-slate-800" />
               </FormItem>
             )}
           />
           <div className="mt-4 flex flex-col gap-4 md:mt-[16px] lg:flex-row lg:items-center lg:justify-end lg:gap-[24px]">
-            <div className="block text-center text-[12px] font-medium text-white/80 lg:hidden">
+            <div className="block text-center text-[12px] font-medium text-slate-800/80 lg:hidden">
               Ask our moderators and community on Discord
             </div>
             <div className="flex w-full items-center gap-[8px] lg:hidden">
               <div className="h-[1px] w-full bg-white/20" />
-              <div className="text-[12px] font-medium text-white/60">or</div>
+              <div className="text-[12px] font-medium text-slate-800/60">or</div>
               <div className="h-[1px] w-full bg-white/20" />
             </div>
             <Button

@@ -92,7 +92,7 @@ export default function VaultsContainer({
         defaultValue={searchParams.tag ?? 'all'}
         className="flex flex-col gap-[24px]"
       >
-        <div className="flex  flex-wrap items-center justify-between rounded-[15px] border border-white bg-[rgba(255,255,255,0.11)] p-[12px] md:gap-0">
+        <div className="flex flex-wrap items-center justify-between rounded-[15px] border border-slate-300 bg-white p-[12px] shadow-[0_2px_8px_rgba(0,0,0,0.08)] md:gap-0">
           <Filter className="w-1/2 pr-1 md:w-1/3 md:pr-0" />
           <VaultPoolTabs className="order-3 flex w-full items-center justify-center gap-4 pt-4 md:order-[0] md:w-1/3 md:pl-4 md:pt-0 xl:pl-0" />
           <SortBy className="w-1/2 justify-end pl-1 md:flex md:w-1/3 md:pl-0" />

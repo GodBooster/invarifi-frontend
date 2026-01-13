@@ -128,7 +128,7 @@ export const EarnHistoryTable = ({ cubes }: EarnHistoryTableProps) => {
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow
                 key={headerGroup.id}
-                className="grid grid-cols-9 bg-[#293056] text-[12px] [&>th]:flex [&>th]:items-center [&>th]:text-xs [&>th]:font-semibold [&>th]:text-white"
+                className="grid grid-cols-9 bg-[#293056] text-[12px] [&>th]:flex [&>th]:items-center [&>th]:text-xs [&>th]:font-semibold [&>th]:text-slate-800"
               >
                 {headerGroup.headers.map((header, index) => (
                   <TableHead

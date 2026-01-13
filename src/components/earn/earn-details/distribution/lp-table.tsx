@@ -87,7 +87,7 @@ export const LpTable: FC<ILpTable> = ({ data, needLight }) => {
                   />
                   <div
                     className={`${
-                      needLight ? 'text-text-grey' : 'text-white'
+                      needLight ? 'text-text-grey' : 'text-slate-800'
                     } text-[14px] font-semibold leading-[20px]`}
                   >
                     {item.name}
@@ -96,7 +96,7 @@ export const LpTable: FC<ILpTable> = ({ data, needLight }) => {
                 <div className="flex items-center gap-[8px]">
                   <div
                     className={`${
-                      needLight ? 'text-text-contrast' : 'text-white'
+                      needLight ? 'text-text-contrast' : 'text-slate-800'
                     } text-[14px] font-[500] leading-[20px]`}
                   >
                     {item.percent.toFixed(2)}%

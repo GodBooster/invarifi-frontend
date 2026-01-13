@@ -34,7 +34,7 @@ export const Boost = ({ vault }: BoostProps) => {
             </TooltipItem>
           </div>
           <div className="flex items-center gap-2 rounded-[8px] bg-danger px-2 py-1 text-sm font-medium">
-            <Timer className="h-[16px] w-[16px] fill-white" />
+            <Timer className="h-[16px] w-[16px] fill-slate-800" />
             <span>ENDS</span>
             <span>{lastHarvestFormatter(vault.boost.periodFinish)}</span>
           </div>
@@ -47,7 +47,7 @@ export const Boost = ({ vault }: BoostProps) => {
           <Button
             className={cn(
               buttonVariants(),
-              'bg-light-purple flex w-full text-white hover:bg-[#7f75cb]',
+              'bg-light-purple flex w-full text-slate-800 hover:bg-[#7f75cb]',
             )}
           >
             Switch network
@@ -65,7 +65,7 @@ export const Boost = ({ vault }: BoostProps) => {
               href="#"
               className={cn(
                 buttonVariants({ variant: 'default' }),
-                'hover:border-primary border border-white bg-transparent-bg font-semibold text-white hover:bg-transparent-bg',
+                'hover:border-primary border border-white bg-transparent-bg font-semibold text-slate-800 hover:bg-transparent-bg',
               )}
             >
               Website
@@ -102,7 +102,7 @@ export const Boost = ({ vault }: BoostProps) => {
               href="#"
               className={cn(
                 buttonVariants({ variant: 'default' }),
-                'hover:border-primary border border-white bg-transparent-bg font-semibold text-white hover:bg-transparent-bg',
+                'hover:border-primary border border-white bg-transparent-bg font-semibold text-slate-800 hover:bg-transparent-bg',
               )}
             >
               Explore <ArrowRightCircle className="ml-2 h-[20px] w-[20px]" />

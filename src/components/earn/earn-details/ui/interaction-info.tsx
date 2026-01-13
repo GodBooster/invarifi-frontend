@@ -19,7 +19,7 @@ export const InteractionInfo = ({
         <div className="flex items-center gap-[8px]">
           <div className="text-[12px]">DEPOSIT FEE</div>
           <TooltipItem contentClassName="text-sm">
-            Fee for deposit charged by the provider or Margin Space
+            Fee for deposit charged by the provider or InvariFi
           </TooltipItem>
         </div>
         <div className="text-[14px]">
@@ -30,7 +30,7 @@ export const InteractionInfo = ({
         <div className="flex items-center gap-[8px]">
           <div className="text-[12px]">WITHDRAWAL FEE</div>
           <TooltipItem contentClassName="text-sm">
-            Fee for withdrawal charged by the provider or Margin Space
+            Fee for withdrawal charged by the provider or InvariFi
           </TooltipItem>
         </div>
         <div className="text-[14px]">

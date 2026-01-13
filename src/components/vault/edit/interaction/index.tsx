@@ -152,13 +152,13 @@ export const Interaction = ({ vault, tokens }: Props) => {
           <div className="flex flex-col-reverse items-start justify-between gap-4 sm:flex-row sm:items-center">
             <TabsList className="h-auto gap-[8px] rounded-b-none rounded-t-[12px] bg-white bg-opacity-11 pb-0">
               <TabsTrigger
-                className="w-[90px] rounded-b-[2px] rounded-t-[8px] py-2 text-sm text-white data-[state=active]:bg-indigo-350"
+                className="w-[90px] rounded-b-[2px] rounded-t-[8px] py-2 text-sm text-slate-800 data-[state=active]:bg-indigo-350"
                 value={EditTabs.EDIT}
               >
                 Edit
               </TabsTrigger>
             </TabsList>
-            <p className="flex flex-col px-2 text-sm font-medium text-white sm:text-[#F1F3F8]">
+            <p className="flex flex-col px-2 text-sm font-medium text-slate-800 sm:text-[#F1F3F8]">
               Your Deposit: {showDeposited} (
               {`${expectedSwap} ${tokenAddresses.wrappedNativeToken.symbol}`})
             </p>

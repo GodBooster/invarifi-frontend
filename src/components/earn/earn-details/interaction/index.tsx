@@ -117,26 +117,26 @@ export default function EarnInteraction({ cube, tokens }: EarnProps) {
           <div className="flex flex-col-reverse items-end justify-between gap-4 sm:flex-row sm:items-center">
             <TabsList className="h-auto gap-[8px] self-end rounded-b-none rounded-t-[12px] bg-white bg-opacity-11 pb-0">
               <TabsTrigger
-                className="rounded-b-[2px] rounded-t-[8px] py-[8px] text-white data-[state=active]:bg-indigo-350"
+                className="rounded-b-[2px] rounded-t-[8px] py-[8px] text-slate-800 data-[state=active]:bg-indigo-350"
                 value={EarnTab.DEPOSIT}
               >
                 Deposit
               </TabsTrigger>
               <TabsTrigger
-                className="rounded-b-[2px] rounded-t-[8px] py-[8px] text-white data-[state=active]:bg-indigo-350"
+                className="rounded-b-[2px] rounded-t-[8px] py-[8px] text-slate-800 data-[state=active]:bg-indigo-350"
                 value={EarnTab.WITHDRAW}
               >
                 Withdraw
               </TabsTrigger>
             </TabsList>
             <div className="flex flex-col items-end gap-1">
-              <p className="flex flex-col text-xs font-medium text-white sm:text-[#F1F3F8]">
+              <p className="flex flex-col text-xs font-medium text-slate-800 sm:text-[#F1F3F8]">
                 Reserved: ${(totalDeposit - depositWithoutReserved).toFixed(2)}{' '}
                 (
                 {`${expectedReservedSwap} ${tokenAddresses.wrappedNativeToken.symbol}`}
                 )
               </p>
-              <p className="flex flex-col text-sm font-medium text-white sm:text-[#F1F3F8]">
+              <p className="flex flex-col text-sm font-medium text-slate-800 sm:text-[#F1F3F8]">
                 Your Deposit: ${depositWithoutReserved.toFixed(2)} (
                 {`${expectedSwap} ${tokenAddresses.wrappedNativeToken.symbol}`})
               </p>

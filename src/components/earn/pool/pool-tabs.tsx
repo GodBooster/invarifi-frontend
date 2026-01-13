@@ -28,7 +28,7 @@ export const CubePoolTabs = memo(({ className }: CubePoolTabsProps) => {
           <TabsTrigger
             key={value}
             value={value}
-            className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-[8px] px-3 py-2 text-sm text-white hover:bg-primary-hover transition-colors"
+            className="data-[state=active]:bg-primary data-[state=active]:text-white rounded-[8px] px-3 py-2 text-sm text-slate-800 hover:bg-primary/20 transition-colors"
             asChild
           >
             <Link

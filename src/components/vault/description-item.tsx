@@ -11,7 +11,7 @@ export const DescriptionItem: FC<{
         {name} {icon && icon}
       </div>
       {typeof value === 'string' || typeof value === 'undefined' ? (
-        <div className="text-[16px] text-white">{value || ''}</div>
+        <div className="text-[16px] text-slate-800">{value || ''}</div>
       ) : (
         value
       )}

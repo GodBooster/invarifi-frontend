@@ -93,7 +93,7 @@ const EarnPage = async ({ params: { earnId } }: EarnPageProps) => {
                     src={getTokenAssetUrl(cube.stable)}
                     alt={cube.stable}
                   />
-                  <p className="text-[16px] font-bold text-white">
+                  <p className="text-[16px] font-bold text-slate-800">
                     {cube.stable}
                   </p>
                 </div>

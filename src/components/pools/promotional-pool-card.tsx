@@ -26,7 +26,7 @@ const badges = {
   popular: (
     <div className="flex items-center rounded-[8px] bg-[#CAA550] px-3 py-2">
       <p className="cursor-default text-sm font-semibold">Most Popular</p>
-      <BadgeDollarSign className="fill-white pl-1" />
+      <BadgeDollarSign className="fill-slate-800 pl-1" />
     </div>
   ),
   hot: (
@@ -38,7 +38,7 @@ const badges = {
   profitable: (
     <div className="flex items-center rounded-[8px] bg-[#59B38A] px-3 py-2">
       <p className="cursor-default text-sm font-semibold">Most Profitable</p>
-      <BadgeDollarSign className="fill-white pl-1" />
+      <BadgeDollarSign className="fill-slate-800 pl-1" />
     </div>
   ),
 };
@@ -96,7 +96,7 @@ export const PromotionalPoolCard = ({
         <div className="mb-[12px]">{vault.name}</div>
         <div className="flex items-center justify-between rounded-[8px] bg-gradient-to-r from-gray-200 px-[12px] py-[10px] text-[16px] font-semibold">
           <span className="text-sm text-gray-800">APY</span>
-          <span className="text-xl text-white">
+          <span className="text-xl text-slate-800">
             {apyFormatter(vault.apy.totalApy)}
           </span>
         </div>
@@ -126,21 +126,21 @@ export const PromotionalPoolCard = ({
               variant="ghost"
               onClick={onPrev}
             >
-              <ArrowLeft className="fill-light-purple cursor-pointer transition-all group-hover:fill-white" />
+              <ArrowLeft className="fill-light-purple cursor-pointer transition-all group-hover:fill-slate-800" />
             </Button>
             <Button
               className="group px-0 hover:bg-transparent"
               variant="ghost"
               onClick={onNext}
             >
-              <ArrowRight className="fill-light-purple cursor-pointer transition-all group-hover:fill-white" />
+              <ArrowRight className="fill-light-purple cursor-pointer transition-all group-hover:fill-slate-800" />
             </Button>
           </div>
         </div>
         {isAdmin && type === 'hot' ? (
           <Button
             onClick={handlePromotedVaultsClick}
-            className="bg-light-purple hover:bg-light-purple-hover mt-4 w-full text-white"
+            className="bg-light-purple hover:bg-light-purple-hover mt-4 w-full text-slate-800"
           >
             Promote
           </Button>

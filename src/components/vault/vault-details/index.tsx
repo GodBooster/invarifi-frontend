@@ -23,7 +23,7 @@ export const VaultDetails = ({ vault }: VaultDetailsProps) => {
             <TabsTrigger
               className={cn(
                 tab.value === 'boost' && 'bg-[#81E3D8]',
-                'rounded-b-[2px] rounded-t-[8px] px-[12px] py-[8px] !text-white data-[state=active]:bg-[#A093FE]',
+                'rounded-b-[2px] rounded-t-[8px] px-[12px] py-[8px] !text-slate-800 data-[state=active]:bg-[#A093FE]',
               )}
               key={tab.value}
               value={tab.value}

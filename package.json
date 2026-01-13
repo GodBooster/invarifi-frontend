@@ -1,6 +1,7 @@
 {
-  "name": "cubera-interface",
-  "version": "0.1.0",
+  "name": "invarifi-frontend",
+  "version": "1.0.0",
+  "description": "InvariFi - Social staking platform with diversification and advanced security mechanisms",
   "private": true,
   "scripts": {
     "dev": "next dev",

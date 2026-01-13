@@ -86,7 +86,7 @@ export const VaultItem = forwardRef<HTMLDivElement, VaultItemProps>(
               </p>
               <Close
                 onClick={handleCloseClick}
-                className="z-10 cursor-pointer fill-white"
+                className="z-10 cursor-pointer fill-slate-800"
               />
             </>
           ) : (
@@ -103,8 +103,8 @@ export const VaultItem = forwardRef<HTMLDivElement, VaultItemProps>(
               >
                 <Check
                   className={cn(
-                    'transition-colors hover:fill-white',
-                    selected ? 'fill-white' : 'fill-[rgba(41,45,50,50)]',
+                    'transition-colors hover:fill-slate-800',
+                    selected ? 'fill-slate-800' : 'fill-[rgba(41,45,50,50)]',
                   )}
                 />
               </Button>
@@ -119,7 +119,7 @@ export const VaultItem = forwardRef<HTMLDivElement, VaultItemProps>(
             <span className="text-sm font-semibold text-black xl:text-base">
               {vault.name}
             </span>
-            <span className="text-sm font-semibold text-white xl:text-xl">
+            <span className="text-sm font-semibold text-slate-800 xl:text-xl">
               {apyFormatter(vault.apy.totalApy)}
             </span>
           </div>
@@ -143,7 +143,7 @@ export const VaultItem = forwardRef<HTMLDivElement, VaultItemProps>(
         {addedDate && (
           <div className="mt-2 flex gap-4 text-sm font-semibold">
             <span className="text-light-grey">Added to hot</span>
-            <span className="text-white">{addedDate}</span>
+            <span className="text-slate-800">{addedDate}</span>
           </div>
         )}
       </div>

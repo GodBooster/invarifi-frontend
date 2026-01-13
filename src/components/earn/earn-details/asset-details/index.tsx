@@ -42,7 +42,7 @@ export const AssetDetails = ({ cube }: AssetDetailsProps) => {
                 />
               ))}
             </div>
-            <div className="text-[16px] font-semibold text-white">
+            <div className="text-[16px] font-semibold text-slate-800">
               {cube.stable}
             </div>
           </div>

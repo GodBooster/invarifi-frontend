@@ -14,7 +14,7 @@ export const NoWalletDashboard = () => {
             No wallet connected. Connect your wallet or search for an address
           </h5>
         </div>
-        <ConnectWalletButton className="bg-primary hover:bg-primary-hover w-[320px] text-base font-semibold text-white" />
+        <ConnectWalletButton className="bg-primary hover:bg-primary-hover w-[320px] text-base font-semibold text-slate-800" />
       </div>
     </div>
   );

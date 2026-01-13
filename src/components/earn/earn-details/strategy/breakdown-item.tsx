@@ -38,12 +38,12 @@ export const BreakdownItem = ({
               />
             ))}
           </div>
-          <div className="text-[14px] font-bold text-white">{vault.name}</div>
+          <div className="text-[14px] font-bold text-slate-800">{vault.name}</div>
         </div>
       </div>
       <div className="flex flex-row items-center justify-between gap-[2px] md:flex-col md:items-start md:justify-normal">
         <div className="text-[12px] font-[400] text-text-purple">Platform</div>
-        <div className="text-[14px] font-bold leading-[20px] text-white">
+        <div className="text-[14px] font-bold leading-[20px] text-slate-800">
           {vault.platformId.toUpperCase()}
         </div>
       </div>

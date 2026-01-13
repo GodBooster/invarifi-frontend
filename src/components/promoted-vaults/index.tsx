@@ -108,7 +108,7 @@ export default function PromotedVaultsGrid({ vaults, allVaults }: Props) {
   return (
     <>
       <div className="flex items-center justify-between">
-        <p className="my-4 text-sm font-medium text-white">
+        <p className="my-4 text-sm font-medium text-slate-800">
           Drag vault to change its order number
         </p>
         <Button

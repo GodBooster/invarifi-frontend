@@ -31,10 +31,10 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         <div className="flex h-full flex-col">
           {/* Header */}
           <div className="flex items-center justify-between border-b border-primary/20 px-6 py-4">
-            <h2 className="text-xl font-semibold text-white">Menu</h2>
+            <h2 className="text-xl font-semibold text-slate-800">Menu</h2>
             <button
               onClick={onClose}
-              className="flex h-10 w-10 items-center justify-center rounded-lg text-white transition-all hover:bg-primary/20 hover:text-primary"
+              className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-800 transition-all hover:bg-primary/20 hover:text-primary"
             >
               <X className="h-6 w-6" />
             </button>
@@ -55,7 +55,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                         className={`group flex items-center gap-3 rounded-[12px] px-4 py-3 text-[15px] font-medium transition-all duration-300 ${
                           isActive
                             ? 'bg-primary/20 text-primary shadow-[0_0_10px_rgba(212,107,48,0.2)]'
-                            : 'text-white hover:bg-primary/10 hover:text-primary'
+                            : 'text-slate-800 hover:bg-primary/10 hover:text-primary'
                         }`}
                       >
                         {nestedItem.icon && (
@@ -74,7 +74,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                   className={`group flex items-center gap-3 rounded-[12px] px-4 py-3 text-[15px] font-medium transition-all duration-300 ${
                     pathname === item.pathname
                       ? 'bg-primary/20 text-primary shadow-[0_0_10px_rgba(212,107,48,0.2)]'
-                      : 'text-white hover:bg-primary/10 hover:text-primary'
+                      : 'text-slate-800 hover:bg-primary/10 hover:text-primary'
                   }`}
                 >
                   <item.icon className="h-[20px] w-[20px] fill-current transition-transform duration-300 group-hover:scale-110" />

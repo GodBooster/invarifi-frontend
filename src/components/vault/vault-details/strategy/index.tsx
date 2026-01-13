@@ -27,7 +27,7 @@ export const Strategy = ({ vault }: StrategyProps) => {
             target="_blank"
             className={cn(
               buttonVariants({ variant: 'default' }),
-              'hover:border-primary border border-white bg-transparent-bg font-semibold text-white hover:bg-transparent-bg',
+              'hover:border-primary border border-white bg-transparent-bg font-semibold text-slate-800 hover:bg-transparent-bg',
             )}
           >
             Strategy address <Globe className="ml-2 h-[20px] w-[20px]" />
@@ -39,7 +39,7 @@ export const Strategy = ({ vault }: StrategyProps) => {
           target="_blank"
           className={cn(
             buttonVariants({ variant: 'default' }),
-            'hover:border-light-purple border border-white bg-transparent-bg font-semibold text-white hover:bg-transparent-bg',
+            'hover:border-light-purple border border-white bg-transparent-bg font-semibold text-slate-800 hover:bg-transparent-bg',
           )}
         >
           Vault address <Globe className="ml-2 h-[20px] w-[20px]" />

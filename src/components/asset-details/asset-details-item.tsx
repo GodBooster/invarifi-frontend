@@ -60,14 +60,14 @@ export const AssetDetailsItem = ({
               )}
             </div>
           )}
-          <div className="text-[14px] font-semibold text-white">{title}</div>
+          <div className="text-[14px] font-semibold text-slate-800">{title}</div>
         </div>
         {platform && (
           <div className="flex items-center gap-[8px]">
             <div className="text-[12px] font-[500] text-text-purple">
               Platform
             </div>
-            <div className="text-[12px] font-[500] text-white">{platform}</div>
+            <div className="text-[12px] font-[500] text-slate-800">{platform}</div>
           </div>
         )}
         {chain && (
@@ -106,7 +106,7 @@ export const AssetDetailsItem = ({
             href={docsUrl}
             className={buttonVariants({ variant: 'link', className: '!p-0' })}
           >
-            <File className="mr-2 h-[20px] w-[20px] fill-white" />
+            <File className="mr-2 h-[20px] w-[20px] fill-slate-800" />
             Docs
           </Link>
         )}

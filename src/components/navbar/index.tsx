@@ -23,13 +23,13 @@ export const Navbar = () => {
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
       />
-      <nav className="container m-0 flex min-h-fit min-w-[calc(100%+20px)] flex-row flex-wrap items-center justify-between bg-linear-white px-[24px] py-[16px] backdrop-blur-[58px] lg:px-[48px] lg:py-[20px]">
+      <nav className="container m-0 flex min-h-fit min-w-[calc(100%+20px)] flex-row flex-wrap items-center justify-between border-b-2 border-slate-200 bg-white/90 px-[24px] py-[16px] shadow-sm backdrop-blur-[58px] lg:px-[48px] lg:py-[20px]">
       {/* Logo */}
       <div className="order-1 flex items-center lg:order-1">
         <Link href="/">
           <Image
             alt="logo"
-            src="/icons/logo.svg"
+            src="/logo.svg"
             width={140}
             height={48}
             className="lg:h-[54px] lg:w-[160px]"
@@ -50,7 +50,7 @@ export const Navbar = () => {
                 className="flex w-[220px] flex-col gap-2 rounded-[10px] bg-white p-2 shadow-[0px_4px_42px_rgba(0,0,0,0.78)]"
                 trigger={
                   <button className="group p-0 bg-transparent border-none cursor-pointer">
-                    <item.icon className="h-[20px] w-[20px] fill-white transition-all group-hover:fill-primary" />
+                    <item.icon className="h-[20px] w-[20px] fill-foreground transition-all group-hover:fill-primary" />
                   </button>
                 }
               >
@@ -74,9 +74,9 @@ export const Navbar = () => {
             <Link
               key={item.id}
               href={item.link || '#'}
-              className="group relative flex items-center gap-2 text-[16px] font-medium text-white transition-all duration-300 hover:text-primary after:absolute after:bottom-[-8px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+              className="group relative flex items-center gap-2 text-[16px] font-medium text-slate-800 transition-all duration-300 hover:text-primary after:absolute after:bottom-[-8px] after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
             >
-              <item.icon className="h-[20px] w-[20px] fill-white transition-all duration-300 group-hover:fill-primary group-hover:scale-110" />
+              <item.icon className="h-[20px] w-[20px] fill-slate-800 transition-all duration-300 group-hover:fill-primary group-hover:scale-110" />
               {item.label && (
                 <span className="whitespace-nowrap">{item.label}</span>
               )}
@@ -99,7 +99,7 @@ export const Navbar = () => {
       <div className="w-full border-t border-white/5 bg-white/[0.02] px-[24px] py-[12px] backdrop-blur-[8px]">
         <button
           onClick={() => setIsMobileMenuOpen(true)}
-          className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-[12px] border border-primary/40 bg-gradient-to-r from-primary/15 via-primary/10 to-primary/5 px-4 py-3 text-white shadow-[0_2px_8px_rgba(0,0,0,0.15)] transition-all hover:border-primary hover:from-primary/20 hover:via-primary/15 hover:to-primary/10 hover:shadow-[0_0_20px_rgba(212,107,48,0.4)] active:scale-[0.98]"
+          className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-[12px] border border-primary/40 bg-gradient-to-r from-primary/15 via-primary/10 to-primary/5 px-4 py-3 text-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.15)] transition-all hover:border-primary hover:from-primary/20 hover:via-primary/15 hover:to-primary/10 hover:shadow-[0_0_20px_rgba(212,107,48,0.4)] active:scale-[0.98]"
         >
           <Menu className="h-[20px] w-[20px]" />
           <span className="text-[15px] font-semibold">Menu</span>

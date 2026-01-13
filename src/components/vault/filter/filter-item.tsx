@@ -41,7 +41,7 @@ export const FilterItem = ({
                   <InfoCircle />
                 </div>
               </TooltipTrigger>
-              <TooltipContent className="max-w-[250px] border-0 bg-[#0B0B0B] text-white">
+              <TooltipContent className="max-w-[250px] border-0 bg-[#0B0B0B] text-slate-800">
                 {tooltip}
               </TooltipContent>
             </Tooltip>

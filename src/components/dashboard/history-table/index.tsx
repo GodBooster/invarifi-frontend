@@ -137,7 +137,7 @@ export function HistoryTable({ vaults }: HistoryTableProps) {
           <TableHeader className="border-none">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow
-                className="grid grid-cols-7 border-none bg-[#293056] [&>th]:flex [&>th]:items-center [&>th]:text-xs [&>th]:font-semibold [&>th]:text-white"
+                className="grid grid-cols-7 border-none bg-[#293056] [&>th]:flex [&>th]:items-center [&>th]:text-xs [&>th]:font-semibold [&>th]:text-slate-800"
                 key={headerGroup.id}
               >
                 {headerGroup.headers.map((header, i) => {

@@ -25,7 +25,7 @@ export default function RiskManagement({
         <TooltipItem>
           <div className="flex max-w-[245px] flex-col gap-1">
             <p className="text-xs font-medium text-additional-grey">
-              Margin Space uses a Stop-Loss order, which serves to control the
+              InvariFi uses a Stop-Loss order, which serves to control the
               risks of a fall in the price of assets in vault.
             </p>
           </div>
@@ -49,7 +49,7 @@ export default function RiskManagement({
               className={cn(
                 'flex flex-1 cursor-pointer items-center justify-center rounded-[8px] px-3 py-2 shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] backdrop-blur-[10px]',
                 selectedOption
-                  ? 'bg-light-purple !text-white'
+                  ? 'bg-light-purple !text-slate-800'
                   : 'bg-transparent-bg-dark',
               )}
             >

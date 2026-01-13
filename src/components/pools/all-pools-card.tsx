@@ -229,7 +229,7 @@ export const AllPoolCard = memo(
                   {apyFormatter(vault.apy.totalApy)}
                 </h4>
                 {vault.boost && (
-                  <div className="bg-primary flex items-center gap-1 rounded-lg px-2 py-[2px] text-xs text-white animate-pulse-orange">
+                  <div className="bg-primary flex items-center gap-1 rounded-lg px-2 py-[2px] text-xs text-slate-800 animate-pulse-orange">
                     Boost <InfoCircle light />
                   </div>
                 )}
@@ -286,7 +286,7 @@ export const AllPoolCard = memo(
                   <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
                     Deposited
                   </h4>
-                  <h5 className="text-[14px] font-semibold leading-[20px] text-white">
+                  <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
                     ${vault.deposited.toFixed(2)}
                   </h5>
                 </div>
@@ -302,7 +302,7 @@ export const AllPoolCard = memo(
                     <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
                       Rewards
                     </h4>
-                    <h5 className="text-[14px] font-semibold leading-[20px] text-white">
+                    <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
                       0 WKAVA
                     </h5>
                   </div>
@@ -310,7 +310,7 @@ export const AllPoolCard = memo(
                     <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
                       Ends
                     </h4>
-                    <h5 className="text-[14px] font-semibold leading-[20px] text-white">
+                    <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
                       11d 03h 58m
                     </h5>
                   </div>

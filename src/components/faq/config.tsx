@@ -13,11 +13,11 @@ export interface IFaqList {
 // ==================== GETTING STARTED ====================
 const gettingStartedFaqConfig: IFaqDropdownItem[] = [
   {
-    question: 'What is Margin Space?',
+    question: 'What is InvariFi?',
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Margin Space is an advanced DeFi yield aggregation platform that automatically optimizes your crypto assets across multiple chains and protocols. We leverage sophisticated strategies to maximize returns while minimizing risk and gas costs.
+          InvariFi is an advanced DeFi yield aggregation platform that automatically optimizes your crypto assets across multiple chains and protocols. We leverage sophisticated strategies to maximize returns while minimizing risk and gas costs.
         </p>
         <p>
           Our platform features auto-compounding vaults, promotional pools with boosted rewards, and AI-powered yield optimization that works 24/7 to ensure you're always earning the best possible returns on your deposits.
@@ -30,7 +30,7 @@ const gettingStartedFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Getting started with Margin Space is simple:
+          Getting started with InvariFi is simple:
         </p>
         <ol className="list-decimal list-inside space-y-2 ml-2">
           <li>Connect your Web3 wallet (MetaMask, WalletConnect, etc.)</li>
@@ -49,7 +49,7 @@ const gettingStartedFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Margin Space supports all major Web3 wallets including:
+          InvariFi supports all major Web3 wallets including:
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li>MetaMask</li>
@@ -65,11 +65,11 @@ const gettingStartedFaqConfig: IFaqDropdownItem[] = [
     ),
   },
   {
-    question: 'Which blockchains does Margin Space support?',
+    question: 'Which blockchains does InvariFi support?',
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Margin Space is multi-chain and currently supports:
+          InvariFi is multi-chain and currently supports:
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li>Ethereum</li>
@@ -127,7 +127,7 @@ const vaultsAndStrategiesFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Margin Space offers several types of vaults:
+          InvariFi offers several types of vaults:
         </p>
         <ul className="list-disc list-inside space-y-2 ml-2">
           <li><strong>Single Asset Vaults:</strong> Deposit one token to earn yield (e.g., USDC, ETH)</li>
@@ -259,17 +259,17 @@ const feesAndApyFaqConfig: IFaqDropdownItem[] = [
           <strong>Example:</strong> A vault with 100% APR compounded daily results in approximately 171% APY.
         </p>
         <p>
-          All rates displayed on Margin Space are <strong>APY</strong> (already including compounding effects), showing you the real expected annual return.
+          All rates displayed on InvariFi are <strong>APY</strong> (already including compounding effects), showing you the real expected annual return.
         </p>
       </div>
     ),
   },
   {
-    question: 'What fees does Margin Space charge?',
+    question: 'What fees does InvariFi charge?',
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Margin Space has a transparent fee structure:
+          InvariFi has a transparent fee structure:
         </p>
         <ul className="list-disc list-inside space-y-2 ml-2">
           <li><strong>Performance Fee:</strong> % of earned profits (only charged on gains)</li>
@@ -285,7 +285,7 @@ const feesAndApyFaqConfig: IFaqDropdownItem[] = [
           All displayed APYs are <strong>net of fees</strong> – what you see is what you get.
         </p>
         <p>
-          Gas fees for blockchain transactions are separate and paid directly to network validators, not to Margin Space.
+          Gas fees for blockchain transactions are separate and paid directly to network validators, not to InvariFi.
         </p>
       </div>
     ),
@@ -315,7 +315,7 @@ const feesAndApyFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          No. Margin Space believes in complete transparency. All fees are clearly displayed:
+          No. InvariFi believes in complete transparency. All fees are clearly displayed:
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li>Performance fees are shown in vault details</li>
@@ -333,11 +333,11 @@ const feesAndApyFaqConfig: IFaqDropdownItem[] = [
 // ==================== SECURITY & RISKS ====================
 const securityAndRisksFaqConfig: IFaqDropdownItem[] = [
   {
-    question: 'Is my money safe in Margin Space vaults?',
+    question: 'Is my money safe in InvariFi vaults?',
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Margin Space takes security extremely seriously:
+          InvariFi takes security extremely seriously:
         </p>
         <ul className="list-disc list-inside space-y-2 ml-2">
           <li><strong>Audited Smart Contracts:</strong> All vault contracts are audited by leading security firms</li>
@@ -374,11 +374,11 @@ const securityAndRisksFaqConfig: IFaqDropdownItem[] = [
     ),
   },
   {
-    question: 'Have Margin Space contracts been audited?',
+    question: 'Have InvariFi contracts been audited?',
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Yes. Margin Space smart contracts have been audited by multiple independent security firms including:
+          Yes. InvariFi smart contracts have been audited by multiple independent security firms including:
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li>CertiK</li>
@@ -420,7 +420,7 @@ const securityAndRisksFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Margin Space implements multiple safeguards:
+          InvariFi implements multiple safeguards:
         </p>
         <ul className="list-disc list-inside space-y-2 ml-2">
           <li><strong>Emergency Pause:</strong> Admin multisig can pause deposits if issues detected</li>
@@ -443,7 +443,7 @@ const technicalFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          After depositing into a vault, you'll receive vault share tokens (e.g., marginSpaceETH, marginSpaceUSDC). To see them in your wallet:
+          After depositing into a vault, you'll receive vault share tokens (e.g., invarifiETH, invarifiUSDC). To see them in your wallet:
         </p>
         <ol className="list-decimal list-inside space-y-1 ml-2">
           <li>Copy the vault token contract address (shown in vault details)</li>
@@ -470,7 +470,7 @@ const technicalFaqConfig: IFaqDropdownItem[] = [
           As the vault earns and compounds rewards, the exchange rate of shares to underlying assets increases. When you withdraw, you burn your shares and receive back more of the underlying asset than you deposited.
         </p>
         <p>
-          <strong>Example:</strong> Deposit 100 USDC, receive 95 marginSpaceUSDC shares. Over time, 95 marginSpaceUSDC might be worth 105 USDC due to compounded earnings.
+          <strong>Example:</strong> Deposit 100 USDC, receive 95 invarifiUSDC shares. Over time, 95 invarifiUSDC might be worth 105 USDC due to compounded earnings.
         </p>
       </div>
     ),
@@ -542,7 +542,7 @@ const technicalFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          During high network congestion, Margin Space automatically adjusts:
+          During high network congestion, InvariFi automatically adjusts:
         </p>
         <ul className="list-disc list-inside space-y-2 ml-2">
           <li><strong>Harvest Delays:</strong> Waits for gas to drop before harvesting (avoids wasting profits on gas)</li>
@@ -569,12 +569,12 @@ const supportFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          You can reach the Margin Space team through:
+          You can reach the InvariFi team through:
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li><strong>Telegram:</strong> Official announcement channel and support group</li>
           <li><strong>Twitter:</strong> for updates and quick questions</li>
-          <li><strong>Email:</strong> support@marginspace.io for detailed inquiries</li>
+          <li><strong>Email:</strong> support@invarifi.com for detailed inquiries</li>
           <li><strong>Contact Form:</strong> Fill out the form on our Support page</li>
         </ul>
         <p>
@@ -588,16 +588,16 @@ const supportFaqConfig: IFaqDropdownItem[] = [
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
-          Currently, Margin Space is a web-based platform optimized for both desktop and mobile browsers.
+          Currently, InvariFi is a web-based platform optimized for both desktop and mobile browsers.
         </p>
         <p>
-          To use Margin Space on mobile:
+          To use InvariFi on mobile:
         </p>
         <ol className="list-decimal list-inside space-y-1 ml-2">
           <li>Open your mobile Web3 wallet app (MetaMask, Trust Wallet, etc.)</li>
           <li>Navigate to the built-in browser</li>
-          <li>Go to app.marginspace.com</li>
-          <li>Connect your wallet and start using Margin Space</li>
+          <li>Go to app.invarifi.com</li>
+          <li>Connect your wallet and start using InvariFi</li>
         </ol>
         <p>
           A native mobile app is on our roadmap for 2025.
@@ -625,14 +625,14 @@ const supportFaqConfig: IFaqDropdownItem[] = [
     ),
   },
   {
-    question: 'Does Margin Space have a token?',
+    question: 'Does InvariFi have a token?',
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>
           Information about potential governance tokens and tokenomics will be announced through official channels.
         </p>
         <p>
-          <strong>⚠️ BEWARE OF SCAMS:</strong> Margin Space will never:
+          <strong>⚠️ BEWARE OF SCAMS:</strong> InvariFi will never:
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
           <li>DM you first on Discord or Telegram</li>
@@ -647,7 +647,7 @@ const supportFaqConfig: IFaqDropdownItem[] = [
     ),
   },
   {
-    question: 'How can I contribute to Margin Space?',
+    question: 'How can I contribute to InvariFi?',
     answer: (
       <div className="flex w-full flex-col gap-4">
         <p>

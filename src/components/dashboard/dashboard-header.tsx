@@ -18,7 +18,7 @@ const DashboardHeader = ({ addressFromUrl }: DashboardHeaderProps) => {
   return (
     <div className="flex items-end justify-between pt-6">
       <div className="flex items-end gap-2">
-        <h1 className="text-4xl font-semibold">Dashboard</h1>
+        <h1 className="text-4xl font-semibold text-primary">Dashboard</h1>
         {isConnected && isMounted && addressFromUrl && (
           <div className="flex items-center gap-2">
             <span className="text-primary text-base font-medium">

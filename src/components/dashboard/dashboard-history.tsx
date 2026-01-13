@@ -47,8 +47,7 @@ const DashboardHistory = ({
               <p>History</p>
               <TooltipItem>
                 <p className="text-base font-medium text-text-light">
-                  Detailed history of actions and interactions with Margin
-                  Space&apos;s vaults and strategies
+                  Detailed history of actions and interactions with InvariFi's vaults and strategies
                 </p>
               </TooltipItem>
             </div>
@@ -59,13 +58,13 @@ const DashboardHistory = ({
             <TabsList className="h-fit w-full justify-center gap-[8px] bg-transparent">
               <TabsTrigger
                 value={HistoryTabs.VAULTS}
-                className="data-[state=active]:!bg-primary rounded-[8px] px-[24px] py-[8px] text-[14px] font-semibold !text-white"
+                className="data-[state=active]:!bg-primary rounded-[8px] px-[24px] py-[8px] text-[14px] font-semibold !text-slate-800"
               >
                 Vaults
               </TabsTrigger>
               <TabsTrigger
                 value={HistoryTabs.STRATEGIES}
-                className="data-[state=active]:!bg-primary rounded-[8px] px-[24px] py-[8px] text-[14px] font-semibold !text-white"
+                className="data-[state=active]:!bg-primary rounded-[8px] px-[24px] py-[8px] text-[14px] font-semibold !text-slate-800"
               >
                 Strategies
               </TabsTrigger>

@@ -18,7 +18,7 @@ export const FaqDropdownItem: FC<IFaqDropdownItem> = ({ question, answer }) => {
         <div
           className={cn(
             'max-w-[90%] text-[14px] font-[500] md:text-[16px]',
-            opened ? 'text-white' : 'text-text-grey',
+            opened ? 'text-slate-800' : 'text-slate-800',
           )}
         >
           {question}

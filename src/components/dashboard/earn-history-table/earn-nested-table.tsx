@@ -131,7 +131,7 @@ export const EarnNestedHistoryTable = ({
                 <TableHead
                   key={header.id}
                   className={cn(
-                    'text-xs font-medium text-white',
+                    'text-xs font-medium text-slate-800',
                     (index === 1 || index === 2) && 'col-span-2',
                   )}
                 >

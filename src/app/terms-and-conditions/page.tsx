@@ -8,31 +8,31 @@ const TermsAndConditions = () => {
   return (
     <main className="flex h-full w-full flex-col items-center px-4 py-8 md:px-[16px] md:py-[40px]">
       <div className="w-full max-w-4xl">
-        <h1 className="mb-8 text-center text-[28px] font-semibold text-white md:text-[36px]">
+        <h1 className="mb-8 text-center text-[28px] font-semibold text-slate-800 md:text-[36px]">
           Terms and Conditions
         </h1>
 
         <div className="rounded-[16px] border-2 border-primary/30 bg-linear-white p-6 backdrop-blur-[35px] md:p-8">
           <div className="prose prose-invert max-w-none">
-            <p className="mb-6 text-sm text-white/80 md:text-base">
+            <p className="mb-6 text-sm text-slate-800/80 md:text-base">
               <strong>Effective as of August 01, 2025</strong>
             </p>
 
-            <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+            <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
               The following Terms and Conditions (the "Agreement") is a legal agreement between you
-              ("you") and Margin Space (the "Platform", "we" or "us") for use of the website
-              https://marginspace.io (the "Website"). Please read this Agreement carefully as it
+              ("you") and InvariFi (the "Platform", "we" or "us") for use of the website
+              https://invarifi.com (the "Website"). Please read this Agreement carefully as it
               constitutes a binding force and regulates relations between you and the Platform.
-              Margin Space is a decentralized finance (DeFi) protocol that operates on blockchain
+              InvariFi is a decentralized finance (DeFi) protocol that operates on blockchain
               networks. The Platform is not a licensed financial institution and does not provide
               regulated financial services.
             </p>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 1. Definitions
               </h2>
-              <div className="space-y-3 text-sm leading-relaxed text-white/90 md:text-base">
+              <div className="space-y-3 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 <p>
                   <strong>"Blockchain"</strong> means a distributed ledger technology that
                   contains list of blocks (digital records) that are linked via cryptographic
@@ -83,10 +83,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 1. Acceptance of the Agreement
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 By accessing and using the Website, you are confirming that you have read and agree
                 to be bound by these Terms and Conditions, Platform's Privacy Policy, and other
                 notices posted through the Website. By this confirmation you warrant and approve
@@ -96,10 +96,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 2. Update of Agreement
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 From time to time, we may modify this Agreement. We will notify you by email or by
                 presenting you with a new version of the Agreement for you to accept if we make
                 modifications that materially change your rights. Your continued use of the Website
@@ -109,8 +109,8 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">3. Services</h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">3. Services</h2>
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 Through the Website you may obtain access to the Platform that allows you to
                 contribute your Digital Assets to our Staking Pools and earn Rewards by
                 participating in our Staking Services (the "Services"). The Staking Services are
@@ -121,7 +121,7 @@ const TermsAndConditions = () => {
                 service provider(s). You may find the resources provided on our Platform for more
                 information regarding Staking Services.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 To receive the Services, you don't need to register any personal accounts or
                 deposit your Virtual or Fiat currencies to the Platform's balance. We provide
                 dedicated solution in the form of bridge between your Digital Wallet and Staking
@@ -131,10 +131,10 @@ const TermsAndConditions = () => {
                 related to the Staking services.
               </p>
 
-              <h3 className="mb-3 mt-6 text-lg font-semibold text-white md:text-xl">
+              <h3 className="mb-3 mt-6 text-lg font-semibold text-slate-800 md:text-xl">
                 Staking Services
               </h3>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 When you place a specific Digital asset that is eligible for Staking, you consent
                 to such Digital asset being staked in part or in entirety via the Platform in the
                 Staking pool of the end service providers. For clarity, the Staking Services are
@@ -145,10 +145,10 @@ const TermsAndConditions = () => {
                 staked Digital asset remains your property while staked.
               </p>
 
-              <h3 className="mb-3 mt-6 text-lg font-semibold text-white md:text-xl">
+              <h3 className="mb-3 mt-6 text-lg font-semibold text-slate-800 md:text-xl">
                 Selection of Staking Services and Staking Reward Order
               </h3>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 When you decide to contribute a Digital asset from your Digital wallet to the
                 Staking pool, the Platform will remit to you the applicable percentage of staking
                 Rewards received from the supported protocol of Digital asset attributable to your
@@ -158,19 +158,19 @@ const TermsAndConditions = () => {
                 supported protocol of the Digital asset; and (iv) be further transferred to your
                 Digital wallet.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 Staking Rewards will be calculated and paid with the decimal precision described at
-                Reward Template (https://app.marginspace.com) as may be updated by us from time to
+                Reward Template (https://app.invarifi.com) as may be updated by us from time to
                 time in our sole discretion. All Staking Rewards will be paid to your Digital
                 wallet in the same digital form as it was placed in Staking.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 Staking Reward rates will be determined at our sole discretion based on the type of
                 staked Digital asset, market conditions and risk factors. Such rates have no
                 relationship to and may not be competitive with benchmark interest rates provided
                 in the market for bank deposit accounts or other similar services.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 You understand and agree that we don't guarantee that you will receive Staking
                 Rewards and that the relevant percentage (i) is an estimate only and not guaranteed,
                 (ii) may change at any time at Platform's sole discretion, and (iii) may be more or
@@ -184,10 +184,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 4. Obtaining of Services
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 To use the Website services, you don't need to create any accounts at the Platform.
                 To obtain the Services, inter alia to place your Digital assets for Staking you need
                 to specify details of your Digital wallet at the Platform. This information will be
@@ -199,7 +199,7 @@ const TermsAndConditions = () => {
                 be accurate and complete, and that it will be updated promptly in case of any
                 changes.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 Once you connected your Digital wallet to the Platform, you can contribute specific
                 Digital assets supported by the Platform from your Digital Wallet to Staking by
                 selecting the amount and type of Digital assets you suppose to contribute from your
@@ -208,7 +208,7 @@ const TermsAndConditions = () => {
                 balances that you initially deposited to your Digital wallet connected to the
                 Platform.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 Digital Assets that you contribute from your Digital wallet to the Staking will be
                 treated as transferred into Staking pool once they displayed as such on Staking
                 page on the Website; provided, that we reserve the right to: (i) reject or remove
@@ -216,8 +216,8 @@ const TermsAndConditions = () => {
                 amounts; or (iii) change Blockchain networks supported at the Platform.
               </p>
 
-              <h3 className="mb-3 mt-6 text-lg font-semibold text-white md:text-xl">Withdrawal</h3>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <h3 className="mb-3 mt-6 text-lg font-semibold text-slate-800 md:text-xl">Withdrawal</h3>
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 You can order a full or partial withdrawal of your Staked Digital Assets (the
                 "Withdrawal") at any time. Upon receipt of your order, we'll initiate the
                 Withdrawal process instantly when applicable; however it is provided, that
@@ -230,20 +230,20 @@ const TermsAndConditions = () => {
                 you may lose the specific amount of Staking Reward.
               </p>
 
-              <h3 className="mb-3 mt-6 text-lg font-semibold text-white md:text-xl">
+              <h3 className="mb-3 mt-6 text-lg font-semibold text-slate-800 md:text-xl">
                 Non-use of your Virtual Assets
               </h3>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 The Platform doesn't have access to your Digital Assets placed for Staking as well
                 as doesn't have access to your Virtual Wallet. Thus we don't use your Digital
                 Assets in any possible way and don't have any technical access to your Digital
                 Assets placed on Staking.
               </p>
 
-              <h3 className="mb-3 mt-6 text-lg font-semibold text-white md:text-xl">
+              <h3 className="mb-3 mt-6 text-lg font-semibold text-slate-800 md:text-xl">
                 Applicable Risks
               </h3>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 The Staking Reward Service contains the specific risks. Before participating in the
                 Staking Rewards Service, it's important to understand its specific and applicable
                 risks. You should carefully review this Agreement. You should examine your
@@ -251,7 +251,7 @@ const TermsAndConditions = () => {
                 Digital assets to the Staking Reward Service is appropriate for you. Some, but not
                 all, of the risks and uncertainties associated with the Staking Reward Service are:
               </p>
-              <ul className="mb-4 ml-6 list-disc space-y-2 text-sm leading-relaxed text-white/90 md:text-base">
+              <ul className="mb-4 ml-6 list-disc space-y-2 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 <li>
                   Rewards for Staking of Digital assets are not guaranteed, and we reserve the right
                   to adjust Reward rates at our sole discretion.
@@ -276,11 +276,11 @@ const TermsAndConditions = () => {
                   financial services licensing requirements.
                 </li>
               </ul>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 When placing your Digital assets into Staking, you confirm, acknowledge, and
                 understand that:
               </p>
-              <ul className="mb-4 ml-6 list-disc space-y-2 text-sm leading-relaxed text-white/90 md:text-base">
+              <ul className="mb-4 ml-6 list-disc space-y-2 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 <li>you have read this Agreement in full prior to use the Staking Reward Service;</li>
                 <li>
                   you are personally responsible for, and you assume in full, all risks related to
@@ -291,7 +291,7 @@ const TermsAndConditions = () => {
                   you have determined that such use of Staking Reward Service is appropriate for you.
                 </li>
               </ul>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 You hereby acknowledge and agree that we disclaim and have no responsibility for
                 any loss, liability, or damage you may incur, directly or indirectly, in connection
                 with the Staking Reward Service, including any loss, liability or damage arising
@@ -303,16 +303,16 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">5. Fees</h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">5. Fees</h2>
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 When you receive the Staking Reward, we shall charge our fees for your use of our
                 Platform (the "Staking fees"). The amount of Staking fees to be charged by us
                 depends on: (i) type of Digital asset placed in Staking, (ii) the supported
                 protocol of the Digital asset used for Staking, (iii) duration of Staking and (iv)
                 discretion of the Platform. Staking fees are described at Fees Template
-                (https://app.marginspace.com).
+                (https://app.invarifi.com).
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 The Platform doesn't provide any subscription or similar services that undertakes
                 payment of regular scheduled fees. We don't accept payment in Fiat currencies and
                 don't accept deposits from you. The Staking fees are calculated in the percentage of
@@ -322,11 +322,11 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 6. No Insurance of Digital assets
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
-                Margin Space is a decentralized finance (DeFi) protocol and is not a banking,
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
+                InvariFi is a decentralized finance (DeFi) protocol and is not a banking,
                 financial or other depository institution. We do not hold any financial licenses
                 and do not provide regulated financial services. When you place your Digital assets
                 via Platform for Staking this is not equivalent to the placing of Virtual or Fiat
@@ -338,10 +338,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 7. No Guarantee of Staking Services
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 The Platform cannot guarantee constant or error-free operation of the Staking
                 Services or that we'll fix all errors or prevent disruptions or immediately renew
                 stainable operation of the network. We may suspend or terminate the Staking Services
@@ -360,8 +360,8 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">8. Unlawful conduct</h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">8. Unlawful conduct</h2>
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 As a condition of using the Website, you agree not to use the Website for any
                 purpose that is prohibited by this Agreement. You are responsible for all of your
                 activity in connection with the Website and you shall obey all the local and
@@ -369,7 +369,7 @@ const TermsAndConditions = () => {
                 that if you take any of the following actions, you will be materially breaching this
                 Agreement, and you agree that you shall not:
               </p>
-              <ul className="mb-4 ml-6 list-disc space-y-2 text-sm leading-relaxed text-white/90 md:text-base">
+              <ul className="mb-4 ml-6 list-disc space-y-2 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 <li>
                   use the Services for any commercial purpose, outside the scope of Website purposes
                   explicitly permitted under this Agreement;
@@ -405,7 +405,7 @@ const TermsAndConditions = () => {
                   Website or features that prevent or restrict use or copying of any content.
                 </li>
               </ul>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 Any such forbidden use shall immediately terminate your use of Services. In such
                 case your Staking will be cancelled and your staked Digital assets will be return
                 to your Digital wallet without payment of Staking Reward.
@@ -413,10 +413,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 9. Changes to the Website
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 From time to time and without prior notice to you, we may change, expand, and
                 improve the Website. We may also, at any time, cease to continue operating part or
                 all of the Website or selectively disable certain features of the Website. Your use
@@ -428,10 +428,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 10. Age restrictions
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 We provide Services only to persons whose age is above 18 years. You should be
                 aware that this Website is not intended or designed to provide any Services to
                 persons under the age of 18. If your age is below 18 years please leave the
@@ -440,16 +440,16 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">11. Copyright</h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">11. Copyright</h2>
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 All rights, title, and interest in and to the Website not expressly granted in this
                 Agreement are reserved by the Platform. If you wish to use the Platform's title, trade
                 name, trademark, service mark, logo, domain name and/or any other identification with
                 notable brand features or other content owned by the Platform, you must obtain
                 written permission from the Platform. Permission requests may be sent to
-                support@marginspace.io.
+                support@invarifi.com.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 To avoid any doubts, the Platform owns all the text, images, photos, audio, video,
                 location data, and all other forms of data or communication that the Platform creates
                 and makes available in connection with the Website, including but not limited to
@@ -458,19 +458,19 @@ const TermsAndConditions = () => {
                 do not grant you any express or implied rights, and all rights in and to the Website
                 and the Platform's content are retained by us.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 If you believe any materials accessible on or from the Website infringe your
                 copyright, you may request removal of those materials (or access thereto) from this
                 Website by contacting the Platform by sending a notification to
-                support@marginspace.io.
+                support@invarifi.com.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 12. Warranty disclaimer
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 YOUR USE OF THE WEBSITE IS AT YOUR OWN RISK. NO INFORMATION OR ADVICE GIVEN BY US
                 SHALL CREATE A WARRANTY. THE WEBSITE AND ALL THE MATERIALS, INFORMATION, FACILITIES,
                 SERVICES AND OTHER CONTENT IN THE WEBSITE ARE PROVIDED "AS IS" AND "AS AVAILABLE"
@@ -491,7 +491,7 @@ const TermsAndConditions = () => {
                 APPLY TO YOU, THE ABOVE EXCLUSIONS WILL APPLY TO YOU ONLY TO THE EXTENT PERMITTED BY
                 APPLICABLE LAW.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 COMPANY IS NOT A BANK OR OTHER DEPOSITORY INSTITUTION. YOUR DIGITAL ASSETS PLACED
                 ON STAKING ARE NOT DEPOSITED ON OUR ACCOUNT OR A BANK ACCOUNT. THE STAKING REWARDS
                 PROGRAM ISN'T A DEPOSITORY OR BANK PROGRAM. YOUR DIGITAL ASSETS AS DEFINED HEREIN
@@ -501,10 +501,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 13. Limitation of liability
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 YOU FURTHER ACKNOWLEDGE AND AGREE THAT IN NO EVENT THE COMPANY SHALL BE LIABLE FOR
                 ANY LOSS, INJURY, CLAIM, LIABILITY, OR DAMAGE OF ANY KIND RESULTING FROM YOUR USE
                 OF THE WEBSITE. THE COMPANY SHALL NOT BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT,
@@ -512,7 +512,7 @@ const TermsAndConditions = () => {
                 LIMITATION, LEGAL FEES AND COURT COSTS) IN ANY WAY DUE TO, RESULTING FROM, OR
                 ARISING IN CONNECTION WITH:
               </p>
-              <ul className="mb-4 ml-6 list-disc space-y-2 text-sm leading-relaxed text-white/90 md:text-base">
+              <ul className="mb-4 ml-6 list-disc space-y-2 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 <li>
                   THE USE OF OR INABILITY TO USE THE WEBSITE, OR ANY INFORMATION AND CONTENT
                   CONTAINED THEREIN;
@@ -527,17 +527,17 @@ const TermsAndConditions = () => {
                   FUNDAMENTAL BREACH OR FAILURE OF ESSENTIAL PURPOSE.
                 </li>
               </ul>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 TO THE EXTENT THIS LIMITATION ON LIABILITY IS PROHIBITED, COMPANY'S SOLE OBLIGATION
                 TO YOU FOR DAMAGES SHALL BE LIMITED TO ONE HUNDRED US DOLLARS (USD 100.00).
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 14. Enforcement rights
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 We are not obligated to monitor access or use of the Website. However, we reserve
                 the right to do so for purposes of operating and maintaining the Website, ensuring
                 your compliance with this Agreement, and complying with applicable legal
@@ -549,15 +549,15 @@ const TermsAndConditions = () => {
                 discretion that your content or use of the Website is objectionable or in violation
                 of this Agreement.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 The Platform has no liability or responsibility to users of the Website or any other
                 person or entity for performance or nonperformance of the aforementioned activities.
               </p>
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">15. Indemnity</h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">15. Indemnity</h2>
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 You agree to indemnify, defend, and hold the Platform, its business partners,
                 officers, directors, employees, and agents harmless from any loss, liability, claim,
                 action, suit, demand, damage, or expense (including reasonable legal fees, costs of
@@ -569,10 +569,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 16. Applicable law and dispute resolution
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 This Agreement shall be governed by and construed in accordance with applicable laws
                 related to decentralized protocols and blockchain-based services, without regard to
                 conflict of law provisions. Any dispute arising from this Agreement shall be resolved
@@ -581,10 +581,10 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 17. Other provisions
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 If for any reason a court of competent jurisdiction finds any provision of this
                 Agreement, or a portion thereof, to be unenforceable, that provision shall be
                 enforced to the maximum extent permissible so as to affect the intent of this
@@ -592,7 +592,7 @@ const TermsAndConditions = () => {
                 effect. A printed version of this Agreement shall be admissible in judicial or
                 administrative proceedings.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 No waiver of the Platform of any term or condition set forth in this Agreement shall
                 be deemed a further or continuing waiver of such term or condition or a waiver of
                 any other term or condition, and any failure of the Platform to assert a right or
@@ -602,12 +602,12 @@ const TermsAndConditions = () => {
                 such provision shall be eliminated or limited to the minimum extent such that the
                 remaining provisions of this Agreement will continue in full force and effect.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 Upon termination, all provisions of this Agreement, which, by their nature, should
                 survive termination, shall survive termination, including, without limitation,
                 ownership provisions, warranty disclaimers, and limitations of liability.
               </p>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 All claims between the parties related to this Agreement will be litigated
                 individually, and the parties will not consolidate or seek class treatment for any
                 claim unless previously agreed to in writing by the parties.
@@ -615,13 +615,13 @@ const TermsAndConditions = () => {
             </section>
 
             <section className="mb-8">
-              <h2 className="mb-4 text-xl font-semibold text-white md:text-2xl">
+              <h2 className="mb-4 text-xl font-semibold text-slate-800 md:text-2xl">
                 Questions and comments
               </h2>
-              <p className="mb-4 text-sm leading-relaxed text-white/90 md:text-base">
+              <p className="mb-4 text-sm leading-relaxed text-slate-800/90 md:text-base">
                 If you have any technical comments or questions on any part of the Website or any
                 part of these Terms of Use, require support, or have any claims, please contact us
-                at support@marginspace.io.
+                at support@invarifi.com.
               </p>
             </section>
           </div>

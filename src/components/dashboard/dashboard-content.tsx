@@ -149,7 +149,7 @@ const DashboardContent = ({
                     {item.label}
                   </span>
                 </div>
-                <span className="text-xl font-semibold">{item.text}</span>
+                <span className="text-xl font-semibold text-slate-800">{item.text}</span>
               </div>
             ))}
       </div>
@@ -165,10 +165,10 @@ const DashboardContent = ({
               </TooltipItem>
             </div>
 
-            <TabsList className="h-fit w-fit gap-2 !rounded-b-none bg-transparent-bg text-white">
+            <TabsList className="h-fit w-fit gap-2 !rounded-b-none bg-transparent-bg text-slate-800">
               {overviewTabs.map(({ label, value }) => (
                 <TabsTrigger
-                  className="data-[state=active]:!bg-primary rounded-b-none last:rounded data-[state=active]:!rounded-b-none data-[state=active]:!text-white"
+                  className="data-[state=active]:!bg-primary rounded-b-none last:rounded data-[state=active]:!rounded-b-none data-[state=active]:!text-slate-800"
                   key={value}
                   value={value}
                 >
@@ -201,7 +201,7 @@ const DashboardContent = ({
                 enter another wallet address
               </p>
             </div>
-            <Button className="bg-primary hover:bg-primary-hover w-[320px] text-base font-semibold text-white">
+            <Button className="bg-primary hover:bg-primary-hover w-[320px] text-base font-semibold text-slate-800">
               <Link href="/">View All Vaults</Link>
             </Button>
           </div>

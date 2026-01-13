@@ -30,7 +30,7 @@ export const VaultInfoBlock = memo(
             <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
               Native APY
             </h4>
-            <h5 className="text-[14px] font-semibold leading-[20px] text-white">
+            <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
               {apyFormatter(vault.apy.totalApy)}
             </h5>
           </div>
@@ -38,7 +38,7 @@ export const VaultInfoBlock = memo(
             <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
               Daily APY
             </h4>
-            <h5 className="text-[14px] font-semibold leading-[20px] text-white">
+            <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
               {apyFormatter(vault.apy.totalApy ? vault.apy.totalApy / 365 : 0)}
             </h5>
           </div>
@@ -46,7 +46,7 @@ export const VaultInfoBlock = memo(
             <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
               Last harvest
             </h4>
-            <h5 className="text-[14px] font-semibold leading-[20px] text-white">
+            <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
               {lastHarvest || 'No harvest yet'}
             </h5>
           </div>
@@ -56,7 +56,7 @@ export const VaultInfoBlock = memo(
             <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
               Deposit fee
             </h4>
-            <h5 className="text-[14px] font-semibold leading-[20px] text-white">
+            <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
               {isFeesLoading ? '...' : `${feesData?.depositFee}%`}
             </h5>
           </div>
@@ -64,7 +64,7 @@ export const VaultInfoBlock = memo(
             <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
               Withdraw fee
             </h4>
-            <h5 className="text-[14px] font-semibold leading-[20px] text-white">
+            <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
               {isFeesLoading ? '...' : `${feesData?.withdrawFee}%`}
             </h5>
           </div>

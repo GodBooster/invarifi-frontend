@@ -157,7 +157,7 @@ export const HarvestSettings = ({
       <div className="flex items-center justify-between">
         <div className="flex-1">
           <div className="flex items-center gap-2">
-            <h3 className="text-sm font-semibold text-white">
+            <h3 className="text-sm font-semibold text-slate-800">
               Auto-Compound on Deposit
             </h3>
             <span

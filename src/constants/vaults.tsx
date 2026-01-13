@@ -34,7 +34,7 @@ export const vaultsData: PromotionalPoolCardItem[] = [
     apy: '9.06%',
     platform: 'ALIENBASE',
     color: '#E9C268',
-    icon: <Star className="fill-white" />,
+    icon: <Star className="fill-slate-800" />,
   },
   {
     name: 'ETH-USDbC',
@@ -42,7 +42,7 @@ export const vaultsData: PromotionalPoolCardItem[] = [
     apy: '109.06%',
     platform: 'ALIENBASE',
     color: '#D85F5A',
-    icon: <Fire className="fill-white" />,
+    icon: <Fire className="fill-slate-800" />,
   },
   {
     name: 'Gyroscope wstETH-cbETH',
@@ -50,7 +50,7 @@ export const vaultsData: PromotionalPoolCardItem[] = [
     apy: '2229.06%',
     platform: 'ALIENBASE',
     color: '#59B38A',
-    icon: <BadgeDollarSign className="fill-white" />,
+    icon: <BadgeDollarSign className="fill-slate-800" />,
   },
 ];
 

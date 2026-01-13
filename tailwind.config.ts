@@ -39,7 +39,7 @@ const config: Config = {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
-          DEFAULT: '#D46B30',
+          DEFAULT: '#FF6340',
           foreground: 'hsl(var(--primary-foreground))',
         },
         secondary: {
@@ -66,8 +66,8 @@ const config: Config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        // Цветовая схема Margin Space
-        'primary-hover': '#B85A26',
+        // Цветовая схема InvariFi
+        'primary-hover': '#E5552E',
         'light-grey': '#C6C6CC',
         'additional-grey': '#667085',
         'background-dark': '#222324',

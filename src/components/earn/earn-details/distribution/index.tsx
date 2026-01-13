@@ -74,7 +74,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
                 alt={name}
               />
             ))}
-            <div className="text-[14px] font-semibold text-white">
+            <div className="text-[14px] font-semibold text-slate-800">
               {asset.vault}
             </div>
           </div>
@@ -84,7 +84,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
                 <div className="text-[12px] font-[500] text-text-purple">
                   Platform
                 </div>
-                <div className="w-[70px] text-end text-[12px] font-[500] text-white">
+                <div className="w-[70px] text-end text-[12px] font-[500] text-slate-800">
                   {asset.platform}
                 </div>
               </div>
@@ -92,7 +92,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
                 <div className="text-[12px] font-[500] text-text-purple">
                   Distribution
                 </div>
-                <div className="w-[70px] text-end text-[12px] font-[500] text-white">
+                <div className="w-[70px] text-end text-[12px] font-[500] text-slate-800">
                   {asset.distribution}%
                 </div>
               </div>
@@ -104,7 +104,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
                 <div className="text-[12px] font-[500] text-text-purple">
                   Platform
                 </div>
-                <div className=" text-end text-[12px] font-[500] text-white">
+                <div className=" text-end text-[12px] font-[500] text-slate-800">
                   {asset.platform}
                 </div>
               </div>
@@ -112,7 +112,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
                 <div className="text-[12px] font-[500] text-text-purple">
                   Distribution
                 </div>
-                <div className=" text-end text-[12px] font-[500] text-white">
+                <div className=" text-end text-[12px] font-[500] text-slate-800">
                   {asset.distribution}%
                 </div>
               </div>
@@ -139,7 +139,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
         <div className="text-[16px] font-semibold leading-6 text-text-purple">
           Estimated Distribution
         </div>
-        <div className="text-text-white text-[16px] font-semibold leading-6">
+        <div className="text-text-slate-800 text-[16px] font-semibold leading-6">
           100%
         </div>
       </div>
