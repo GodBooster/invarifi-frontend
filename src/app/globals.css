@@ -118,10 +118,10 @@
 /* Гибкая сетка для карточек на экранах больше 1535px */
 @media (min-width: 1536px) {
   .grid-auto-fit-vaults {
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto)) !important;
   }
   
   .grid-auto-fit-strategies {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto)) !important;
   }
 }
