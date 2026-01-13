@@ -18,7 +18,7 @@ export const VaultDetails = ({ vault }: VaultDetailsProps) => {
   return (
     <Tabs defaultValue={valultDetailTabs[0].value}>
       <div className="overflow-x-auto">
-        <TabsList className="h-auto justify-normal gap-[8px] rounded-b-[0px] rounded-t-[12px] bg-white bg-opacity-[0.11] pb-0 lg:w-full">
+        <TabsList className="h-auto justify-normal gap-[8px] rounded-b-[0px] rounded-t-[12px] bg-slate-100 pb-0 lg:w-full">
           {valultDetailTabs.map((tab) => (
             <TabsTrigger
               className={cn(
@@ -35,7 +35,7 @@ export const VaultDetails = ({ vault }: VaultDetailsProps) => {
       </div>
       {valultDetailTabs.map((tab) => (
         <TabsContent
-          className="mt-[24px] rounded-[8px] bg-[#2a2c34]"
+          className="mt-[24px] rounded-[8px] border border-slate-200 bg-white"
           key={tab.value}
           value={tab.value}
         >

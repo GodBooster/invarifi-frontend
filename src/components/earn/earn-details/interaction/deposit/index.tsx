@@ -486,11 +486,11 @@ export const EarnDeposit = ({
   };
 
   return (
-    <div className="flex flex-col gap-[16px] rounded-b-[12px] rounded-tr-[12px] bg-white bg-opacity-11 p-[16px]">
+    <div className="flex flex-col gap-[16px] rounded-b-[12px] rounded-tr-[12px] bg-slate-50 p-[16px]">
       <Collapsible className="flex flex-col gap-4" open={isCollapsibleOpen}>
-        <div className="rounded-[8px] bg-transparent-bg-dark shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] backdrop-blur-[10px]">
+        <div className="rounded-[8px] bg-slate-200 shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
           <div className="flex flex-col gap-[12px] p-[16px]">
-              <div className="flex flex-row justify-between text-[14px] text-[#CFC9FF]">
+              <div className="flex flex-row justify-between text-[14px] text-slate-600">
               <div>
                 Available:{' '}
                 {formatBigIntComa(

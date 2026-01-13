@@ -39,7 +39,7 @@ export const generateMetadata = async ({
 };
 
 const accordionStyles = cn(
-  'rounded-[12px] bg-white bg-opacity-[0.11] p-[16px] backdrop-blur-[20px]',
+  'rounded-[12px] border border-slate-200 bg-white p-[16px] shadow-sm',
 );
 
 const VaultPage = async ({ params: { vaultId } }: VaultPageProps) => {
@@ -59,7 +59,7 @@ const VaultPage = async ({ params: { vaultId } }: VaultPageProps) => {
     <div className="container py-[40px]">
       <BackButton className="mb-[24px] lg:absolute lg:mb-0" />
       <div className="mx-auto flex max-w-[455px] flex-col gap-[24px]">
-        <div className="text-[32px] font-semibold lg:text-center">
+        <div className="text-[32px] font-semibold text-slate-800 lg:text-center">
           {vault.name}
         </div>
         <div className="flex items-center gap-3 lg:justify-center">

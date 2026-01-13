@@ -83,7 +83,7 @@ export const LpBreakdown = ({ vault }: LpBreakdownProps) => {
                 </div>
               </div>
               <div className="flex flex-row items-center justify-between">
-                <div className="text-[12px] text-[#C6C6CC]">Token Amount</div>
+                <div className="text-[12px] text-slate-500">Token Amount</div>
                 <div>
                   <TooltipItemExtended tooltipComponent={row.amount}>
                     <span className="text-sm font-semibold underline underline-offset-4">
@@ -93,7 +93,7 @@ export const LpBreakdown = ({ vault }: LpBreakdownProps) => {
                 </div>
               </div>
               <div className="flex flex-row items-center justify-between">
-                <div className="text-[12px] text-[#C6C6CC]">Value</div>
+                <div className="text-[12px] text-slate-500">Value</div>
                 <div>${tvlFormatter(row.value, 2)}</div>
               </div>
             </div>

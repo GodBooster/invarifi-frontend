@@ -19,7 +19,7 @@ export const VaultHeaderBadge = ({
   return (
     <div
       className={cn(
-        'flex items-center justify-between gap-x-2 rounded-[8px] bg-white bg-opacity-11 px-[16px] py-[8px] font-semibold backdrop-blur-2lg',
+        'flex items-center justify-between gap-x-2 rounded-[8px] border border-slate-200 bg-white px-[16px] py-[8px] font-semibold text-slate-800',
         className,
       )}
       {...props}

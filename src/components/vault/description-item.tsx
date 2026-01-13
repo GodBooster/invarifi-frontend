@@ -7,7 +7,7 @@ export const DescriptionItem: FC<{
 }> = ({ name, value, icon }) => {
   return (
     <div className="flex flex-row gap-[16px] font-semibold">
-      <div className="flex flex-row items-center justify-center gap-[4px] text-[14px] text-[#C6C6CC]">
+      <div className="flex flex-row items-center justify-center gap-[4px] text-[14px] text-slate-500">
         {name} {icon && icon}
       </div>
       {typeof value === 'string' || typeof value === 'undefined' ? (

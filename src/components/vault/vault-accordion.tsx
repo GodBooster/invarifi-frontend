@@ -32,7 +32,7 @@ export const AccordionTrigger = React.forwardRef<
       {...props}
       ref={forwardedRef}
     >
-      <div className="flex grow flex-row items-center gap-[4px] text-start text-[22px] font-semibold">
+      <div className="flex grow flex-row items-center gap-[4px] text-start text-[22px] font-semibold text-slate-800">
         {children}
       </div>
       <SecondArrow className="transition-all" />

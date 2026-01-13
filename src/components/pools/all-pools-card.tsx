@@ -203,7 +203,7 @@ export const AllPoolCard = memo(
         <AccordionItem
           onClick={handleClick}
           value={`item-${vault.id}`}
-          className="block rounded-[16px] border-2 border-[rgba(255,255,255,0.05)] bg-linear-black p-[16px] pb-0 backdrop-blur-[16px] transition-all duration-300 hover:border-primary hover:shadow-card-elevated hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(212,107,48,0.4)]"
+          className="block rounded-[16px] border border-slate-200 bg-white p-[16px] pb-0 shadow-sm transition-all duration-300 hover:border-primary hover:shadow-card-elevated hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(212,107,48,0.4)]"
         >
           <div className="mb-[12px] flex gap-[2px]">
             {vault.assets.map((asset) => (
@@ -216,12 +216,12 @@ export const AllPoolCard = memo(
               />
             ))}
           </div>
-          <div className="mb-[12px] flex items-center rounded-[8px] bg-[#0B0B0B] px-[12px] py-[10px] text-[16px] font-semibold text-[#D46B30]">
+          <div className="mb-[12px] flex items-center rounded-[8px] bg-slate-100 px-[12px] py-[10px] text-[16px] font-semibold text-primary">
             {vault.name}
           </div>
           <div className="flex justify-between border-b-2 border-dashed border-additional-grey pb-[12px]">
             <div>
-              <h3 className="text-[14px] font-semibold leading-[20px] text-light-grey">
+              <h3 className="text-[14px] font-semibold leading-[20px] text-slate-500">
                 APY
               </h3>
               <div className="flex gap-2">
@@ -236,7 +236,7 @@ export const AllPoolCard = memo(
               </div>
             </div>
             <div>
-              <h3 className="text-right text-[14px] font-semibold leading-[20px] text-light-grey">
+              <h3 className="text-right text-[14px] font-semibold leading-[20px] text-slate-500">
                 TVL
               </h3>
               <h4 className="text-[20px] font-semibold leading-[30px] text-primary">
@@ -246,7 +246,7 @@ export const AllPoolCard = memo(
           </div>
           <div className="relative flex justify-between pb-[16px] pt-[8px]">
             <div>
-              <h3 className="text-[14px] font-semibold leading-[20px] text-light-grey">
+              <h3 className="text-[14px] font-semibold leading-[20px] text-slate-500">
                 Platform
               </h3>
               <h4 className="text-[14px] font-semibold leading-[20px] text-primary">
@@ -254,7 +254,7 @@ export const AllPoolCard = memo(
               </h4>
             </div>
             <div>
-              <h3 className="text-right text-[14px] font-semibold leading-[20px] text-light-grey">
+              <h3 className="text-right text-[14px] font-semibold leading-[20px] text-slate-500">
                 Chain
               </h3>
               {chainImages[vault.chain] ?? <div>{vault.chain}</div>}
@@ -282,8 +282,8 @@ export const AllPoolCard = memo(
             <VaultInfoBlock vault={vault} />
             {vault.deposited ? (
               <div className="flex gap-[4px]">
-                <div className="flex w-full justify-between rounded-[6px] bg-[#0B0B0B] p-[8px]">
-                  <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
+                <div className="flex w-full justify-between rounded-[6px] bg-slate-100 p-[8px]">
+                  <h4 className="text-[12px] font-medium leading-[18px] text-primary">
                     Deposited
                   </h4>
                   <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
@@ -298,16 +298,16 @@ export const AllPoolCard = memo(
                   Active BOOST:
                 </h1>
                 <div className="mb-[4px] flex gap-[4px]">
-                  <div className="w-full rounded-[6px] bg-[#0B0B0B] p-[8px]">
-                    <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
+                  <div className="w-full rounded-[6px] bg-slate-100 p-[8px]">
+                    <h4 className="text-[12px] font-medium leading-[18px] text-primary">
                       Rewards
                     </h4>
                     <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
                       0 WKAVA
                     </h5>
                   </div>
-                  <div className="w-full rounded-[6px] bg-[#0B0B0B] p-[8px]">
-                    <h4 className="text-[12px] font-medium leading-[18px] text-[#D46B30]">
+                  <div className="w-full rounded-[6px] bg-slate-100 p-[8px]">
+                    <h4 className="text-[12px] font-medium leading-[18px] text-primary">
                       Ends
                     </h4>
                     <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">

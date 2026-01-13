@@ -42,7 +42,7 @@ export const EarnDetails = ({ cube }: VaultDetailsProps) => {
 
   return (
     <Tabs defaultValue={earnDetailTabs[0].value}>
-      <TabsList className="z-[1] h-auto justify-normal gap-[8px] rounded-b-[0px] rounded-t-[12px] bg-white bg-opacity-[0.11] pb-0 shadow-tab lg:w-full">
+      <TabsList className="z-[1] h-auto justify-normal gap-[8px] rounded-b-[0px] rounded-t-[12px] bg-slate-100 pb-0 shadow-tab lg:w-full">
         {earnDetailTabs.map((tab) => (
           <TabsTrigger
             className={cn(
@@ -58,7 +58,7 @@ export const EarnDetails = ({ cube }: VaultDetailsProps) => {
       </TabsList>
       {earnDetailTabs.map((tab) => (
         <TabsContent
-          className="relative z-[2] rounded-[8px] bg-[#2a2c34]"
+          className="relative z-[2] rounded-[8px] border border-slate-200 bg-white"
           key={tab.value}
           value={tab.value}
         >

@@ -108,14 +108,14 @@ export default function EarnInteraction({ cube, tokens }: EarnProps) {
 
   return (
     <div className="col-span-6 rounded-[18px] p-0.5 lg:col-span-2">
-      <div className="border-primary flex h-full flex-col gap-[16px] rounded-[16px]   border-2 bg-gradient-to-b from-[rgba(255,255,255,0.28)] via-[rgba(255,255,255,0.17)] p-[16px]">
+      <div className="border-primary flex h-full flex-col gap-[16px] rounded-[16px] border-2 bg-white p-[16px] shadow-sm">
         <div className="flex flex-row items-center justify-center">
-          <div className="flex-[1] text-2xl font-medium">Interaction</div>
+          <div className="flex-[1] text-2xl font-medium text-slate-800">Interaction</div>
           <FavoritesButton cube={cube} />
         </div>
         <Tabs defaultValue={EarnTab.DEPOSIT}>
           <div className="flex flex-col-reverse items-end justify-between gap-4 sm:flex-row sm:items-center">
-            <TabsList className="h-auto gap-[8px] self-end rounded-b-none rounded-t-[12px] bg-white bg-opacity-11 pb-0">
+            <TabsList className="h-auto gap-[8px] self-end rounded-b-none rounded-t-[12px] bg-slate-100 pb-0">
               <TabsTrigger
                 className="rounded-b-[2px] rounded-t-[8px] py-[8px] text-slate-800 data-[state=active]:bg-indigo-350"
                 value={EarnTab.DEPOSIT}
@@ -130,13 +130,13 @@ export default function EarnInteraction({ cube, tokens }: EarnProps) {
               </TabsTrigger>
             </TabsList>
             <div className="flex flex-col items-end gap-1">
-              <p className="flex flex-col text-xs font-medium text-slate-800 sm:text-[#F1F3F8]">
+              <p className="flex flex-col text-xs font-medium text-slate-500">
                 Reserved: ${(totalDeposit - depositWithoutReserved).toFixed(2)}{' '}
                 (
                 {`${expectedReservedSwap} ${tokenAddresses.wrappedNativeToken.symbol}`}
                 )
               </p>
-              <p className="flex flex-col text-sm font-medium text-slate-800 sm:text-[#F1F3F8]">
+              <p className="flex flex-col text-sm font-medium text-slate-600">
                 Your Deposit: ${depositWithoutReserved.toFixed(2)} (
                 {`${expectedSwap} ${tokenAddresses.wrappedNativeToken.symbol}`})
               </p>

@@ -12,7 +12,7 @@ type Props = {
 
 export const VaultMetrics = ({ vault }: Props) => {
   return (
-    <div className="flex flex-col justify-between gap-[20px] rounded-[16px] bg-[rgba(14,18,27,0.4)] bg-opacity-[0.80] p-[16px] lg:flex-row lg:gap-0">
+    <div className="flex flex-col justify-between gap-[20px] rounded-[16px] border border-slate-200 bg-white p-[16px] shadow-sm lg:flex-row lg:gap-0">
       <div className="flex flex-col gap-[20px]">
         <DescriptionItem name="APY" value={apyFormatter(vault.apy.totalApy)} />
         <DescriptionItem

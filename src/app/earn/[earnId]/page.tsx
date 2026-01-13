@@ -39,7 +39,7 @@ export const generateMetadata = async ({
 };
 
 const accordionStyles = cn(
-  'rounded-[12px] bg-white bg-opacity-[0.11] p-[16px] backdrop-blur-[20px]',
+  'rounded-[12px] border border-slate-200 bg-white p-[16px] shadow-sm',
 );
 
 const EarnPage = async ({ params: { earnId } }: EarnPageProps) => {
@@ -55,7 +55,7 @@ const EarnPage = async ({ params: { earnId } }: EarnPageProps) => {
     <div className="container py-[40px]">
       <BackButton className="mb-[24px] lg:absolute lg:mb-0" />
       <div className="mx-auto flex max-w-[620px] flex-col gap-[24px]">
-        <div className="text-[32px] font-semibold lg:text-center">
+        <div className="text-[32px] font-semibold text-slate-800 lg:text-center">
           {cube.name}
         </div>
         <div className="flex items-center gap-3 lg:justify-center">
@@ -67,7 +67,7 @@ const EarnPage = async ({ params: { earnId } }: EarnPageProps) => {
           />
         </div>
         <EarnInteraction cube={cube} tokens={tokens} />
-        <div className="flex flex-col justify-between gap-[20px] rounded-[16px] bg-[#0E121B] bg-opacity-[0.80] p-[16px]">
+        <div className="flex flex-col justify-between gap-[20px] rounded-[16px] border border-slate-200 bg-white p-[16px] shadow-sm">
           <DescriptionItem name="APY" value={apyFormatter(cube.avgAPY)} />
           <DescriptionItem
             name="Daily"
