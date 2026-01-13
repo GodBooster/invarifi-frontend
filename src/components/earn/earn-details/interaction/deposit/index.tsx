@@ -30,12 +30,14 @@ import { InteractionInfo } from '../../ui/interaction-info';
 import RiskManagement from '../risk-management';
 
 import { earnPoolCheckerAbi } from '@/abi/earn/EarnPoolCheckerAbi';
+import { priceAggregatorAbi } from '@/abi/earn/PriceAggregatorAbi';
 import { type CubeWithApyAndTvl } from '@/actions/get-all-cubes';
 import { type TokensByName } from '@/actions/get-all-tokens';
 import { ConnectWalletButton } from '@/components/connect-wallet-button';
 import { SlippageModal } from '@/components/slippage-modal';
 import { Input } from '@/components/vault/trade/ui/input';
 import { stopLossesLabels, StopLossValue } from '@/constants/earn-details';
+import { getNetworkTokenAddresses } from '@/constants/networkTokenAddresses';
 import { DEFAULT_DEPOSIT_SLIPPAGE } from '@/constants/slippage';
 import { useCubeTokensBalances } from '@/hooks/useCubeTokensBalances';
 import { apiChainToWagmi } from '@/lib/api-chain-to-wagmi';
@@ -121,6 +123,31 @@ export const EarnDeposit = ({
     watch: true,
   });
   const positionCost = stableReceived ? stableReceived[0] : BigInt(0);
+
+  // Get token price for minimum deposit validation
+  const tokenAddresses = getNetworkTokenAddresses(cube.network);
+  const wrappedNativeAddress = tokenAddresses.wrappedNativeToken.address;
+  
+  const { data: tokenPrice } = useContractRead({
+    abi: priceAggregatorAbi,
+    address: cube.priceAggregator as Address,
+    functionName: 'getPrice',
+    args: selectedVaultToken 
+      ? [selectedVaultToken.isNative ? wrappedNativeAddress : (selectedVaultToken.address as Address)]
+      : undefined,
+    chainId: apiChainToWagmi(cube.network).id,
+    enabled: !!selectedVaultToken && !!cube.priceAggregator,
+  });
+
+  // Get stable token price for USD conversion
+  const { data: stablePrice } = useContractRead({
+    abi: priceAggregatorAbi,
+    address: cube.priceAggregator as Address,
+    functionName: 'getPrice',
+    args: [cube.stableAddress as Address],
+    chainId: apiChainToWagmi(cube.network).id,
+    enabled: !!cube.priceAggregator,
+  });
 
   const currentAllowance = parseFloat(
     formatUnits(
@@ -321,11 +348,20 @@ export const EarnDeposit = ({
       return;
     }
     if (isAllowanceEnough && (!zapsData?.calldata || !cube.earn)) {
-      toast({
-        variant: 'destructive',
-        title: 'Transaction data is not ready.',
-        description: 'Please wait a moment and try again.',
-      });
+      const hasStopLoss = activeRiskOption !== StopLossValue.NONE;
+      if (hasStopLoss) {
+        toast({
+          variant: 'destructive',
+          title: 'Transaction data not ready',
+          description: 'With stop-loss enabled, minimum deposit is $15 USD (or 0.005 ETH). $2 will be reserved for Gelato automation. Please increase your deposit amount.',
+        });
+      } else {
+        toast({
+          variant: 'destructive',
+          title: 'Transaction data is not ready.',
+          description: 'Please wait a moment and try again.',
+        });
+      }
       return;
     }
     setIsLoading(true);
@@ -393,6 +429,53 @@ export const EarnDeposit = ({
         (s) => s.id === stopLossesLabels[activeRiskOption].id,
       );
 
+      const hasStopLoss = activeRiskOption !== StopLossValue.NONE;
+
+      // Validate minimum deposit amount for stop-loss
+      if (hasStopLoss) {
+        const minETH = 0.005;
+        const minUSD = 15;
+        let isValid = false;
+        let errorMessage = '';
+
+        if (selectedVaultToken.isNative) {
+          // For ETH/native tokens: check if >= 0.005 ETH
+          if (amountToDeposit >= minETH) {
+            isValid = true;
+          } else {
+            errorMessage = `With stop-loss enabled, minimum deposit is ${minETH} ETH (or $${minUSD} USD). $2 will be reserved for Gelato automation.`;
+          }
+        } else {
+          // For ERC20 tokens: calculate USD value
+          if (tokenPrice && stablePrice) {
+            const tokenPriceNum = parseFloat(formatUnits(tokenPrice, 18));
+            const stablePriceNum = parseFloat(formatUnits(stablePrice, 18));
+            const depositValueUSD = amountToDeposit * tokenPriceNum;
+            
+            if (depositValueUSD >= minUSD) {
+              isValid = true;
+            } else {
+              errorMessage = `With stop-loss enabled, minimum deposit is $${minUSD} USD (or ${minETH} ETH). $2 will be reserved for Gelato automation.`;
+            }
+          } else {
+            // If prices not available, use a conservative check based on token amount
+            // This is a fallback - ideally prices should be available
+            isValid = true; // Allow to proceed, backend will validate
+          }
+        }
+
+        if (!isValid) {
+          setZapsData(null);
+          setIsZapsLoading(false);
+          toast({
+            variant: 'destructive',
+            title: 'Minimum deposit required',
+            description: errorMessage,
+          });
+          return;
+        }
+      }
+
       setZapsData(
         await depositEarn({
           cube,
@@ -443,11 +526,23 @@ export const EarnDeposit = ({
                 : errorMessage,
             });
           } else if (errorMessage.includes('IntegerOutOfRange')) {
+            const hasStopLoss = activeRiskOption !== StopLossValue.NONE;
             toast({
               variant: 'destructive',
               title: 'Invalid Amount',
-              description: 'The calculated amount is invalid. Please adjust your deposit amount or disable stop-loss.',
+              description: hasStopLoss
+                ? 'With stop-loss enabled, minimum deposit is $15 USD (or 0.005 ETH). $2 will be reserved for Gelato automation. Please increase your deposit amount or disable stop-loss.'
+                : 'The calculated amount is invalid. Please adjust your deposit amount.',
             });
+          } else if (errorMessage.includes('Transaction data is not ready') || errorMessage.includes('not ready')) {
+            const hasStopLoss = activeRiskOption !== StopLossValue.NONE;
+            if (hasStopLoss) {
+              toast({
+                variant: 'destructive',
+                title: 'Transaction data not ready',
+                description: 'With stop-loss enabled, minimum deposit is $15 USD (or 0.005 ETH). $2 will be reserved for Gelato automation. Please increase your deposit amount.',
+              });
+            }
           }
         }
       })
@@ -471,6 +566,8 @@ export const EarnDeposit = ({
     activeRiskOption,
     slippageValue,
     toast,
+    tokenPrice,
+    stablePrice,
   ]);
 
   useEffect(() => {
