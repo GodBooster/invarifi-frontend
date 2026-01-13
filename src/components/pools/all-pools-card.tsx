@@ -141,30 +141,62 @@ export const AllPoolCard = memo(
       async (e: MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation();
 
-        if (walletClient) {
+        if (!walletClient) {
+          toast({
+            variant: 'destructive',
+            title: 'Error.',
+            description: 'Wallet not connected.',
+          });
+          return;
+        }
+
+        try {
           const res = vault.isHidden
             ? await deleteHiddenVault(vault.id, walletClient)
             : await addHiddenVault(vault.id, walletClient);
 
-          if (res && res.status === 201) {
+          if (!res) {
+            toast({
+              variant: 'destructive',
+              title: 'Error.',
+              description: 'Failed to connect to server.',
+            });
+            return;
+          }
+
+          if (res.status === 201) {
             toast({
               variant: 'default',
               title: 'Success.',
               description: 'Vault hidden.',
             });
-          } else if (res && res.status === 200) {
+          } else if (res.status === 200) {
             toast({
               variant: 'default',
               title: 'Success.',
               description: 'Vault shown.',
             });
+          } else if (res.status === 401) {
+            toast({
+              variant: 'destructive',
+              title: 'Unauthorized.',
+              description: 'Your address is not in the admin list or token is invalid.',
+            });
           } else {
+            const errorText = await res.text().catch(() => 'Unknown error');
             toast({
               variant: 'destructive',
               title: 'Error.',
-              description: 'Try again.',
+              description: `Server error: ${res.status}. ${errorText}`,
             });
           }
+        } catch (error) {
+          console.error('Error in onVaultHide:', error);
+          toast({
+            variant: 'destructive',
+            title: 'Error.',
+            description: 'An unexpected error occurred.',
+          });
         }
       },
       [vault.id, vault.isHidden, walletClient, toast],

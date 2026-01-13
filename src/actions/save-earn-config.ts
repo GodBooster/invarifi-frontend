@@ -36,9 +36,14 @@ export const saveEarnConfig = async (
   config: EarnConfig,
   walletClient: WalletClient,
 ): Promise<Response | null> => {
-  const token = await signAuthMessage(walletClient);
-
   try {
+    const token = await signAuthMessage(walletClient);
+    
+    if (!token) {
+      console.error('Failed to generate auth token');
+      return null;
+    }
+
     const response = await fetch(BLOB_URL, {
       method: 'Post',
       headers: {
@@ -50,7 +55,7 @@ export const saveEarnConfig = async (
 
     return response;
   } catch (error) {
-    console.error(error);
+    console.error('Error saving earn config:', error);
     return null;
   }
 };

@@ -10,9 +10,14 @@ export const archiveVault = async ({
   id: string;
   walletClient: WalletClient;
 }) => {
-  const token = await signAuthMessage(walletClient);
-
   try {
+    const token = await signAuthMessage(walletClient);
+    
+    if (!token) {
+      console.error('Failed to generate auth token');
+      return null;
+    }
+
     return await fetch(ARCHIVED_VAULT_URL + '/archive', {
       method: 'Post',
       cache: 'no-cache',
@@ -23,7 +28,7 @@ export const archiveVault = async ({
       body: JSON.stringify({ id }),
     });
   } catch (e) {
-    console.error(e);
+    console.error('Error archiving vault:', e);
     return null;
   }
 };

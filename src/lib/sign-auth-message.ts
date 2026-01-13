@@ -20,16 +20,26 @@ const extractDomain = (urlOrDomain: string): string => {
   }
 };
 
-export const signAuthMessage = async (walletClient: WalletClient) => {
-  // Web3Token expects domain format like "example.com" (not "https://example.com")
-  const domain = extractDomain(ADMIN_MESSAGE.toString());
-  
-  const token = await Web3Token.sign(
-    async (msg: string) => await walletClient.signMessage({ message: msg }),
-    {
-      domain,
-    },
-  );
+export const signAuthMessage = async (walletClient: WalletClient): Promise<string | null> => {
+  try {
+    // Web3Token expects domain format like "example.com" (not "https://example.com")
+    const domain = extractDomain(ADMIN_MESSAGE.toString());
+    
+    const token = await Web3Token.sign(
+      async (msg: string) => await walletClient.signMessage({ message: msg }),
+      {
+        domain,
+      },
+    );
 
-  return token;
+    if (!token) {
+      console.error('Web3Token.sign returned null or undefined');
+      return null;
+    }
+
+    return token;
+  } catch (error) {
+    console.error('Error signing auth message:', error);
+    return null;
+  }
 };
