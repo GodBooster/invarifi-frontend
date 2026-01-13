@@ -49,34 +49,34 @@ export const EarnVaultTableRow = ({
                 />
               ))}
             </span>
-            <span className="text-[14px] font-semibold">{vault.name}</span>
+            <span className="text-[14px] font-semibold text-slate-800">{vault.name}</span>
           </span>
-          <span className="flex items-center gap-[4px] text-[14px] font-semibold text-[#C6C6CC]">
+          <span className="flex items-center gap-[4px] text-[14px] font-semibold text-slate-500">
             Platform:
-            <span className="text-[12px] text-[#C6C6CC]">
+            <span className="text-[12px] text-slate-600">
               {vault.platformId.toUpperCase()}
             </span>
           </span>
         </TableCell>
         <TableCell>
-          <span className="text-[14px] font-medium">
+          <span className="text-[14px] font-medium text-slate-800">
             {usdFormatter(vaultsMap[vault.id].atDeposit)}
           </span>
         </TableCell>
         <TableCell className="flex flex-col">
-          <span className="text-[14px] font-medium">
+          <span className="text-[14px] font-medium text-slate-800">
             {usdFormatter(vaultsMap[vault.id].pnl)}
           </span>
         </TableCell>
         <TableCell>
-          <span className="text-[14px] font-medium">
+          <span className="text-[14px] font-medium text-slate-800">
             {usdFormatter(vaultsMap[vault.id].now)}
           </span>
         </TableCell>
         <TableCell className="col-span-2 flex items-center justify-end gap-6">
           {!vault.isArchived && (
             <Link
-              className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-slate-800 transition-colors"
+              className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-white transition-colors"
               target="_blank"
               href={`/vault/${vault.oracleId}`}
             >

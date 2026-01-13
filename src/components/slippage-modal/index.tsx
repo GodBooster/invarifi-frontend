@@ -95,11 +95,11 @@ export function SlippageModal({
 
   return (
     <Dialog>
-      <DialogTrigger className="group  flex gap-1 self-end p-1 underline-offset-4 ">
-        <span className="group-hover:text-primary text-sm font-semibold transition-all group-hover:underline">
+      <DialogTrigger className="group flex gap-1 self-end p-1 underline-offset-4">
+        <span className="text-sm font-semibold text-slate-800 transition-all group-hover:text-primary group-hover:underline">
           Settings
         </span>
-        <Settings className="fill-light-purple" />
+        <Settings className="fill-primary" />
       </DialogTrigger>
       <DialogContent
         onCloseAutoFocus={handleBlur}

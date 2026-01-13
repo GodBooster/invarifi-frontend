@@ -34,7 +34,7 @@ const columns: ColumnDef<EarnNestedHistoryTableProps['actions'][number]>[] = [
     accessorKey: 'action',
     header: 'Action',
     cell: ({ row }) => (
-      <span className="text-[14px] font-medium">{row.original.type}</span>
+      <span className="text-[14px] font-medium text-slate-800">{row.original.type}</span>
     ),
   },
   {
@@ -64,7 +64,7 @@ const columns: ColumnDef<EarnNestedHistoryTableProps['actions'][number]>[] = [
       </button>
     ),
     cell: ({ row }) => (
-      <span className="text-[14px] font-medium underline underline-offset-2">
+      <span className="text-[14px] font-medium text-slate-800 underline underline-offset-2">
         {usdFormatter(row.original.balance)}
       </span>
     ),
@@ -73,14 +73,14 @@ const columns: ColumnDef<EarnNestedHistoryTableProps['actions'][number]>[] = [
     accessorKey: 'timestamp',
     header: ({ column }) => (
       <button
-        className="flex items-center text-[12px] font-semibold"
+        className="flex items-center text-[12px] font-semibold text-slate-800"
         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
       >
         Date <CaretSortIcon className="fill-primary ml-2 h-4 w-4" />
       </button>
     ),
     cell: ({ row }) => (
-      <span className="text-[14px] font-medium">
+      <span className="text-[14px] font-medium text-slate-800">
         {format(new Date(row.original.timestamp), 'dd MMM yyyy HH:mm:ss')}
       </span>
     ),
@@ -91,7 +91,7 @@ const columns: ColumnDef<EarnNestedHistoryTableProps['actions'][number]>[] = [
     cell: ({ row }) => {
       return (
         <Link
-          className="ml-auto rounded-[8px] p-2 transition-colors hover:underline"
+          className="ml-auto rounded-[8px] p-2 text-primary transition-colors hover:underline"
           target="_blank"
           href={row.original.etherscanLink}
         >

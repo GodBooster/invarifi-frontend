@@ -25,7 +25,7 @@ export const TradeInfo = ({
             Fee for deposit charged by the provider or InvariFi
           </TooltipItem>
         </div>
-        <div className="text-[14px]">
+        <div className="text-[14px] text-slate-800">
           {isFeesLoading ? '...' : `${feesData?.depositFee}%`}
         </div>
       </div>
@@ -36,7 +36,7 @@ export const TradeInfo = ({
             Fee for withdrawal charged by the provider or InvariFi
           </TooltipItem>
         </div>
-        <div className="text-[14px]">
+        <div className="text-[14px] text-slate-800">
           {isFeesLoading ? '...' : `${feesData?.withdrawFee}%`}
         </div>
       </div>

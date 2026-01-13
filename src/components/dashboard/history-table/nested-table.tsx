@@ -37,7 +37,7 @@ export const columns: ColumnDef<
   {
     accessorKey: 'action',
     header: 'Action',
-    cell: ({ row }) => <div className="capitalize">{row.original.action}</div>,
+    cell: ({ row }) => <div className="capitalize text-slate-800">{row.original.action}</div>,
   },
   {
     accessorKey: 'amount',
@@ -71,7 +71,7 @@ export const columns: ColumnDef<
     header: ({ column }) => {
       return (
         <button
-          className="flex items-center"
+          className="flex items-center text-slate-800"
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
           Balance
@@ -87,7 +87,7 @@ export const columns: ColumnDef<
       );
 
       return (
-        <div className="lowercase">${(price * formattedAmount).toFixed(2)}</div>
+        <div className="lowercase text-slate-800">${(price * formattedAmount).toFixed(2)}</div>
       );
     },
   },
@@ -96,7 +96,7 @@ export const columns: ColumnDef<
     header: ({ column }) => {
       return (
         <button
-          className="flex items-center"
+          className="flex items-center text-slate-800"
           onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
         >
           Date
@@ -105,7 +105,7 @@ export const columns: ColumnDef<
       );
     },
     cell: ({ row }) => (
-      <div>
+      <div className="text-slate-800">
         {format(
           new Date(+row.original.timestamp * 1000),
           'dd MMM yyyy HH:mm:ss',
@@ -119,7 +119,7 @@ export const columns: ColumnDef<
     cell: ({ row }) => {
       return (
         <Link
-          className="ml-auto rounded-[8px] p-2 transition-colors hover:underline"
+          className="ml-auto rounded-[8px] p-2 text-primary transition-colors hover:underline"
           target="_blank"
           href={row.original.etherscanUrl}
         >
