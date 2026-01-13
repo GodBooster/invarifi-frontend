@@ -181,7 +181,7 @@ export const EditVaultForm = ({
           </AccordionItem>
         </AccordionRoot>
         <div className="flex justify-center gap-2">
-          <Button type="button" className="" variant="transparent">
+          <Button type="button" className="text-slate-800" variant="transparent">
             Retire This Cube
           </Button>
           <Button
@@ -196,7 +196,7 @@ export const EditVaultForm = ({
           <Button
             onClick={handleCancel}
             type="button"
-            className="flex-1"
+            className="flex-1 text-slate-800"
             variant="transparent"
           >
             Cancel

@@ -388,11 +388,11 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
       <SuccessAlert open={successOpen}>Strategy successfully created.</SuccessAlert>
       {isAdmin && <div onClick={() => setOpen(true)}>{children}</div>}
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 bg-[#29305666] backdrop-blur-[10px]" />
+        <Dialog.Overlay className="fixed inset-0 bg-slate-900/50 backdrop-blur-[10px]" />
         <Dialog.Content className="fixed inset-0 flex flex-col items-center justify-center">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="fixed flex h-full max-h-[800px] w-full max-w-[545px] flex-col gap-[16px] overflow-y-scroll rounded-[20px] bg-[#272536] p-[24px]"
+            className="fixed flex h-full max-h-[800px] w-full max-w-[545px] flex-col gap-[16px] overflow-y-scroll rounded-[20px] border border-slate-200 bg-white p-[24px] shadow-xl"
           >
             <div className="text-[24px] font-semibold text-slate-800">
               Create a new strategy
@@ -402,7 +402,7 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
               render={({ field }) => (
                 <Input
                   required
-                  className="bg-[#3E3C4B]"
+                  className="border border-slate-300 bg-white text-slate-800 placeholder:text-slate-400"
                   {...field}
                   placeholder="strategy name"
                 />
@@ -413,7 +413,7 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
               control={control}
               render={({ field }) => (
                 <Input
-                  className="bg-[#3E3C4B]"
+                  className="border border-slate-300 bg-white text-slate-800 placeholder:text-slate-400"
                   {...field}
                   placeholder="Strategy description"
                 />
@@ -473,8 +473,8 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
 
                     return (
                       <div key={index} className="flex flex-row items-center">
-                        <div className="w-1/2 truncate">{vault?.name}</div>
-                        <div className="w-1/4 truncate">
+                        <div className="w-1/2 truncate text-slate-800">{vault?.name}</div>
+                        <div className="w-1/4 truncate text-slate-600">
                           {vault?.platformId.toUpperCase()}
                         </div>
                         <Controller
@@ -491,7 +491,7 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
                                   .toFixed(2)
                                   .toString() + '%'
                               }
-                              className="w-1/4 rounded-[8px] bg-[#ffffff1c] px-[16px] py-[7px] text-center"
+                              className="w-1/4 rounded-[8px] border border-slate-300 bg-slate-100 px-[16px] py-[7px] text-center text-slate-800"
                             />
                           )}
                           name={name}
@@ -508,15 +508,15 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
                 <Button
                   type="button"
                   onClick={onAutoBalanceClick}
-                  variant="transparent"
-                  className="bg-[#272536]"
+                  variant="outlined"
+                  className="border-slate-300 text-slate-800"
                 >
                   Auto balance
                 </Button>
               </Fragment>
             )}
-            <div className="border-t-[1px] border-dashed border-[#C6C6CC]" />
-            <div>Set up Risk Management options:</div>
+            <div className="border-t-[1px] border-dashed border-slate-300" />
+            <div className="text-slate-800">Set up Risk Management options:</div>
             <div className="flex flex-col items-center gap-[8px]">
               <div className="flex w-full flex-row items-center justify-between">
                 <div className="text-[#59B38A]">Low</div>
@@ -527,7 +527,7 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
                       {...field}
                       type="number"
                       placeholder="5%"
-                      className="w-[138px] text-center"
+                      className="w-[138px] border border-slate-300 bg-white text-center text-slate-800 placeholder:text-slate-400"
                     />
                   )}
                   name="low"
@@ -564,10 +564,10 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
                 />
               </div>
             </div>
-            <div>Set up deposit/withdraw commission:</div>
+            <div className="text-slate-800">Set up deposit/withdraw commission:</div>
             <div className="flex flex-col items-center gap-[8px]">
               <div className="flex w-full flex-row items-center justify-between">
-                <div>Deposit</div>
+                <div className="text-slate-800">Deposit</div>
                 <Controller
                   control={control}
                   render={({ field }) => (
@@ -582,7 +582,7 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
                 />
               </div>
               <div className="flex w-full flex-row items-center justify-between">
-                <div>Withdraw</div>
+                <div className="text-slate-800">Withdraw</div>
                 <Controller
                   control={control}
                   render={({ field }) => (
@@ -597,10 +597,10 @@ export const NewCube = ({ children, configs, vaults }: Props) => {
                 />
               </div>
             </div>
-            <div>Set autoswap commission:</div>
+            <div className="text-slate-800">Set autoswap commission:</div>
             <div className="flex flex-col items-center gap-[8px]">
               <div className="flex w-full flex-row items-center justify-between">
-                <div>Autoswap</div>
+                <div className="text-slate-800">Autoswap</div>
                 <Controller
                   control={control}
                   render={({ field }) => (

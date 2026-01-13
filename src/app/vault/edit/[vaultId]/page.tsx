@@ -44,7 +44,7 @@ const EditVaultPage = async ({ params: { vaultId } }: VaultPageProps) => {
     <div className="container flex flex-col gap-6 py-[40px]">
       <div className="grid grid-cols-3 items-center">
         <BackButton className="col-span-1 w-20" />
-        <div className="col-span-1 text-[32px] font-semibold lg:text-center">
+        <div className="col-span-1 text-[32px] font-semibold text-slate-800 lg:text-center">
           {vault.name}
         </div>
       </div>

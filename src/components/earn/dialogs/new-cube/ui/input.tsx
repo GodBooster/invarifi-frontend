@@ -11,7 +11,7 @@ export const Input: FC<InputProps> = ({ className, ...props }) => {
     <input
       {...props}
       className={cn(
-        'rounded-[8px] bg-[#ffffff1c] px-[16px] py-[7px]',
+        'rounded-[8px] border border-slate-300 bg-white px-[16px] py-[7px] text-slate-800 placeholder:text-slate-400',
         className,
       )}
     />

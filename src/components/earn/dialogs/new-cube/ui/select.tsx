@@ -52,8 +52,8 @@ export const Select: FC<InputProps> = ({
         ref={inputReference}
         onBlur={() => setShowMenu(false)}
         tabIndex={0}
-        className={cn(
-          'absolute z-10 mt-[43px] flex w-full flex-col gap-[16px] rounded-[10px] bg-[#3E3C4B] p-[16px] shadow-2xl',
+          className={cn(
+          'absolute z-10 mt-[43px] flex w-full flex-col gap-[16px] rounded-[10px] border border-slate-200 bg-white p-[16px] shadow-xl',
           !isShowMenu && 'hidden',
         )}
       >
@@ -86,14 +86,14 @@ export const Select: FC<InputProps> = ({
             <div
               key={index}
               onClick={onClick}
-              className="flex cursor-pointer flex-row items-center justify-between"
+              className="flex cursor-pointer flex-row items-center justify-between text-slate-800 hover:bg-slate-50 rounded px-2 py-1"
             >
               <div className="flex flex-row items-center gap-[8px]">
                 {icon}
-                {name}
+                <span>{name}</span>
               </div>
               <div className="flex flex-row items-center gap-[24px]">
-                {description}
+                {description && <span className="text-slate-500">{description}</span>}
                 {isMulti ? check : radio}
               </div>
             </div>

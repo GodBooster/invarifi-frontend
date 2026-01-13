@@ -49,7 +49,7 @@ export default function EarnWrapper({
           configs={configs}
           vaults={!vaults || isVaultsLoading ? [] : vaults}
         >
-          <Button variant="transparent" className="ml-[10px]">
+          <Button variant="transparent" className="ml-[10px] text-slate-800">
             Create new strategy
           </Button>
         </NewCube>
