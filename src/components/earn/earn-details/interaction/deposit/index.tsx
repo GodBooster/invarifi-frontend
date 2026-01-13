@@ -545,7 +545,7 @@ export const EarnDeposit = ({
               variant: 'destructive',
               title: 'Invalid Amount',
               description: hasStopLoss
-                ? 'With Risk Management enabled, the minimum deposit is 0.0035 ETH or its equivalent in other supported assets. Please increase your deposit amount or disable Risk Management.'
+                ? 'With Risk Management enabled, the minimum deposit is 0.0035 ETH or its equivalent in other supported assets.'
                 : 'The calculated amount is invalid. Please adjust your deposit amount.',
             });
           } else if (errorMessage.includes('Transaction data is not ready') || errorMessage.includes('not ready')) {
@@ -554,7 +554,7 @@ export const EarnDeposit = ({
               toast({
                 variant: 'destructive',
                 title: 'Transaction data not ready',
-                description: 'With Risk Management enabled, the minimum deposit is 0.0035 ETH or its equivalent in other supported assets. Please increase your deposit amount.',
+                description: 'With Risk Management enabled, the minimum deposit is 0.0035 ETH or its equivalent in other supported assets.',
               });
             }
           }

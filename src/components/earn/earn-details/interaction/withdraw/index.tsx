@@ -32,6 +32,7 @@ import { type CubeWithApyAndTvl } from '@/actions/get-all-cubes';
 import { type TokensByName } from '@/actions/get-all-tokens';
 import { ConnectWalletButton } from '@/components/connect-wallet-button';
 import { SlippageModal } from '@/components/slippage-modal';
+import { Checkbox, CheckboxIndicator } from '@/components/ui/checkbox';
 import { Collapsible, CollapsibleContent } from '@/components/ui/collapsible';
 import { Input } from '@/components/vault/trade/ui/input';
 import { DEFAULT_WITHDRAW_SLIPPAGE } from '@/constants/slippage';
@@ -476,15 +477,16 @@ export const EarnWithdraw = ({
               setOpen={setIsCollapsibleOpen}
             />
           </div>
-          <label className="flex items-center gap-2 text-xs text-slate-600">
-            <input
-              type="checkbox"
-              className="h-4 w-4"
+          <label className="flex items-center gap-2 text-xs text-slate-600 cursor-pointer">
+            <Checkbox
               checked={withdrawEntirePosition}
-              onChange={(event) =>
-                handleWithdrawEntireToggle(event.target.checked)
+              onCheckedChange={(val) =>
+                handleWithdrawEntireToggle(Boolean(val))
               }
-            />
+              className="flex items-center justify-center border-slate-300 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-white"
+            >
+              <CheckboxIndicator className="text-white" />
+            </Checkbox>
             <span>
               Withdraw entire position (incl. reserved ≈ $
               {reservedParsed.toFixed(2)})
