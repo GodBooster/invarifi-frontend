@@ -38,7 +38,7 @@ export const TokensList = memo(
               {loading ? (
                 <Loader2 className="text-primary h-[20px] w-[20px] animate-spin" />
               ) : (
-                <Refresh className="fill-light-purple hover:fill-light-purple-hover transition-colors" />
+                <Refresh className="fill-primary hover:fill-primary-hover transition-colors" />
               )}
             </Button>
           </div>

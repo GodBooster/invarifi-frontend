@@ -28,7 +28,7 @@ export const TokensList = memo(
     defaultToken,
   }: TokensListProps) => {
     return (
-      <div className="flex flex-col rounded-[8px] bg-text-grey">
+      <div className="flex flex-col rounded-[8px] bg-slate-100">
         <div className="p-[16px]">
           <div className="flex items-center justify-between">
             <p className="text-sm font-medium text-[#667085]">Available:</p>
@@ -39,7 +39,7 @@ export const TokensList = memo(
               {loading ? (
                 <Loader2 className="text-primary h-[20px] w-[20px] animate-spin" />
               ) : (
-                <Refresh className="fill-light-purple hover:fill-light-purple-hover transition-colors" />
+                <Refresh className="fill-primary hover:fill-primary-hover transition-colors" />
               )}
             </Button>
           </div>

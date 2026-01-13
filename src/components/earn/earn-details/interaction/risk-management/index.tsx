@@ -19,12 +19,12 @@ export default function RiskManagement({
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-1 [&>div]:flex">
-        <p className="text-sm font-semibold text-text-grey">
+        <p className="text-sm font-semibold text-slate-800">
           Risk Management options:
         </p>
         <TooltipItem>
           <div className="flex max-w-[245px] flex-col gap-1">
-            <p className="text-xs font-medium text-additional-grey">
+            <p className="text-xs font-medium text-slate-500">
               InvariFi uses a Stop-Loss order, which serves to control the
               risks of a fall in the price of assets in vault.
             </p>
@@ -47,10 +47,10 @@ export default function RiskManagement({
               key={stopLossLabel.id}
               onClick={() => onClick(option as StopLossValue)}
               className={cn(
-                'flex flex-1 cursor-pointer items-center justify-center rounded-[8px] px-3 py-2 shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] backdrop-blur-[10px]',
+                'flex flex-1 cursor-pointer items-center justify-center rounded-[8px] px-3 py-2 shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] transition-colors',
                 selectedOption
-                  ? 'bg-light-purple !text-slate-800'
-                  : 'bg-transparent-bg-dark',
+                  ? 'bg-primary text-white'
+                  : 'border border-slate-300 bg-white text-slate-800 hover:bg-slate-50',
               )}
             >
               <div className="select-none text-sm font-medium">
@@ -73,7 +73,7 @@ export default function RiskManagement({
                     </p>
                   </div>
                 ) : (
-                  <p>None</p>
+                  <p className={selectedOption ? 'text-white' : 'text-slate-800'}>None</p>
                 )}
               </div>
             </div>
