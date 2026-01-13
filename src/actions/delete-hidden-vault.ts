@@ -27,10 +27,6 @@ export const deleteHiddenVault = async (
       body: JSON.stringify({ id }),
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Show vault error:', response.status, errorText);
-    }
 
     return response;
   } catch (error) {
