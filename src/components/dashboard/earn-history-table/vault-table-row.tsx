@@ -97,7 +97,7 @@ export const EarnVaultTableRow = ({
         </TableCell>
       </TableRow>
       {open && (
-        <TableRow className="flex border-spacing-4 border-none">
+        <TableRow className="flex border-spacing-4 border-none hover:bg-transparent">
           <EarnNestedHistoryTable actions={vaultsMap[vault.id].actions} />
         </TableRow>
       )}

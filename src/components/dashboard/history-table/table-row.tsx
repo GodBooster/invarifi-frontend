@@ -120,7 +120,7 @@ export const HistoryTableRow = ({ vault }: HistoryTableRowProps) => {
       </TableRow>
       <TableRow
         className={cn(
-          'flex border-spacing-4 border-b-2 border-dashed border-slate-300',
+          'flex border-spacing-4 border-b-2 border-dashed border-slate-300 hover:bg-transparent',
         )}
       >
         <TableCell className="w-full p-0">

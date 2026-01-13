@@ -201,7 +201,7 @@ function NestedHistoryTable({ vault, open }: NestedHistoryTableProps) {
               <TableRow
                 key={row.id}
                 data-state={row.getIsSelected() && 'selected'}
-                className="grid grid-cols-7 border-none"
+                className="grid grid-cols-7 border-none hover:bg-transparent"
               >
                 {row.getVisibleCells().map((cell, i) => (
                   <TableCell
@@ -220,8 +220,8 @@ function NestedHistoryTable({ vault, open }: NestedHistoryTableProps) {
               </TableRow>
             ))
           ) : (
-            <TableRow>
-              <TableCell colSpan={columns.length} className="h-24 text-center">
+            <TableRow className="hover:bg-transparent">
+              <TableCell colSpan={columns.length} className="h-24 text-center text-slate-500">
                 No results.
               </TableCell>
             </TableRow>

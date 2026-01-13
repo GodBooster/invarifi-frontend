@@ -124,7 +124,7 @@ export const EarnHistoryTableRow = ({ cube }: EarnHistoryTableRowProps) => {
         </TableCell>
       </TableRow>
       {open && (
-        <TableRow className="flex border-spacing-4 border-b-2 border-dashed border-slate-300">
+        <TableRow className="flex border-spacing-4 border-b-2 border-dashed border-slate-300 hover:bg-transparent">
           <TableCell className="w-full border-none p-0">
             {cube.vaults.map((vault) => (
               <EarnVaultTableRow
