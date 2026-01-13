@@ -483,7 +483,7 @@ export const EarnWithdraw = ({
               onCheckedChange={(val) =>
                 handleWithdrawEntireToggle(Boolean(val))
               }
-              className="flex items-center justify-center border-slate-300 data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-white"
+              className="flex items-center justify-center border-2 border-slate-400 shadow-sm hover:border-slate-500 hover:shadow-md transition-all data-[state=checked]:border-primary data-[state=checked]:bg-primary data-[state=checked]:text-white data-[state=checked]:shadow-[0_0_8px_rgba(255,99,64,0.3)]"
             >
               <CheckboxIndicator className="text-white" />
             </Checkbox>

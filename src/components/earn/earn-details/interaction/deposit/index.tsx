@@ -363,7 +363,7 @@ export const EarnDeposit = ({
         toast({
           variant: 'destructive',
           title: 'Transaction data not ready',
-          description: 'With Risk Management enabled, the minimum deposit is 0.0035 ETH or its equivalent in other supported assets. Please increase your deposit amount.',
+          description: 'With Risk Management enabled, the minimum deposit is 0.0035 ETH or its equivalent in other supported assets.',
         });
       } else {
         toast({
@@ -455,7 +455,7 @@ export const EarnDeposit = ({
         }
         
         let isValid = false;
-        const errorMessage = `With Risk Management enabled, the minimum deposit is ${minETH} ETH or its equivalent in other supported assets. Please increase your deposit amount.`;
+        const errorMessage = `With Risk Management enabled, the minimum deposit is ${minETH} ETH or its equivalent in other supported assets.`;
 
         if (selectedVaultToken.isNative) {
           // For ETH/native tokens: check if >= 0.0035 ETH
