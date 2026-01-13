@@ -59,7 +59,7 @@ export const EarnPoolCard = memo(
         <AccordionItem
           onClick={handleClick}
           value={`item-${cube.id}`}
-          className="block cursor-pointer rounded-[16px] border border-slate-200 bg-white p-[16px] pb-0 shadow-sm transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(255,99,64,0.4)] hover:scale-[1.02]"
+          className="block cursor-pointer rounded-[16px] border border-slate-200 bg-white p-[16px] pb-0 shadow-sm transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(255,99,64,0.4)]"
         >
           <div className="mb-[12px] truncate text-slate-800 font-medium">{cube.name || cube.id}</div>
           <div className="mb-[12px] flex items-center rounded-[8px] bg-slate-100 px-[12px] py-[10px] text-[16px] font-semibold text-primary">
