@@ -28,12 +28,12 @@ export const TooltipItem = ({
       <Tooltip delayDuration={100}>
         <TooltipTrigger asChild>
           <span className={cn('inline-flex', className)}>
-            <Info className="fill-light-purple inline-block h-[16px] w-[16px] cursor-pointer" />
+            <Info className="fill-primary inline-block h-[16px] w-[16px] cursor-pointer" />
           </span>
         </TooltipTrigger>
         <TooltipContent
           className={cn(
-            'border-none bg-white p-3 text-base font-medium text-text-light',
+            'border border-slate-200 bg-white p-3 text-base font-medium text-slate-500 shadow-lg',
             contentClassName,
           )}
         >

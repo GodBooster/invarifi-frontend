@@ -104,20 +104,20 @@ export function SlippageModal({
       <DialogContent
         onCloseAutoFocus={handleBlur}
         onEscapeKeyDown={handleBlur}
-        className="max-w-[70%] bg-[#272536] lg:max-w-[60%] xl:max-w-[50%]"
+        className="max-w-[70%] border border-slate-200 bg-white shadow-xl lg:max-w-[60%] xl:max-w-[50%]"
       >
         <DialogHeader>
-          <DialogTitle className="text-2xl font-semibold">Settings</DialogTitle>
+          <DialogTitle className="text-2xl font-semibold text-slate-800">Settings</DialogTitle>
         </DialogHeader>
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div className="flex flex-col gap-3">
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-1">
-                <span className="text-sm font-semibold text-text-grey">
+                <span className="text-sm font-semibold text-slate-800">
                   Slippage tolerance
                 </span>
                 <TooltipItem contentClassName="w-[400px]">
-                  <p className="text-xs font-medium text-text-light">
+                  <p className="text-xs font-medium text-slate-500">
                     Slippage is the difference between a trade&apos;s expected
                     or requested price and the price at which the trade is
                     effectively executed. It typically occurs in markets
@@ -131,9 +131,9 @@ export function SlippageModal({
                     key={value}
                     type="button"
                     className={cn(
-                      'cursor-pointer rounded bg-[rgba(53,40,82,.5)] px-3 py-2 text-center text-sm font-medium',
+                      'cursor-pointer rounded bg-slate-100 px-3 py-2 text-center text-sm font-medium text-slate-800 transition-colors hover:bg-slate-200',
                       !inputSelected && selected === value
-                        ? 'bg-light-purple'
+                        ? 'bg-primary text-white hover:bg-primary-hover'
                         : '',
                     )}
                     onClick={() => handleButtonClick(value)}
@@ -145,7 +145,7 @@ export function SlippageModal({
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex items-center gap-1">
-                <span className="text-sm font-semibold text-text-grey">
+                <span className="text-sm font-semibold text-slate-800">
                   Custom
                 </span>
               </div>
@@ -165,10 +165,10 @@ export function SlippageModal({
                       }
                     }}
                     className={cn(
-                      'w-[calc(50%_-_6px)] bg-[#3E3C4B] p-4 text-center outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 md:w-[calc(25%_-_9px)]',
+                      'w-[calc(50%_-_6px)] bg-slate-100 p-4 text-center text-slate-800 outline-none focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0 md:w-[calc(25%_-_9px)]',
                       inputSelected || !buttonValues.includes(selected)
-                        ? 'border-[#E9C268]'
-                        : '',
+                        ? 'border-primary'
+                        : 'border-slate-200',
                     )}
                   />
                 )}
@@ -182,8 +182,8 @@ export function SlippageModal({
                     : 'invisible opacity-0',
                 )}
               >
-                <Danger />
-                <p className="text-xs font-medium text-[#E9C268]">
+                <Danger className="text-primary" />
+                <p className="text-xs font-medium text-primary">
                   Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                   accusantium doloremque laudantium
                 </p>
@@ -194,14 +194,14 @@ export function SlippageModal({
             <Button
               type="button"
               onClick={handleSetDefaultClick}
-              className="h-[30px] border border-white bg-[#3E3C4B] px-3 py-1 text-xs font-semibold text-slate-800 hover:bg-[#4A485A]"
+              className="h-[30px] border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-800 hover:bg-slate-200"
             >
               Set up default
             </Button>
           </div>
           <Close
             type="submit"
-            className="bg-light-purple hover:bg-light-purple-hover inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-md px-3 py-2 text-base font-medium transition-colors"
+            className="bg-primary hover:bg-primary-hover inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-md px-3 py-2 text-base font-medium text-white transition-colors"
           >
             Save changes
           </Close>

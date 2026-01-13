@@ -65,7 +65,7 @@ const DropdownMenuContent = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={cn(
-        'z-50 min-w-[8rem] overflow-hidden rounded-[10px] bg-white p-4 shadow-[0px_4px_42px_rgba(0,0,0,0.78)] data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+        'z-50 min-w-[8rem] overflow-hidden rounded-[10px] border border-slate-200 bg-white p-4 shadow-lg data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
         className,
       )}
       {...props}
@@ -83,7 +83,7 @@ const DropdownMenuItem = React.forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
       className={cn(
-        'relative flex cursor-pointer select-none items-center rounded-[4px] bg-white px-2 py-2 text-sm font-medium text-[#0B0B0B] outline-none transition-all duration-300 hover:bg-[#D46B30] hover:text-slate-800 hover:scale-[1.02] hover:shadow-[0_0_10px_rgba(212,107,48,0.3)] focus:bg-[#D46B30] focus:text-slate-800 data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+        'relative flex cursor-pointer select-none items-center rounded-[4px] bg-white px-2 py-2 text-sm font-medium text-slate-800 outline-none transition-all duration-300 hover:bg-primary hover:text-white hover:scale-[1.02] hover:shadow-[0_0_10px_rgba(255,99,64,0.3)] focus:bg-primary focus:text-white data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
         inset && 'pl-8',
         className,
       )}
