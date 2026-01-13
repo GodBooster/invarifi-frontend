@@ -46,25 +46,25 @@ export const Strategy = ({ vault }: StrategyProps) => {
       <div className="flex items-center gap-6">
         {vault.isMultiToken && (
           <div className="flex-1">
-            <div className="mb-2">Strategy address</div>
+            <div className="mb-2 text-slate-800">Strategy address</div>
             <div className="relative">
               <Input
-                className="rounded-[12px] bg-[#52515E]  pl-12 leading-5 placeholder:text-[#C6C6CC] focus-visible:ring-0 focus-visible:ring-offset-0"
+                className="rounded-[12px] border border-slate-300 bg-slate-100 pl-12 leading-5 text-slate-800 placeholder:text-slate-400 focus-visible:ring-0 focus-visible:ring-offset-0"
                 placeholder="Link"
               />
-              <Globe className="absolute left-4 top-2 h-[20px] w-[20px]" />
+              <Globe className="absolute left-4 top-2 h-[20px] w-[20px] text-slate-500" />
             </div>
           </div>
         )}
 
         <div className="flex-1">
-          <div className="mb-2">Vault address</div>
+          <div className="mb-2 text-slate-800">Vault address</div>
           <div className="relative">
             <Input
-              className="rounded-[12px] bg-[#52515E]  pl-12 leading-5 placeholder:text-[#C6C6CC] focus-visible:ring-0 focus-visible:ring-offset-0"
+              className="rounded-[12px] border border-slate-300 bg-slate-100 pl-12 leading-5 text-slate-800 placeholder:text-slate-400 focus-visible:ring-0 focus-visible:ring-offset-0"
               placeholder="Link"
             />
-            <Globe className="absolute left-4 top-2 h-[20px] w-[20px]" />
+            <Globe className="absolute left-4 top-2 h-[20px] w-[20px] text-slate-500" />
           </div>
         </div>
       </div>
@@ -75,10 +75,10 @@ export const Strategy = ({ vault }: StrategyProps) => {
             ref={textareaRef}
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className="mb-2 resize-none rounded-[12px] bg-[#52515E] leading-5 placeholder:text-[#C6C6CC] focus-visible:ring-0 focus-visible:ring-offset-0"
+            className="mb-2 resize-none rounded-[12px] border border-slate-300 bg-slate-100 leading-5 text-slate-800 placeholder:text-slate-400 focus-visible:ring-0 focus-visible:ring-offset-0"
           />
         ) : (
-          <p className="mb-2 text-sm font-medium">{text}</p>
+          <p className="mb-2 text-sm font-medium text-slate-700">{text}</p>
         )}
         <div className="flex justify-end">
           <Button
@@ -91,22 +91,22 @@ export const Strategy = ({ vault }: StrategyProps) => {
         </div>
       </div>
       <div className="flex flex-col gap-[16px] rounded-[8px]">
-        <p className="text-base font-semibold">APY Breakdown</p>
+        <p className="text-base font-semibold text-slate-800">APY Breakdown</p>
         <div className="grid grid-cols-3 gap-[8px]">
           <ApyBreakdownItem
-            className="border-none bg-transparent-bg-dark"
+            className="border border-slate-200 bg-slate-100"
             label="TOTAL APY"
           >
             {apyFormatter(vault.apy.totalApy)}
           </ApyBreakdownItem>
           <ApyBreakdownItem
-            className="border-none bg-transparent-bg-dark"
+            className="border border-slate-200 bg-slate-100"
             label="VAULT APR"
           >
             {apyFormatter(vault.apy.vaultApr)}
           </ApyBreakdownItem>
           <ApyBreakdownItem
-            className="border-none bg-transparent-bg-dark"
+            className="border border-slate-200 bg-slate-100"
             label="BOOST APR"
           >
             {apyFormatter(0)}

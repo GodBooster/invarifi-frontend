@@ -105,7 +105,7 @@ export const EditVaultForm = ({
         <VaultMetrics vault={vault} />
         <AccordionRoot
           collapsible
-          className="rounded-[12px] bg-white bg-opacity-[0.11] p-[16px] backdrop-blur-[20px]"
+          className="rounded-[12px] border border-slate-200 bg-white p-[16px] shadow-sm"
           type="single"
         >
           <AccordionItem value="0">
@@ -125,7 +125,7 @@ export const EditVaultForm = ({
                       />
                     ))}
                   </div>
-                  <p className="text-sm font-semibold">
+                  <p className="text-sm font-semibold text-slate-800">
                     {vault.assets.join('/')}
                   </p>
                 </div>
@@ -160,8 +160,8 @@ export const EditVaultForm = ({
         </AccordionRoot>
         <AccordionRoot collapsible type="single">
           <AccordionItem value="0">
-            <AccordionTrigger className="rounded-[12px] bg-white bg-opacity-[0.11] p-[16px] backdrop-blur-[20px]">
-              Vault details
+            <AccordionTrigger className="rounded-[12px] border border-slate-200 bg-white p-[16px] shadow-sm">
+              <span className="text-slate-800">Vault details</span>
               <TooltipItem>
                 <div className="flex w-[250px] flex-col gap-1">
                   <p className="text-xs font-semibold text-text">

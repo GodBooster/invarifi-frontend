@@ -108,7 +108,7 @@ export const EarnHistoryTableRow = ({ cube }: EarnHistoryTableRowProps) => {
             target="_blank"
             href={`/earn/${cube.id}`}
           >
-            Go to cube
+            Go to Strategy
           </Link>
           <Button
             onClick={handleRowClick}

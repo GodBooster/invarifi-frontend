@@ -56,11 +56,11 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
   };
 
   return (
-    <div className="flex flex-col gap-[16px] rounded-b-[12px] rounded-tr-[12px] bg-white bg-opacity-11 p-[16px]">
+    <div className="flex flex-col gap-[16px] rounded-b-[12px] rounded-tr-[12px] bg-slate-50 p-[16px]">
       <Collapsible className="flex flex-col gap-4">
-        <div className="flex flex-col gap-3 rounded-[8px] bg-[rgba(53,40,82,0.43)] p-[16px] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)] backdrop-blur-[10px]">
+        <div className="flex flex-col gap-3 rounded-[8px] bg-slate-200 p-[16px] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]">
           <div className="flex flex-row items-center justify-between">
-            <p className="text-sm font-semibold text-[#CFC9FF]">
+            <p className="text-sm font-semibold text-slate-800">
               Select deposit token
             </p>
             <CollapsibleTrigger asChild className="text-[12px]">
@@ -86,7 +86,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
                 />
               ))
             ) : (
-              <p className="inline-flex h-6 items-center text-sm font-medium text-light-grey">
+              <p className="inline-flex h-6 items-center text-sm font-medium text-slate-500">
                 No tokens selected
               </p>
             )}
@@ -95,13 +95,13 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
 
         <CollapsibleContent asChild>
           <div className="shadow-xl">
-            <div className="flex flex-col gap-4 rounded-t-[10px] bg-text-grey p-4">
+            <div className="flex flex-col gap-4 rounded-t-[10px] bg-slate-100 p-4">
               <div className="flex items-center justify-between">
-                <p className="text-sm font-medium text-text-light">
-                  Avaliable:
+                <p className="text-sm font-medium text-slate-500">
+                  Available:
                 </p>
                 <div className="-mr-0.5 flex items-center gap-2">
-                  <p className="text-sm font-semibold text-text">
+                  <p className="text-sm font-semibold text-slate-800">
                     Add new token
                   </p>
                   <Button
@@ -123,7 +123,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
                         src={getTokenAssetUrl(token.symbol)}
                         alt={token.symbol}
                       />
-                      <span className="text-sm font-semibold text-text">
+                      <span className="text-sm font-semibold text-slate-800">
                         {token.symbol}
                       </span>
                     </div>
@@ -154,7 +154,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
       <div className="flex flex-col gap-[16px] ">
         <div className="gap-6 lg:flex">
           <div className="mb-4 flex-1 lg:mb-0">
-            <div className="mb-4 flex gap-2 text-xs font-medium text-text-grey">
+            <div className="mb-4 flex gap-2 text-xs font-medium text-slate-500">
               DEPOSIT FEE
               <TooltipItem>
                 Fee for deposit charged by the provider or InvariFi
@@ -172,7 +172,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
                   <Input
                     {...field}
                     placeholder="0%"
-                    className="h-5 w-[80px] border-0 bg-transparent-bg-dark p-4 text-center focus-visible:border-0"
+                    className="h-5 w-[80px] border border-slate-300 bg-white p-4 text-center text-slate-800 focus-visible:border-primary"
                   />
                 )}
                 name="depositFee"
@@ -180,7 +180,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
             </div>
           </div>
           <div className="flex-1">
-            <div className="mb-4 flex gap-2 text-xs font-medium text-text-grey">
+            <div className="mb-4 flex gap-2 text-xs font-medium text-slate-500">
               WITHDRAW FEE
               <TooltipItem>
                 Fee for withdrawal charged by the provider or InvariFi
@@ -198,7 +198,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
                   <Input
                     {...field}
                     placeholder="0.1%"
-                    className="h-5 w-[80px] border-0 bg-transparent-bg-dark p-4 text-center focus-visible:border-0"
+                    className="h-5 w-[80px] border border-slate-300 bg-white p-4 text-center text-slate-800 focus-visible:border-primary"
                   />
                 )}
                 name="withdrawFee"
@@ -206,7 +206,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
             </div>
           </div>
         </div>
-        <p className="mb-4 inline text-sm">
+        <p className="mb-4 inline text-sm text-slate-500">
           The displayed APY accounts for performance fee that is deducted from
           the generated yield only.
         </p>
@@ -217,7 +217,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
           <div className="mb-4 gap-6 lg:flex">
             <div className="mb-4 flex flex-1 items-center justify-between lg:mb-0">
               <div className="flex items-center gap-2">
-                Featured
+                <span className="text-slate-800">Featured</span>
                 <TooltipItem>
                   <div className="flex w-[250px] flex-col gap-1">
                     <p className="text-xs font-semibold text-text">Featured</p>
@@ -236,7 +236,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
             </div>
             <div className="flex flex-1 items-center justify-between">
               <div className="flex items-center gap-2">
-                Blue chip
+                <span className="text-slate-800">Blue chip</span>
                 <TooltipItem>
                   <div className="flex w-[250px] flex-col gap-1">
                     <p className="text-xs font-semibold text-text">Featured</p>
@@ -257,7 +257,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
           <div className="gap-6 lg:flex">
             <div className="mb-4 flex flex-1 items-center justify-between lg:mb-0">
               <div className="flex items-center gap-2">
-                Stablecoins
+                <span className="text-slate-800">Stablecoins</span>
                 <TooltipItem>
                   <div className="flex w-[250px] flex-col gap-1">
                     <p className="text-xs font-semibold text-text">Featured</p>
@@ -276,7 +276,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
             </div>
             <div className="flex flex-1 items-center justify-between">
               <div className="flex items-center gap-2">
-                Correlated{' '}
+                <span className="text-slate-800">Correlated</span>{' '}
                 <TooltipItem>
                   <div className="flex w-[250px] flex-col gap-1">
                     <p className="text-xs font-semibold text-text">Featured</p>
@@ -298,7 +298,7 @@ export const InteractionEdit = memo(({ vault, tokens }: Props) => {
 
         <div className="flex flex-1 items-center gap-2">
           <div className="flex items-center gap-2">
-            Boost{' '}
+            <span className="text-slate-800">Boost</span>{' '}
             <TooltipItem>
               <div className="flex w-[250px] flex-col gap-1">
                 <p className="text-xs font-semibold text-text">Featured</p>

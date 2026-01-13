@@ -102,14 +102,14 @@ export const Interaction = ({ vault, tokens }: Props) => {
 
   return (
     <div className="col-span-6  rounded-[18px] p-0.5 lg:col-span-2">
-      <div className="border-primary flex h-full flex-col gap-2 rounded-[16px] border-2   bg-gradient-to-b from-[rgba(255,255,255,0.28)] via-[rgba(255,255,255,0.17)] p-[16px] sm:gap-4">
+      <div className="border-primary flex h-full flex-col gap-2 rounded-[16px] border-2 bg-white p-[16px] shadow-sm sm:gap-4">
         <div className="flex flex-row items-center justify-center">
-          <div className="flex-[1] text-2xl font-medium">Interaction</div>
+          <div className="flex-[1] text-2xl font-medium text-slate-800">Interaction</div>
         </div>
         <div className=" flex flex-wrap gap-4 lg:gap-10">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
-              <p className="text-sm font-medium">Retire This Vault</p>
+              <p className="text-sm font-medium text-slate-800">Retire This Vault</p>
               <TooltipItem>
                 <div className="flex w-[250px] flex-col gap-1">
                   <p className="text-xs font-semibold text-text">
@@ -129,7 +129,7 @@ export const Interaction = ({ vault, tokens }: Props) => {
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
-              <p className="text-sm font-medium">Pause this Vault</p>
+              <p className="text-sm font-medium text-slate-800">Pause this Vault</p>
               <TooltipItem>
                 <div className="flex w-[250px] flex-col gap-1">
                   <p className="text-xs font-semibold text-text">
@@ -150,15 +150,15 @@ export const Interaction = ({ vault, tokens }: Props) => {
         </div>
         <Tabs defaultValue={EditTabs.EDIT}>
           <div className="flex flex-col-reverse items-start justify-between gap-4 sm:flex-row sm:items-center">
-            <TabsList className="h-auto gap-[8px] rounded-b-none rounded-t-[12px] bg-white bg-opacity-11 pb-0">
+            <TabsList className="h-auto gap-[8px] rounded-b-none rounded-t-[12px] bg-slate-100 pb-0">
               <TabsTrigger
-                className="w-[90px] rounded-b-[2px] rounded-t-[8px] py-2 text-sm text-slate-800 data-[state=active]:bg-indigo-350"
+                className="w-[90px] rounded-b-[2px] rounded-t-[8px] py-2 text-sm text-slate-800 data-[state=active]:bg-primary data-[state=active]:text-white"
                 value={EditTabs.EDIT}
               >
                 Edit
               </TabsTrigger>
             </TabsList>
-            <p className="flex flex-col px-2 text-sm font-medium text-slate-800 sm:text-[#F1F3F8]">
+            <p className="flex flex-col px-2 text-sm font-medium text-slate-600">
               Your Deposit: {showDeposited} (
               {`${expectedSwap} ${tokenAddresses.wrappedNativeToken.symbol}`})
             </p>
