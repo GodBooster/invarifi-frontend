@@ -28,7 +28,7 @@ export const CubeRenderer = memo(
     return (
       <div
         className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-        style={style}
+        style={{ ...style, paddingTop: index === 0 ? '15px' : undefined }}
       >
         {data.cubes[index].map((cube, columnIndex) => (
           <EarnPoolCard
