@@ -41,7 +41,7 @@ export const columns: ColumnDef<VaultWithApyAndTvl>[] = [
         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
       >
         Network
-        <CaretSortIcon className="fill-primary ml-2 h-4 w-4" />
+        <CaretSortIcon className="fill-white ml-2 h-4 w-4" />
       </button>
     ),
     cell: ({ row }) => (
@@ -58,7 +58,7 @@ export const columns: ColumnDef<VaultWithApyAndTvl>[] = [
         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
       >
         AT Deposit
-        <CaretSortIcon className="fill-primary ml-2 h-4 w-4" />
+        <CaretSortIcon className="fill-white ml-2 h-4 w-4" />
       </button>
     ),
     cell: ({ row }) => {
@@ -81,7 +81,7 @@ export const columns: ColumnDef<VaultWithApyAndTvl>[] = [
         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
       >
         PNL
-        <CaretSortIcon className="fill-primary ml-2 h-4 w-4" />
+        <CaretSortIcon className="fill-white ml-2 h-4 w-4" />
       </button>
     ),
     cell: ({ row }) => <div>{row.getValue('id')}</div>,
@@ -94,7 +94,7 @@ export const columns: ColumnDef<VaultWithApyAndTvl>[] = [
         onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
       >
         Now
-        <CaretSortIcon className="fill-primary ml-2 h-4 w-4" />
+        <CaretSortIcon className="fill-white ml-2 h-4 w-4" />
       </button>
     ),
     cell: ({ row }) => <div>{row.getValue('id')}</div>,
@@ -137,7 +137,7 @@ export function HistoryTable({ vaults }: HistoryTableProps) {
           <TableHeader className="border-none">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow
-                className="grid grid-cols-7 border-none bg-[#293056] [&>th]:flex [&>th]:items-center [&>th]:text-xs [&>th]:font-semibold [&>th]:text-slate-800"
+                className="grid grid-cols-7 border-none bg-[#293056] [&>th]:flex [&>th]:items-center [&>th]:text-xs [&>th]:font-semibold"
                 key={headerGroup.id}
               >
                 {headerGroup.headers.map((header, i) => {
@@ -146,7 +146,7 @@ export function HistoryTable({ vaults }: HistoryTableProps) {
                       key={header.id}
                       className={`${
                         i === 0 ? 'col-span-2' : ''
-                      } text-[#F1F3F8]`}
+                      } text-white`}
                     >
                       {header.isPlaceholder
                         ? null
@@ -168,10 +168,10 @@ export function HistoryTable({ vaults }: HistoryTableProps) {
                   <HistoryTableRow key={row.id} vault={row.original} />
                 ))
             ) : (
-              <TableRow>
+              <TableRow className="hover:bg-transparent">
                 <TableCell
                   colSpan={columns.length}
-                  className="h-24 text-center"
+                  className="h-24 text-center text-slate-500"
                 >
                   No results.
                 </TableCell>
