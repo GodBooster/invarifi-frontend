@@ -91,9 +91,9 @@ export const PromotionalPoolCard = ({
     <div className="group/card w-full snap-center transition-all">
       <div
         onClick={handleClick}
-        className="border-primary block rounded-[16px] border-2 bg-linear-black p-[16px] text-base font-bold transition-all hover:cursor-pointer backdrop-blur-[16px]"
+        className="border-primary block rounded-[16px] border-2 bg-white p-[16px] text-base font-bold shadow-sm transition-all hover:cursor-pointer hover:shadow-[0_0_20px_rgba(255,99,64,0.4)]"
       >
-        <div className="mb-[12px]">{vault.name}</div>
+        <div className="mb-[12px] text-slate-800">{vault.name}</div>
         <div className="flex items-center justify-between rounded-[8px] bg-gradient-to-r from-gray-200 px-[12px] py-[10px] text-[16px] font-semibold">
           <span className="text-sm text-gray-800">APY</span>
           <span className="text-xl text-slate-800">
@@ -126,21 +126,21 @@ export const PromotionalPoolCard = ({
               variant="ghost"
               onClick={onPrev}
             >
-              <ArrowLeft className="fill-light-purple cursor-pointer transition-all group-hover:fill-slate-800" />
+              <ArrowLeft className="fill-primary cursor-pointer transition-all group-hover:fill-slate-800" />
             </Button>
             <Button
               className="group px-0 hover:bg-transparent"
               variant="ghost"
               onClick={onNext}
             >
-              <ArrowRight className="fill-light-purple cursor-pointer transition-all group-hover:fill-slate-800" />
+              <ArrowRight className="fill-primary cursor-pointer transition-all group-hover:fill-slate-800" />
             </Button>
           </div>
         </div>
         {isAdmin && type === 'hot' ? (
           <Button
             onClick={handlePromotedVaultsClick}
-            className="bg-light-purple hover:bg-light-purple-hover mt-4 w-full text-slate-800"
+            className="bg-primary hover:bg-primary-hover mt-4 w-full text-white"
           >
             Promote
           </Button>

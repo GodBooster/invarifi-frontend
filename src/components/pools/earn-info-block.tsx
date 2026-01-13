@@ -32,29 +32,29 @@ export const EarnInfoBlock = memo(({ cube }: { cube: CubeWithApyAndTvl }) => {
   return (
     <div className="flex flex-col gap-1">
       <div className="flex flex-row gap-1 md:flex-col">
-        <div className="flex w-full justify-between rounded-[6px] bg-[#352852] bg-opacity-[0.4] p-[8px]">
-          <h4 className="text-[12px] font-medium leading-[18px] text-light-grey">
+        <div className="flex w-full justify-between rounded-[6px] bg-slate-100 p-[8px]">
+          <h4 className="text-[12px] font-medium leading-[18px] text-slate-500">
             Deposit fee
           </h4>
-          <h5 className="text-[14px] font-semibold leading-[20px] text-primary">
+          <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
             {isLoading ? '...' : `${(data?.depositFee || 0).toFixed(2)}%`}
           </h5>
         </div>
-        <div className="flex w-full justify-between rounded-[6px] bg-[#352852] bg-opacity-[0.4] p-[8px]">
-          <h4 className="text-[12px] font-medium leading-[18px] text-light-grey">
+        <div className="flex w-full justify-between rounded-[6px] bg-slate-100 p-[8px]">
+          <h4 className="text-[12px] font-medium leading-[18px] text-slate-500">
             Withdraw fee
           </h4>
-          <h5 className="text-[14px] font-semibold leading-[20px] text-primary">
+          <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
             {isLoading ? '...' : `${(data?.withdrawFee || 0).toFixed(2)}%`}
           </h5>
         </div>
       </div>
       <div className="flex gap-[4px]">
-        <div className="flex w-full justify-between rounded-[6px] bg-[#352852] bg-opacity-[0.4] p-[8px]">
-          <h4 className="text-[12px] font-medium leading-[18px] text-light-grey">
+        <div className="flex w-full justify-between rounded-[6px] bg-slate-100 p-[8px]">
+          <h4 className="text-[12px] font-medium leading-[18px] text-primary">
             Deposited
           </h4>
-          <h5 className="text-[14px] font-semibold leading-[20px] text-primary">
+          <h5 className="text-[14px] font-semibold leading-[20px] text-slate-800">
             ${deposit.toFixed(2)}
           </h5>
         </div>

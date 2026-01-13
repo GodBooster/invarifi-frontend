@@ -38,7 +38,7 @@ export const AssetDetailsItem = ({
   return (
     <div
       className={`${
-        withoutBG ? '' : 'bg-transparent-bg-80'
+        withoutBG ? '' : 'bg-slate-50'
       } mb-4 flex flex-col gap-[12px] rounded-[8px] ${
         withoutBG ? '' : 'px-[8px] py-[10px]'
       }`}
@@ -64,7 +64,7 @@ export const AssetDetailsItem = ({
         </div>
         {platform && (
           <div className="flex items-center gap-[8px]">
-            <div className="text-[12px] font-[500] text-text-purple">
+            <div className="text-[12px] font-[500] text-slate-500">
               Platform
             </div>
             <div className="text-[12px] font-[500] text-slate-800">{platform}</div>
@@ -75,13 +75,13 @@ export const AssetDetailsItem = ({
             <div className="scale-[0.67] [&>div]:h-[24px] [&>div]:w-[24px] [&>div]:bg-transparent">
               {chainImages[chain] ?? null}
             </div>
-            <div className="text-[12px] font-[500] text-text">
+            <div className="text-[12px] font-[500] text-slate-800">
               {capitalize(chain)}
             </div>
           </div>
         )}
       </div>
-      <div className="text-sm font-medium">{description}</div>
+      <div className="text-sm font-medium text-slate-700">{description}</div>
       <div className="flex items-center gap-[16px]">
         {websiteUrl && (
           <Link

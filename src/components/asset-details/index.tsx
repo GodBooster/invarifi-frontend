@@ -8,7 +8,7 @@ export type AssetDetailsProps = {
 };
 
 export const AssetDetails = ({ vault }: AssetDetailsProps) => (
-  <div className="flex flex-col divide-y divide-dashed divide-white rounded-[12px] p-4 last:pb-0">
+  <div className="flex flex-col divide-y divide-dashed divide-slate-300 rounded-[12px] p-4 last:pb-0">
     <div />
     {vault.assets.map((asset) => {
       const assetDetails = getAssetDetails(asset);

@@ -43,8 +43,8 @@ export const HistoryTableRow = ({ vault }: HistoryTableRowProps) => {
       <TableRow
         onClick={handleRowClick}
         className={cn(
-          'grid cursor-pointer grid-cols-7 items-center border-none',
-          open ? '!bg-[rgba(53,40,82,0.43)]' : '',
+          'grid cursor-pointer grid-cols-7 items-center border-none hover:bg-slate-50',
+          open ? 'bg-slate-100' : '',
         )}
       >
         <TableCell className="col-span-2 flex flex-col">
@@ -60,10 +60,10 @@ export const HistoryTableRow = ({ vault }: HistoryTableRowProps) => {
                 />
               ))}
             </div>
-            <span className="text-sm font-semibold">{vault.name}</span>
+            <span className="text-sm font-semibold text-slate-800">{vault.name}</span>
           </div>
           {open && (
-            <span className="text-sm font-semibold text-light-grey">
+            <span className="text-sm font-semibold text-slate-500">
               Platform:{' '}
               <span className="text-base font-semibold text-slate-800">
                 {vault.platformId.toUpperCase()}
@@ -72,33 +72,33 @@ export const HistoryTableRow = ({ vault }: HistoryTableRowProps) => {
           )}
         </TableCell>
         <TableCell>
-          <div className="flex w-fit items-center gap-[6px] rounded-[4px] bg-white bg-opacity-[0.11] px-[8px] py-[2px] font-medium">
+          <div className="flex w-fit items-center gap-[6px] rounded-[4px] bg-slate-100 px-[8px] py-[2px] font-medium text-slate-800">
             {chainImages[vault.chain] ?? null}
             <div>{capitalize(vault.chain)}</div>
           </div>
         </TableCell>
         <TableCell>
-          <div className="text-[14px] font-medium">{deposit.toFixed(8)}</div>
-          <div className="text-[12px] font-semibold">
+          <div className="text-[14px] font-medium text-slate-800">{deposit.toFixed(8)}</div>
+          <div className="text-[12px] font-semibold text-slate-600">
             ${(deposit * price).toFixed(2)}
           </div>
         </TableCell>
         <TableCell>
-          <div className="text-[14px] font-medium">{pnl.toFixed(8)}</div>
-          <div className="text-[12px] font-semibold">
+          <div className="text-[14px] font-medium text-slate-800">{pnl.toFixed(8)}</div>
+          <div className="text-[12px] font-semibold text-slate-600">
             ${(pnl * price).toFixed(2)}
           </div>
         </TableCell>
         <TableCell>
-          <div className="text-[14px] font-medium">{now.toFixed(8)}</div>
-          <div className="text-[12px] font-semibold">
+          <div className="text-[14px] font-medium text-slate-800">{now.toFixed(8)}</div>
+          <div className="text-[12px] font-semibold text-slate-600">
             ${(now * price).toFixed(2)}
           </div>
         </TableCell>
         <TableCell className="flex items-center justify-end gap-6">
           {!vault.isArchived && (
             <Link
-              className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-slate-800 transition-colors"
+              className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-white transition-colors"
               target="_blank"
               href={`/vault/${vault.oracleId}`}
             >
@@ -120,7 +120,7 @@ export const HistoryTableRow = ({ vault }: HistoryTableRowProps) => {
       </TableRow>
       <TableRow
         className={cn(
-          'flex border-spacing-4 border-b-2 border-dashed border-light-grey',
+          'flex border-spacing-4 border-b-2 border-dashed border-slate-300',
         )}
       >
         <TableCell className="w-full p-0">

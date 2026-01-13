@@ -71,7 +71,7 @@ export const Platform = memo(({ vaultsWithCubes }: PlatformProps) => {
 
   return (
     <div className="flex flex-col gap-4 p-4">
-      <p className="mt-4 text-sm font-medium text-text-purple">
+      <p className="mt-4 text-sm font-medium text-slate-600">
         Shows in which platforms and in what quantity the assets of the selected
         wallet address are located. Don&apos;t forget to stay informed about the
         news and updates of these platforms and diversify your risks by using
@@ -85,10 +85,10 @@ export const Platform = memo(({ vaultsWithCubes }: PlatformProps) => {
           >
             {isLargeDevice ? (
               <>
-                <p className="min-w-[80px] self-center whitespace-nowrap text-base font-semibold md:col-span-3 lg:col-span-2">
+                <p className="min-w-[80px] self-center whitespace-nowrap text-base font-semibold text-slate-800 md:col-span-3 lg:col-span-2">
                   {label}
                 </p>
-                <span className="shrink-0 self-center pl-2 text-sm font-medium">
+                <span className="shrink-0 self-center pl-2 text-sm font-medium text-slate-700">
                   {percent}%
                 </span>
                 <div className="flex h-[20px] grow xl:justify-end">
@@ -101,10 +101,10 @@ export const Platform = memo(({ vaultsWithCubes }: PlatformProps) => {
             ) : (
               <>
                 <div className="flex">
-                  <p className="min-w-[80px] self-center whitespace-nowrap text-base font-semibold md:col-span-3 lg:col-span-2">
+                  <p className="min-w-[80px] self-center whitespace-nowrap text-base font-semibold text-slate-800 md:col-span-3 lg:col-span-2">
                     {label}
                   </p>
-                  <span className="shrink-0 self-center pl-2 text-sm font-medium">
+                  <span className="shrink-0 self-center pl-2 text-sm font-medium text-slate-700">
                     {percent}%
                   </span>
                 </div>

@@ -40,7 +40,7 @@ export const LpTable: FC<ILpTable> = ({ data, needLight }) => {
   return (
     <div
       className={`grid-cols-1 md:grid-cols-lp ${
-        needLight ? 'bg-transparent-bg' : 'bg-transparent-bg-darkest'
+        needLight ? 'bg-slate-100' : 'bg-slate-200'
       } grid grid-rows-1 gap-[16px] rounded-[8px] px-4 py-3 md:gap-2`}
     >
       {!isMobile && (
@@ -48,19 +48,19 @@ export const LpTable: FC<ILpTable> = ({ data, needLight }) => {
           values={[
             <div
               key="asset-label"
-              className="text-[12px] font-[500] leading-[18px] text-light-grey"
+              className="text-[12px] font-[500] leading-[18px] text-slate-500"
             >
               Asset
             </div>,
             <div
               key="amount-label"
-              className="text-[12px] font-[500] leading-[18px] text-light-grey"
+              className="text-[12px] font-[500] leading-[18px] text-slate-500"
             >
               Token Amount
             </div>,
             <div
               key="value-label"
-              className="text-[12px] font-[500] leading-[18px] text-light-grey"
+              className="text-[12px] font-[500] leading-[18px] text-slate-500"
             >
               Value
             </div>,
@@ -85,29 +85,17 @@ export const LpTable: FC<ILpTable> = ({ data, needLight }) => {
                     src={getTokenAssetUrl(item.name)}
                     alt={item.name}
                   />
-                  <div
-                    className={`${
-                      needLight ? 'text-text-grey' : 'text-slate-800'
-                    } text-[14px] font-semibold leading-[20px]`}
-                  >
+                  <div className="text-[14px] font-semibold leading-[20px] text-slate-800">
                     {item.name}
                   </div>
                 </div>
                 <div className="flex items-center gap-[8px]">
-                  <div
-                    className={`${
-                      needLight ? 'text-text-contrast' : 'text-slate-800'
-                    } text-[14px] font-[500] leading-[20px]`}
-                  >
+                  <div className="text-[14px] font-[500] leading-[20px] text-primary">
                     {item.percent.toFixed(2)}%
                   </div>
                   <Progress
                     value={item.percent}
-                    className={`h-[20px] w-[100px] bg-transparent-bg ${
-                      needLight
-                        ? '[&>div]:bg-text-contrast'
-                        : '[&>div]:bg-light-purple'
-                    }`}
+                    className="h-[20px] w-[100px] bg-slate-200 [&>div]:bg-primary"
                   />
                 </div>
               </div>,
@@ -116,17 +104,11 @@ export const LpTable: FC<ILpTable> = ({ data, needLight }) => {
                 className="flex w-full items-center justify-between md:justify-end"
               >
                 {isMobile && (
-                  <div
-                    className={`text-[12px] font-[500] leading-[18px] text-light-grey`}
-                  >
+                  <div className="text-[12px] font-[500] leading-[18px] text-slate-500">
                     Token Amount
                   </div>
                 )}
-                <div
-                  className={`text-${
-                    needLight ? 'text-grey' : 'white'
-                  } text-[14px] font-semibold leading-[20px] underline md:no-underline`}
-                >
+                <div className="text-[14px] font-semibold leading-[20px] text-slate-800 underline md:no-underline">
                   {item.amount}
                 </div>
               </div>,
@@ -135,17 +117,11 @@ export const LpTable: FC<ILpTable> = ({ data, needLight }) => {
                 className="flex w-full items-center justify-between md:justify-end"
               >
                 {isMobile && (
-                  <div
-                    className={`text-[12px] font-[500] leading-[18px] text-light-grey`}
-                  >
+                  <div className="text-[12px] font-[500] leading-[18px] text-slate-500">
                     Value
                   </div>
                 )}
-                <div
-                  className={`text-${
-                    needLight ? 'text-grey' : 'white'
-                  } text-[14px] font-semibold leading-[20px] underline md:no-underline`}
-                >
+                <div className="text-[14px] font-semibold leading-[20px] text-slate-800 underline md:no-underline">
                   ${item.value}
                 </div>
               </div>,

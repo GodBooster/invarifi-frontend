@@ -25,7 +25,7 @@ const DashboardHeader = ({ addressFromUrl }: DashboardHeaderProps) => {
               ({parseAddress(addressFromUrl || '')})
             </span>
             <TooltipItem>
-              <p className="text-base font-medium text-text-light">
+              <p className="text-base font-medium text-slate-500">
                 {addressFromUrl}
               </p>
             </TooltipItem>

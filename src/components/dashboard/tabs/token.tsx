@@ -46,7 +46,7 @@ export const Token = ({ vaultsWithCubes }: TokenType) => {
 
   return (
     <div className="flex flex-col gap-4 p-4">
-      <p className="mt-4 text-sm font-medium text-text-purple">
+      <p className="mt-4 text-sm font-medium text-slate-600">
         Indicates in which tokens and in what quantity the assets of the
         selected wallet address are located. Remember to stay informed about the
         news and updates of these products and diversify your risks by holding
@@ -82,16 +82,16 @@ export const Token = ({ vaultsWithCubes }: TokenType) => {
           {data.map(({ label, color, percent }) => (
             <div
               key={label}
-              className="col-span-1 flex w-[320px] max-w-[320px] items-center justify-between rounded-[16px] border-none bg-white bg-opacity-11 px-3 py-2 backdrop-blur-2lg lg:w-[100%]"
+              className="col-span-1 flex w-[320px] max-w-[320px] items-center justify-between rounded-[16px] border border-slate-200 bg-white px-3 py-2 lg:w-[100%]"
             >
               <div className="col-span-1 flex items-center">
                 <div
                   className="mr-2 h-2 w-2 rounded-full"
                   style={{ background: color }}
                 />
-                <p className="text-sm font-semibold">{label}</p>
+                <p className="text-sm font-semibold text-slate-800">{label}</p>
               </div>
-              <p className="text-sm font-medium">{percent}%</p>
+              <p className="text-sm font-medium text-slate-700">{percent}%</p>
             </div>
           ))}
         </div>

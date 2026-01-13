@@ -71,19 +71,19 @@ const config: Config = {
         'light-grey': '#C6C6CC',
         'additional-grey': '#667085',
         'background-dark': '#222324',
-        text: '#293056',
+        text: '#1e293b', // slate-800 - основной текст
         danger: '#D85F5A',
-        furnace: '#FFF094',
-        'text-light': '#667085',
-        'text-contrast': '#FFF094',
-        'text-grey': '#F1F3F8',
-        'text-purple': '#CFC9FF',
-        'light-purple': 'rgba(160, 147, 254, 1)',
-        'light-purple-hover': 'rgba(140, 127, 234, 1)',
-        'transparent-bg': 'rgba(255,255,255,0.11)',
-        'transparent-bg-80': 'rgba(255,255,255,0.08)',
-        'transparent-bg-dark': 'rgba(34,35,36,0.43)',
-        'transparent-bg-darkest': 'rgba(14,18,27,0.35)',
+        furnace: '#FF6340', // оранжевый для акцентов
+        'text-light': '#64748b', // slate-500 - вторичный текст
+        'text-contrast': '#FF6340', // оранжевый для контрастных значений
+        'text-grey': '#475569', // slate-600 - серый текст
+        'text-purple': '#6366f1', // indigo-500 - фиолетовые лейблы
+        'light-purple': 'rgba(99, 102, 241, 1)', // indigo-500
+        'light-purple-hover': 'rgba(79, 82, 221, 1)',
+        'transparent-bg': 'rgba(241, 245, 249, 0.8)', // slate-100 полупрозрачный
+        'transparent-bg-80': 'rgba(241, 245, 249, 0.6)',
+        'transparent-bg-dark': 'rgba(226, 232, 240, 0.8)', // slate-200 для контейнеров
+        'transparent-bg-darkest': 'rgba(203, 213, 225, 0.6)', // slate-300
         'main-gradient-1': 'rgba(255,255,255,0.28)',
         'main-gradient-2': 'rgba(255,255,255,0.17)',
       },

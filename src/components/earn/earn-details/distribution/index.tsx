@@ -81,7 +81,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
           {!isMobile && (
             <>
               <div className="flex items-center gap-[8px]">
-                <div className="text-[12px] font-[500] text-text-purple">
+                <div className="text-[12px] font-[500] text-slate-500">
                   Platform
                 </div>
                 <div className="w-[70px] text-end text-[12px] font-[500] text-slate-800">
@@ -89,7 +89,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
                 </div>
               </div>
               <div className="flex items-center gap-[8px]">
-                <div className="text-[12px] font-[500] text-text-purple">
+                <div className="text-[12px] font-[500] text-slate-500">
                   Distribution
                 </div>
                 <div className="w-[70px] text-end text-[12px] font-[500] text-slate-800">
@@ -101,7 +101,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
           {isMobile && (
             <div className="flex w-full items-center justify-between gap-[10px] px-[16px]">
               <div className="flex items-center gap-[8px]">
-                <div className="text-[12px] font-[500] text-text-purple">
+                <div className="text-[12px] font-[500] text-slate-500">
                   Platform
                 </div>
                 <div className=" text-end text-[12px] font-[500] text-slate-800">
@@ -109,7 +109,7 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
                 </div>
               </div>
               <div className="flex items-center gap-[8px]">
-                <div className="text-[12px] font-[500] text-text-purple">
+                <div className="text-[12px] font-[500] text-slate-500">
                   Distribution
                 </div>
                 <div className=" text-end text-[12px] font-[500] text-slate-800">
@@ -135,11 +135,11 @@ export const Distribution = ({ cube, deposit }: DistributionProps) => {
 
   return (
     <div className="flex flex-col gap-[8px] rounded-[12px] rounded-tl-none p-4 pt-8">
-      <div className="flex items-center justify-between rounded-[8px] bg-transparent-bg px-4 py-[3px]">
-        <div className="text-[16px] font-semibold leading-6 text-text-purple">
+      <div className="flex items-center justify-between rounded-[8px] border border-slate-200 bg-slate-100 px-4 py-[3px]">
+        <div className="text-[16px] font-semibold leading-6 text-slate-500">
           Estimated Distribution
         </div>
-        <div className="text-text-slate-800 text-[16px] font-semibold leading-6">
+        <div className="text-[16px] font-semibold leading-6 text-slate-800">
           100%
         </div>
       </div>

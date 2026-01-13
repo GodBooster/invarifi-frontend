@@ -59,18 +59,15 @@ export const EarnPoolCard = memo(
         <AccordionItem
           onClick={handleClick}
           value={`item-${cube.id}`}
-          style={{
-            boxShadow: '14px 14px 36px 0px rgba(113, 103, 185, 0.20)',
-          }}
-          className="border-primary block cursor-pointer rounded-[16px] border-2 bg-linear-black p-[16px] pb-0 transition-all backdrop-blur-[16px]"
+          className="block cursor-pointer rounded-[16px] border border-slate-200 bg-white p-[16px] pb-0 shadow-sm transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(255,99,64,0.4)] hover:scale-[1.02]"
         >
-          <div className="mb-[12px] truncate">{cube.name || cube.id}</div>
-          <div className="mb-[12px] flex items-center rounded-[8px] bg-gradient-to-r from-primary px-[12px] py-[10px] text-[16px] font-semibold text-black">
+          <div className="mb-[12px] truncate text-slate-800 font-medium">{cube.name || cube.id}</div>
+          <div className="mb-[12px] flex items-center rounded-[8px] bg-slate-100 px-[12px] py-[10px] text-[16px] font-semibold text-primary">
             {cube.stable}
           </div>
           <div className="relative flex justify-between  pb-[16px]">
             <div>
-              <h3 className="text-[14px] font-semibold leading-[20px] text-light-grey">
+              <h3 className="text-[14px] font-semibold leading-[20px] text-slate-500">
                 APY
               </h3>
               <div className="flex gap-2">
@@ -85,17 +82,17 @@ export const EarnPoolCard = memo(
               </div>
             </div>
             <div className="flex flex-col items-end justify-between">
-              <h3 className="text-right text-[14px] font-semibold leading-[20px] text-light-grey">
+              <h3 className="text-right text-[14px] font-semibold leading-[20px] text-slate-500">
                 Chain
               </h3>
               {chainImages[cube.network] ? (
                 chainImages[cube.network]
               ) : (
-                <div>{cube.network}</div>
+                <div className="text-slate-800">{cube.network}</div>
               )}
             </div>
-            <span className="absolute  bottom-0 w-[40%] border-b-2 border-dashed border-additional-grey"></span>
-            <span className="absolute  bottom-0 right-0 w-[40%] border-b-2 border-dashed border-additional-grey"></span>
+            <span className="absolute  bottom-0 w-[40%] border-b-2 border-dashed border-slate-300"></span>
+            <span className="absolute  bottom-0 right-0 w-[40%] border-b-2 border-dashed border-slate-300"></span>
           </div>
           <div className="relative flex -translate-y-[10px] justify-center overflow-hidden">
             <div className=" flex  w-[56px] justify-center bg-inherit">

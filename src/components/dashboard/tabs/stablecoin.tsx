@@ -83,36 +83,35 @@ export const Stablecoin = ({ vaultsWithCubes }: StablecoinProps) => {
 
   return (
     <div className="flex flex-col gap-4 p-4">
-      <p className="mt-4 text-sm font-medium text-text-purple">
+      <p className="mt-4 text-sm font-medium text-slate-600">
         Displays the percentage ratio of volatile assets and stablecoins within
         the selected wallet address. Remember to have available funds for
         further use in necessary moments and particularly volatile market
         periods.
       </p>
       <div
-        className="flex h-[300px] flex-col rounded-[8px] p-4
-backdrop-blur-lg"
+        className="flex h-[300px] flex-col rounded-[8px] p-4"
       >
         <div className="white-scrollbar flex h-[300px] flex-col gap-4 overflow-auto">
           {data.map(({ label, percent, value, color, width }) => (
             <div className="flex flex-row gap-1" key={label + value}>
               <div className="flex items-center">
-                <p className="min-w-[80px] self-center whitespace-nowrap text-base font-semibold">
+                <p className="min-w-[80px] self-center whitespace-nowrap text-base font-semibold text-slate-800">
                   {label}
                 </p>
                 <TooltipItem>
                   <div className="flex max-w-[245px] flex-col gap-1">
-                    <p className="text-xs font-semibold text-[#344054]">
+                    <p className="text-xs font-semibold text-slate-700">
                       What&apos;s a Stable?
                     </p>
-                    <p className="text-xs font-medium text-additional-grey">
+                    <p className="text-xs font-medium text-slate-500">
                       Tooltips are used to describe or identify an element. In
                       most scenarios, tooltips help the user understand the
                       meaning, function or alt-text of an element.
                     </p>
                   </div>
                 </TooltipItem>
-                <span className="self-center pl-3 text-sm font-medium">
+                <span className="self-center pl-3 text-sm font-medium text-slate-700">
                   {percent}%
                 </span>
               </div>

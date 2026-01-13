@@ -21,9 +21,9 @@ export const LpBreakdown = ({ vault }: LpBreakdownProps) => {
 
   return (
     <div className="flex flex-col gap-[4px] rounded-[12px] rounded-tl-none">
-      <div className="flex flex-col gap-[10px] rounded-[8px] bg-white p-[12px] text-xs font-medium text-text">
+      <div className="flex flex-col gap-[10px] rounded-[8px] bg-slate-50 p-[12px] text-xs font-medium text-slate-800">
         <div className="flex flex-row items-center justify-between gap-[4px]">
-          <span className="text-text-light">Asset</span>
+          <span className="text-slate-500">Asset</span>
           <div className="flex gap-2">
             <div className="flex items-center">
               {vault.assets.map((asset) => (
@@ -37,25 +37,25 @@ export const LpBreakdown = ({ vault }: LpBreakdownProps) => {
                 />
               ))}
             </div>
-            <p className="text-sm font-semibold">{vault.assets.join('/')}</p>
+            <p className="text-sm font-semibold text-slate-800">{vault.assets.join('/')}</p>
           </div>
         </div>
         <div className="flex flex-row items-center justify-between gap-[4px]">
-          <span className="text-text-light">Token Amount</span>
+          <span className="text-slate-500">Token Amount</span>
           <TooltipItemExtended tooltipComponent={totalSupply}>
-            <span className="text-sm font-semibold underline underline-offset-4">
+            <span className="text-sm font-semibold text-slate-800 underline underline-offset-4">
               {tvlFormatter(totalSupply, 2)}
             </span>
           </TooltipItemExtended>
         </div>
         <div className="flex flex-row items-center justify-between gap-[4px]">
-          <span className="text-text-light">Value</span>
-          <span className="text-sm font-semibold">
+          <span className="text-slate-500">Value</span>
+          <span className="text-sm font-semibold text-slate-800">
             ${tvlFormatter(totalSupply * (vault.lps?.price ?? 0), 2)}
           </span>
         </div>
       </div>
-      <div className="divide-y divide-dashed divide-[#667085]">
+      <div className="divide-y divide-dashed divide-slate-300">
         {rows
           .filter((row) => !!row)
           .map((row) => (
@@ -68,16 +68,16 @@ export const LpBreakdown = ({ vault }: LpBreakdownProps) => {
                     src={getTokenAssetUrl(row.name)}
                     alt={row.name}
                   />
-                  <p>{row.name}</p>
+                  <p className="text-slate-800">{row.name}</p>
                 </div>
                 <div className="flex flex-row items-center gap-[8px]">
                   <ClientOnly>
-                    <span className="text-sm font-medium text-text-contrast">
+                    <span className="text-sm font-medium text-primary">
                       {row.progress.toFixed(2)}%
                     </span>
                     <Progress
                       value={row.progress}
-                      className="h-[20px] w-[100px] bg-transparent-bg [&>div]:bg-text-contrast"
+                      className="h-[20px] w-[100px] bg-slate-200 [&>div]:bg-primary"
                     />
                   </ClientOnly>
                 </div>
@@ -86,7 +86,7 @@ export const LpBreakdown = ({ vault }: LpBreakdownProps) => {
                 <div className="text-[12px] text-slate-500">Token Amount</div>
                 <div>
                   <TooltipItemExtended tooltipComponent={row.amount}>
-                    <span className="text-sm font-semibold underline underline-offset-4">
+                    <span className="text-sm font-semibold text-slate-800 underline underline-offset-4">
                       {row.amount.toFixed(2)}
                     </span>
                   </TooltipItemExtended>
@@ -94,7 +94,7 @@ export const LpBreakdown = ({ vault }: LpBreakdownProps) => {
               </div>
               <div className="flex flex-row items-center justify-between">
                 <div className="text-[12px] text-slate-500">Value</div>
-                <div>${tvlFormatter(row.value, 2)}</div>
+                <div className="text-slate-800">${tvlFormatter(row.value, 2)}</div>
               </div>
             </div>
           ))}

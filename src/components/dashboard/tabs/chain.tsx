@@ -72,7 +72,7 @@ export const Chain = ({ vaults, cubes }: ChainType) => {
 
   return (
     <div className="flex flex-col gap-4 p-4">
-      <p className="mt-4 text-sm font-medium text-text-purple">
+      <p className="mt-4 text-sm font-medium text-slate-600">
         Displays in which networks and in what quantity the assets of the
         selected wallet address are located.
       </p>
@@ -106,16 +106,16 @@ export const Chain = ({ vaults, cubes }: ChainType) => {
           {data.map(({ value, label, color, percent }) => (
             <div
               key={value}
-              className="flex w-[320px] max-w-[320px] items-center justify-between rounded-[16px] border-none bg-white bg-opacity-11 px-3 py-2 backdrop-blur-2lg lg:w-[100%]"
+              className="flex w-[320px] max-w-[320px] items-center justify-between rounded-[16px] border border-slate-200 bg-white px-3 py-2 lg:w-[100%]"
             >
               <div className="flex items-center">
                 <div
                   className="mr-2 h-2 w-2 rounded-full"
                   style={{ background: color }}
                 />
-                <p className="text-sm font-semibold">{label}</p>
+                <p className="text-sm font-semibold text-slate-800">{label}</p>
               </div>
-              <p className="text-sm font-medium">{percent}%</p>
+              <p className="text-sm font-medium text-slate-700">{percent}%</p>
             </div>
           ))}
         </div>

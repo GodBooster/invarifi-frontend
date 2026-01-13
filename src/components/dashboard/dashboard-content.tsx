@@ -124,12 +124,12 @@ const DashboardContent = ({
 
   return (
     <div className="flex grid-cols-10 flex-col gap-[24px] xl:grid">
-      <div className="col-span-3 flex flex-col justify-between gap-2 rounded-[12px] border-2 border-none bg-white bg-opacity-11 p-4 backdrop-blur-2lg">
+      <div className="col-span-3 flex flex-col justify-between gap-2 rounded-[12px] border border-slate-200 bg-white p-4 shadow-sm">
         {isLoading
           ? Array.from({ length: 5 }).map((_, index) => (
               <div
                 key={index}
-                className="flex h-full w-full flex-col gap-2 rounded-[8px] bg-white bg-opacity-11 p-4"
+                className="flex h-full w-full flex-col gap-2 rounded-[8px] bg-slate-100 p-4"
               >
                 <div className="flex items-center gap-2">
                   <Skeleton className="flex h-6 w-7 !rounded-full" />
@@ -141,11 +141,11 @@ const DashboardContent = ({
           : vaultsDashboardLeft.map((item) => (
               <div
                 key={item.label}
-                className="flex h-full flex-row justify-between gap-2 rounded-[8px] border-none bg-white bg-opacity-11 p-4 backdrop-blur-2lg xl:flex-col"
+                className="flex h-full flex-row justify-between gap-2 rounded-[8px] border border-slate-200 bg-slate-50 p-4 xl:flex-col"
               >
                 <div className="flex items-center gap-2">
                   {item.icon}
-                  <span className="text-sm font-semibold text-light-grey">
+                  <span className="text-sm font-semibold text-slate-500">
                     {item.label}
                   </span>
                 </div>
@@ -153,22 +153,22 @@ const DashboardContent = ({
               </div>
             ))}
       </div>
-      <div className="border-primary col-span-7 flex flex-col gap-4 rounded-[12px] border-2 bg-gradient-to-b from-[rgba(255,255,255,0.28)] via-[rgba(255,255,255,0.17)] p-4 backdrop-blur-[35px]">
+      <div className="border-primary col-span-7 flex flex-col gap-4 rounded-[12px] border-2 bg-white p-4 shadow-sm">
         {usedBefore ? (
           <Tabs defaultValue="chain" className="flex h-full flex-col">
             <div className="flex items-center gap-1 pb-4">
-              <h1 className="text-2xl font-semibold">Statistics</h1>
+              <h1 className="text-2xl font-semibold text-slate-800">Statistics</h1>
               <TooltipItem>
-                <p className="text-base font-medium text-text-light">
+                <p className="text-base font-medium text-slate-500">
                   Detailed statistics about the wallet&apos;s portfolio
                 </p>
               </TooltipItem>
             </div>
 
-            <TabsList className="h-fit w-fit gap-2 !rounded-b-none bg-transparent-bg text-slate-800">
+            <TabsList className="h-fit w-fit gap-2 !rounded-b-none bg-slate-100 text-slate-800">
               {overviewTabs.map(({ label, value }) => (
                 <TabsTrigger
-                  className="data-[state=active]:!bg-primary rounded-b-none last:rounded data-[state=active]:!rounded-b-none data-[state=active]:!text-slate-800"
+                  className="data-[state=active]:!bg-primary rounded-b-none last:rounded data-[state=active]:!rounded-b-none data-[state=active]:!text-white"
                   key={value}
                   value={value}
                 >
@@ -178,7 +178,7 @@ const DashboardContent = ({
             </TabsList>
             {overviewTabs.map(({ content, value }) => (
               <TabsContent
-                className="m-0 h-fit rounded-[16px] rounded-tl-none bg-transparent-bg lg:h-[394px]"
+                className="m-0 h-fit rounded-[16px] rounded-tl-none bg-slate-50 lg:h-[394px]"
                 key={value}
                 value={value}
               >
@@ -190,18 +190,18 @@ const DashboardContent = ({
           <div className="mt-6 flex flex-col items-center gap-6">
             <EmptyWallet />
             <div className="text-center">
-              <p className="text-sm font-semibold">
+              <p className="text-sm font-semibold text-slate-800">
                 Oops, this address has not been used on our platform yet
               </p>
               <p className="text-primary mt-2 text-sm font-semibold">
                 {addressFromUrl}
               </p>
-              <p className="mt-2 text-base font-semibold">
+              <p className="mt-2 text-base font-semibold text-slate-700">
                 Deposit into a vault to view dashboard for connected wallet or
                 enter another wallet address
               </p>
             </div>
-            <Button className="bg-primary hover:bg-primary-hover w-[320px] text-base font-semibold text-slate-800">
+            <Button className="bg-primary hover:bg-primary-hover w-[320px] text-base font-semibold text-white">
               <Link href="/">View All Vaults</Link>
             </Button>
           </div>

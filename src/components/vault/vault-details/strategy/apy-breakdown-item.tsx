@@ -20,8 +20,8 @@ export const ApyBreakdownItem = ({
       )}
       {...props}
     >
-      <p className="text-sm font-semibold text-text-purple">{label}</p>
-      <p className="text-xl font-semibold leading-[30px]">{children}</p>
+      <p className="text-sm font-semibold text-slate-500">{label}</p>
+      <p className="text-xl font-semibold leading-[30px] text-slate-800">{children}</p>
     </div>
   );
 };

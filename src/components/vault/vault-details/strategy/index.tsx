@@ -27,7 +27,7 @@ export const Strategy = ({ vault }: StrategyProps) => {
             target="_blank"
             className={cn(
               buttonVariants({ variant: 'default' }),
-              'hover:border-primary border border-white bg-transparent-bg font-semibold text-slate-800 hover:bg-transparent-bg',
+              'hover:border-primary border border-slate-300 bg-slate-100 font-semibold text-slate-800 hover:bg-slate-200',
             )}
           >
             Strategy address <Globe className="ml-2 h-[20px] w-[20px]" />
@@ -39,13 +39,13 @@ export const Strategy = ({ vault }: StrategyProps) => {
           target="_blank"
           className={cn(
             buttonVariants({ variant: 'default' }),
-            'hover:border-light-purple border border-white bg-transparent-bg font-semibold text-slate-800 hover:bg-transparent-bg',
+            'hover:border-primary border border-slate-300 bg-slate-100 font-semibold text-slate-800 hover:bg-slate-200',
           )}
         >
           Vault address <Globe className="ml-2 h-[20px] w-[20px]" />
         </Link>
       </div>
-      <p className="text-sm font-medium">
+      <p className="text-sm font-medium text-slate-700">
         The vault puts the user&apos;s {vault.name} into a{' '}
         {vault.platformId.toUpperCase()} farm to earn the platform&apos;s
         governance token. The earned token is then exchanged for more of the
@@ -55,22 +55,22 @@ export const Strategy = ({ vault }: StrategyProps) => {
         vault&apos;s users.
       </p>
       <div className="flex flex-col gap-[16px] rounded-[8px]">
-        <p className="text-base font-semibold">APY Breakdown</p>
+        <p className="text-base font-semibold text-slate-800">APY Breakdown</p>
         <div className="grid grid-cols-3 gap-[8px]">
           <ApyBreakdownItem
-            className="border-none bg-transparent-bg-dark"
+            className="border border-slate-200 bg-slate-100"
             label="TOTAL APY"
           >
             {apyFormatter(vault.apy.totalApy)}
           </ApyBreakdownItem>
           <ApyBreakdownItem
-            className="border-none bg-transparent-bg-dark"
+            className="border border-slate-200 bg-slate-100"
             label="VAULT APR"
           >
             {apyFormatter(vault.apy.vaultApr)}
           </ApyBreakdownItem>
           <ApyBreakdownItem
-            className="border-none bg-transparent-bg-dark"
+            className="border border-slate-200 bg-slate-100"
             label="BOOST APR"
           >
             {apyFormatter(0)}

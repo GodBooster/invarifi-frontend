@@ -20,7 +20,7 @@ export const BreakdownItem = ({
   return (
     <div
       className={cn(
-        'box-border flex cursor-pointer flex-col gap-[8px] rounded-[8px] border-[1px] border-transparent bg-[rgba(255,255,255,0.08)] p-[16px] transition-all hover:border-white md:p-[8px]',
+        'box-border flex cursor-pointer flex-col gap-[8px] rounded-[8px] border border-slate-200 bg-slate-50 p-[16px] transition-all hover:border-primary hover:bg-slate-100 md:p-[8px]',
         className,
       )}
       {...props}
@@ -42,13 +42,13 @@ export const BreakdownItem = ({
         </div>
       </div>
       <div className="flex flex-row items-center justify-between gap-[2px] md:flex-col md:items-start md:justify-normal">
-        <div className="text-[12px] font-[400] text-text-purple">Platform</div>
+        <div className="text-[12px] font-[400] text-slate-500">Platform</div>
         <div className="text-[14px] font-bold leading-[20px] text-slate-800">
           {vault.platformId.toUpperCase()}
         </div>
       </div>
       <ApyBreakdownItem
-        className="border-none bg-transparent-bg-dark"
+        className="border border-slate-200 bg-slate-100"
         label="Total APY"
       >
         {apyFormatter(vault.apy.totalApy)}

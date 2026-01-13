@@ -36,13 +36,13 @@ export const Strategy = ({ cube }: StrategyProps) => {
           target="_blank"
           className={cn(
             buttonVariants({ variant: 'default' }),
-            'hover:border-primary border border-white bg-transparent-bg font-semibold text-slate-800 hover:bg-transparent-bg',
+            'hover:border-primary border border-slate-300 bg-slate-100 font-semibold text-slate-800 hover:bg-slate-200',
           )}
         >
           Vault address <Globe className="ml-2 h-[20px] w-[20px]" />
         </Link>
       </div>
-      <p className="text-sm font-medium">
+      <p className="text-sm font-medium text-slate-700">
         The vault puts the user&apos;s{' '}
         {cube.vaults.map((v) => v.name).join('/')} into a{' '}
         {cube.vaults[0].platformId.toUpperCase()} farm to earn the
@@ -52,16 +52,16 @@ export const Strategy = ({ cube }: StrategyProps) => {
         is added to the farm for the next earning event. The transaction cost
         for all this is shared among the vault&apos;s users
       </p>
-      <div className="flex w-full items-center justify-between rounded-[8px] bg-white px-[16px] py-[8px] md:bg-transparent-bg">
-        <div className="text-[14px] font-semibold leading-[20px] text-text md:text-slate-800">
+      <div className="flex w-full items-center justify-between rounded-[8px] border border-slate-200 bg-slate-100 px-[16px] py-[8px]">
+        <div className="text-[14px] font-semibold leading-[20px] text-slate-500">
           Overall Average APY
         </div>
-        <div className="text-[20px] font-semibold leading-[30px] text-text md:text-slate-800">
+        <div className="text-[20px] font-semibold leading-[30px] text-slate-800">
           {apyFormatter(cube.avgAPY)}
         </div>
       </div>
       <div className="flex flex-col gap-[16px] rounded-[8px]">
-        <p className="text-base font-semibold">APY Breakdown</p>
+        <p className="text-base font-semibold text-slate-800">APY Breakdown</p>
         <div className="grid grid-cols-1 gap-[16px] md:grid-cols-3 md:gap-[8px]">
           {cube.vaults.map((vault) => (
             <BreakdownItem key={vault.id} vault={vault} />

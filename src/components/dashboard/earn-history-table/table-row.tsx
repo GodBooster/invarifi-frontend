@@ -33,10 +33,10 @@ export const EarnHistoryTableRow = ({ cube }: EarnHistoryTableRowProps) => {
       <TableRow
         onClick={handleRowClick}
         className={cn(
-          'grid cursor-pointer grid-cols-9 items-center',
+          'grid cursor-pointer grid-cols-9 items-center hover:bg-slate-50',
           open
-            ? 'border-none !bg-[rgba(53,40,82,0.43)]'
-            : 'border-b-2 border-dashed border-light-grey',
+            ? 'border-none bg-slate-100'
+            : 'border-b-2 border-dashed border-slate-300',
         )}
       >
         <TableCell className="col-span-2">
@@ -47,42 +47,42 @@ export const EarnHistoryTableRow = ({ cube }: EarnHistoryTableRowProps) => {
               width={16}
               height={16}
             />
-            <span className="text-xs font-semibold sm:text-sm lg:text-base">
+            <span className="text-xs font-semibold text-slate-800 sm:text-sm lg:text-base">
               {cube.name}
             </span>
           </div>
         </TableCell>
         <TableCell className="text-center">
-          <span className="text-[14px] font-semibold text-[#C6C6C6]">
+          <span className="text-[14px] font-semibold text-slate-500">
             Vaults: <span className="text-slate-800">{cube.vaults.length}</span>
           </span>
         </TableCell>
         <TableCell>
-          <div className="flex w-fit items-center gap-[6px] rounded-[4px] bg-white bg-opacity-[0.11] px-[8px] py-[2px] font-medium">
+          <div className="flex w-fit items-center gap-[6px] rounded-[4px] bg-slate-100 px-[8px] py-[2px] font-medium text-slate-800">
             {chainImages[cube.network] ?? null}
             <div>{capitalize(cube.network)}</div>
           </div>
         </TableCell>
         <TableCell>
-          <div className="text-[14px] font-medium">
+          <div className="text-[14px] font-medium text-slate-800">
             {usdFormatter(cube.dashboard.atDeposit)}
           </div>
         </TableCell>
         <TableCell>
-          <div className="text-[14px] font-medium">
+          <div className="text-[14px] font-medium text-slate-800">
             {usdFormatter(cube.dashboard.pnl)}
           </div>
         </TableCell>
         <TableCell>
-          <div className="text-[14px] font-medium">
+          <div className="text-[14px] font-medium text-slate-800">
             {usdFormatter(cube.dashboard.now)}
           </div>
         </TableCell>
         <TableCell>
-          <div className="text-[14px] font-medium">
+          <div className="text-[14px] font-medium text-slate-800">
             {usdFormatter(cube.dashboard.stopLoss)}
           </div>
-          <div className="text-[12px] font-semibold text-[#C6C6CC]">
+          <div className="text-[12px] font-semibold text-slate-500">
             Risk:{' '}
             <span
               className={
@@ -104,7 +104,7 @@ export const EarnHistoryTableRow = ({ cube }: EarnHistoryTableRowProps) => {
         </TableCell>
         <TableCell className="flex items-center justify-end gap-2">
           <Link
-            className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-slate-800 transition-colors"
+            className="bg-primary hover:bg-primary-hover ml-auto rounded-[8px] px-2 py-1 text-center text-xs font-medium text-white transition-colors"
             target="_blank"
             href={`/earn/${cube.id}`}
           >
@@ -124,7 +124,7 @@ export const EarnHistoryTableRow = ({ cube }: EarnHistoryTableRowProps) => {
         </TableCell>
       </TableRow>
       {open && (
-        <TableRow className="flex border-spacing-4 border-b-2 border-dashed border-light-grey">
+        <TableRow className="flex border-spacing-4 border-b-2 border-dashed border-slate-300">
           <TableCell className="w-full border-none p-0">
             {cube.vaults.map((vault) => (
               <EarnVaultTableRow
