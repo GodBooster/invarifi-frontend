@@ -11,6 +11,8 @@ import { Checkbox, CheckboxIndicator } from '@/ui/checkbox';
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/ui/form';
 import { Input } from '@/ui/input';
 import { Textarea } from '@/ui/textarea';
+import { useToast } from '@/ui/use-toast';
+import { sendEmail } from '@/lib/email/send-email';
 
 const contactUsFormSchema = z.object({
   name: z.string().min(1, { message: 'Name is required' }),
@@ -24,6 +26,7 @@ type ContactUsFormSchema = z.infer<typeof contactUsFormSchema>;
 
 export const ContactUsForm = () => {
   const { createContactUsRequestAsync } = useCreateContactUsRequest();
+  const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
   const contactUsForm = useForm<ContactUsFormSchema>({
     resolver: zodResolver(contactUsFormSchema),
@@ -38,21 +41,50 @@ export const ContactUsForm = () => {
   const onSubmit = async ({ message, name, email }: ContactUsFormSchema) => {
     try {
       setSubmitting(true);
+      
       // 1) Отправляем на backend (сохранить заявку)
-      await createContactUsRequestAsync({ name, email, message });
-    } catch (e) {
-      // ignore; перейдем к почтовому фоллбэку
+      try {
+        await createContactUsRequestAsync({ name, email, message });
+      } catch (e) {
+        // Backend error is not critical, continue with email sending
+        console.warn('Backend request failed:', e);
+      }
+
+      // 2) Отправляем email на ilchukcorporation@gmail.com
+      const emailSent = await sendEmail({ name, email, message });
+      
+      if (emailSent) {
+        toast({
+          title: 'Success!',
+          description: 'Your message has been sent successfully.',
+        });
+        // Reset form after successful submission
+        contactUsForm.reset();
+      } else {
+        // Fallback to mailto if EmailJS is not configured
+        if (typeof window !== 'undefined') {
+          window.location.assign(
+            `mailto:ilchukcorporation@gmail.com?subject=${encodeURIComponent(
+              `Contact Us: ${name}`,
+            )}&body=${encodeURIComponent(
+              `From: ${name} (${email})\n\n${message}`,
+            )}`,
+          );
+          toast({
+            title: 'Opening email client',
+            description: 'Please send the email from your email client.',
+          });
+        }
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        variant: 'destructive',
+        title: 'Error',
+        description: 'Failed to send your message. Please try again.',
+      });
     } finally {
       setSubmitting(false);
-    }
-
-    // 2) Фоллбэк: открываем письмо на ilchukcorporation@gmail.com
-    if (typeof window !== 'undefined') {
-      window.location.assign(
-        `mailto:ilchukcorporation@gmail.com?subject=${encodeURIComponent(name)}&body=${encodeURIComponent(
-          `From: ${email}\n\n${message}`,
-        )}`,
-      );
     }
   };
 
