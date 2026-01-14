@@ -62,6 +62,7 @@ export const ContactUsForm = () => {
 
       if (response.ok && data.success) {
         toast({
+          variant: 'success',
           title: 'Success!',
           description: 'Your message has been sent successfully.',
         });
