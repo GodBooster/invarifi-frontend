@@ -96,10 +96,10 @@ export const Navbar = () => {
     
     {/* Мобильное меню - секция под хедером (показывать только на мобильных < 768px) */}
     <div className="block w-full md:hidden">
-      <div className="w-full border-t border-white/5 bg-white/[0.02] px-[24px] py-[12px] backdrop-blur-[8px]">
+      <div className="w-full border-t border-slate-200 bg-white px-[24px] py-[12px]">
         <button
           onClick={() => setIsMobileMenuOpen(true)}
-          className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-[12px] border border-primary/40 bg-gradient-to-r from-primary/15 via-primary/10 to-primary/5 px-4 py-3 text-slate-800 shadow-[0_2px_8px_rgba(0,0,0,0.15)] transition-all hover:border-primary hover:from-primary/20 hover:via-primary/15 hover:to-primary/10 hover:shadow-[0_0_20px_rgba(212,107,48,0.4)] active:scale-[0.98]"
+          className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-[12px] border border-slate-300 bg-white px-4 py-3 text-slate-800 shadow-sm transition-all hover:border-primary hover:bg-slate-50 hover:shadow-[0_0_20px_rgba(212,107,48,0.2)] active:scale-[0.98]"
         >
           <Menu className="h-[20px] w-[20px]" />
           <span className="text-[15px] font-semibold">Menu</span>

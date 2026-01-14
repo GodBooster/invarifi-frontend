@@ -27,14 +27,14 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogOverlay className="bg-black/60 backdrop-blur-sm" />
-      <DialogContent className="fixed left-0 top-0 h-full w-[280px] max-w-[85vw] translate-x-0 translate-y-0 rounded-r-[20px] rounded-l-none border-r border-primary/20 bg-gradient-to-b from-[rgba(11,11,11,0.95)] via-[rgba(11,11,11,0.98)] to-[rgba(11,11,11,0.95)] p-0 shadow-[0_0_40px_rgba(212,107,48,0.3)] data-[state=open]:animate-slide-in-from-left data-[state=closed]:animate-slide-out-to-left">
+      <DialogContent className="fixed left-0 top-0 h-full w-[280px] max-w-[85vw] translate-x-0 translate-y-0 rounded-r-[20px] rounded-l-none border-r border-slate-200 bg-white p-0 shadow-[0_0_40px_rgba(0,0,0,0.1)] data-[state=open]:animate-slide-in-from-left data-[state=closed]:animate-slide-out-to-left">
         <div className="flex h-full flex-col">
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-primary/20 px-6 py-4">
+          <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4">
             <h2 className="text-xl font-semibold text-slate-800">Menu</h2>
             <button
               onClick={onClose}
-              className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-800 transition-all hover:bg-primary/20 hover:text-primary"
+              className="flex h-10 w-10 items-center justify-center rounded-lg text-slate-800 transition-all hover:bg-slate-100 hover:text-primary"
             >
               <X className="h-6 w-6" />
             </button>
@@ -85,7 +85,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           </nav>
 
           {/* Footer with Ethereum Button */}
-          <div className="border-t border-primary/20 p-4">
+          <div className="border-t border-slate-200 p-4">
             <EthereumButton className="w-full justify-center" />
           </div>
         </div>
