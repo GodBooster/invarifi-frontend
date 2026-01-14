@@ -12,7 +12,6 @@ import { Form, FormControl, FormField, FormItem, FormMessage } from '@/ui/form';
 import { Input } from '@/ui/input';
 import { Textarea } from '@/ui/textarea';
 import { useToast } from '@/ui/use-toast';
-import { sendEmail } from '@/lib/email/send-email';
 
 const contactUsFormSchema = z.object({
   name: z.string().min(1, { message: 'Name is required' }),
@@ -50,10 +49,18 @@ export const ContactUsForm = () => {
         console.warn('Backend request failed:', e);
       }
 
-      // 2) Отправляем email на ilchukcorporation@gmail.com
-      const emailSent = await sendEmail({ name, email, message });
-      
-      if (emailSent) {
+      // 2) Отправляем email через API route
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         toast({
           title: 'Success!',
           description: 'Your message has been sent successfully.',
@@ -61,20 +68,7 @@ export const ContactUsForm = () => {
         // Reset form after successful submission
         contactUsForm.reset();
       } else {
-        // Fallback to mailto if EmailJS is not configured
-        if (typeof window !== 'undefined') {
-          window.location.assign(
-            `mailto:ilchukcorporation@gmail.com?subject=${encodeURIComponent(
-              `Contact Us: ${name}`,
-            )}&body=${encodeURIComponent(
-              `From: ${name} (${email})\n\n${message}`,
-            )}`,
-          );
-          toast({
-            title: 'Opening email client',
-            description: 'Please send the email from your email client.',
-          });
-        }
+        throw new Error(data.error || 'Failed to send email');
       }
     } catch (error) {
       console.error('Error submitting form:', error);
