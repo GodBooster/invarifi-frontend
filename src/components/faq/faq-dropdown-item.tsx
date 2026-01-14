@@ -35,7 +35,7 @@ export const FaqDropdownItem: FC<IFaqDropdownItem> = ({ question, answer }) => {
         </div>
       </div>
       {opened && (
-        <div className="white-scrollbar max-h-[550px] overflow-y-auto rounded-[10px] bg-transparent-bg-dark p-4 text-[14px] leading-[20px] text-light-grey md:bg-transparent">
+        <div className="white-scrollbar max-h-[550px] overflow-y-auto rounded-[10px] bg-slate-100 p-4 text-[14px] leading-[20px] text-slate-800 md:bg-slate-100">
           {answer}
         </div>
       )}

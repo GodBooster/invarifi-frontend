@@ -9,10 +9,10 @@ export const dynamic = 'force-dynamic';
 const FAQ = () => {
   return (
     <main className="m-auto flex h-full max-w-[95%] flex-col gap-[24px] py-[40px] lg:max-w-[588px]">
-      <div className="w-full text-center text-[24px] font-semibold leading-[32px] md:text-[32px] md:leading-[44px]">
+      <div className="w-full text-center text-[24px] font-semibold leading-[32px] text-slate-800 md:text-[32px] md:leading-[44px]">
         FAQ
       </div>
-      <div className="flex w-full flex-col rounded-[16px] bg-transparent-bg p-4 backdrop-blur lg:bg-linear-white">
+      <div className="flex w-full flex-col rounded-[16px] bg-white p-4 shadow-sm lg:bg-white">
         {faqConfig.map((item, index) => (
           <>
             <FaqList

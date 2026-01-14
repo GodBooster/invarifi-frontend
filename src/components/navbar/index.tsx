@@ -50,7 +50,7 @@ export const Navbar = () => {
                 className="flex w-[220px] flex-col gap-2 rounded-[10px] bg-white p-2 shadow-[0px_4px_42px_rgba(0,0,0,0.78)]"
                 trigger={
                   <button className="group p-0 bg-transparent border-none cursor-pointer">
-                    <item.icon className="h-[20px] w-[20px] fill-foreground transition-all group-hover:fill-primary" />
+                    <item.icon className="h-[20px] w-[20px] fill-slate-800 transition-all group-hover:fill-primary" />
                   </button>
                 }
               >
@@ -59,10 +59,10 @@ export const Navbar = () => {
                     key={nestedItem.id}
                     href={nestedItem.link || '#'}
                     onClick={() => setOpenDropdown(null)}
-                    className="flex cursor-pointer items-center gap-3 rounded-[4px] px-4 py-2 text-[14px] font-medium text-[#0B0B0B] transition-all duration-300 hover:bg-primary hover:text-white hover:scale-[1.02] hover:shadow-[0_0_10px_rgba(212,107,48,0.3)]"
+                    className="group flex cursor-pointer items-center gap-3 rounded-[4px] px-4 py-2 text-[14px] font-medium text-slate-800 transition-all duration-300 hover:bg-primary hover:text-white hover:scale-[1.02] hover:shadow-[0_0_10px_rgba(212,107,48,0.3)]"
                   >
                     {nestedItem.icon && (
-                      <nestedItem.icon className="h-[18px] w-[18px] fill-[#0B0B0B]" />
+                      <nestedItem.icon className="h-[18px] w-[18px] fill-slate-800 transition-all duration-300 group-hover:fill-white" />
                     )}
                     {nestedItem.label}
                   </Link>

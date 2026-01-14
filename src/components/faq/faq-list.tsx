@@ -8,7 +8,7 @@ interface IFaqList {
 export const FaqList: FC<IFaqList> = ({ title, items }) => {
   return (
     <div className="flex w-full flex-col gap-4">
-      <div className="text-[18px] font-semibold leading-[28px] text-text-grey">
+      <div className="text-[18px] font-semibold leading-[28px] text-slate-800">
         {title}
       </div>
       <div className="flex w-full flex-col">{items}</div>

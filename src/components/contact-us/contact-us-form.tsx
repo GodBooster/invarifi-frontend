@@ -57,8 +57,8 @@ export const ContactUsForm = () => {
   };
 
   return (
-    <div className="border-primary flex w-full max-w-[620px] flex-col gap-4 rounded-[16px] border-2 bg-linear-white p-4 backdrop-blur-[35px] md:gap-[24px] md:p-[24px]">
-      <div className="text-[20px] font-semibold md:text-[24px]">Contact us</div>
+    <div className="border-primary flex w-full max-w-[620px] flex-col gap-4 rounded-[16px] border-2 bg-white p-4 shadow-sm md:gap-[24px] md:p-[24px]">
+      <div className="text-[20px] font-semibold text-slate-800 md:text-[24px]">Contact us</div>
       <Form {...contactUsForm}>
         <form
           onSubmit={contactUsForm.handleSubmit(onSubmit)}
@@ -71,7 +71,7 @@ export const ContactUsForm = () => {
               <FormItem>
                 <FormControl>
                   <Input
-                    className="w-full rounded-[8px] border-none bg-white/10 px-3 py-3 text-slate-800 placeholder:text-slate-800/60 focus:bg-white/15 md:px-[14px] md:py-[13px]"
+                    className="w-full rounded-[8px] border border-slate-300 bg-slate-100 px-3 py-3 text-slate-800 placeholder:text-slate-500 focus:bg-white focus:border-primary md:px-[14px] md:py-[13px]"
                     placeholder="Your name"
                     {...field}
                   />
@@ -87,7 +87,7 @@ export const ContactUsForm = () => {
               <FormItem>
                 <FormControl>
                   <Input
-                    className="w-full rounded-[8px] border-none bg-white/10 px-3 py-3 text-slate-800 placeholder:text-slate-800/60 focus:bg-white/15 md:px-[14px] md:py-[13px]"
+                    className="w-full rounded-[8px] border border-slate-300 bg-slate-100 px-3 py-3 text-slate-800 placeholder:text-slate-500 focus:bg-white focus:border-primary md:px-[14px] md:py-[13px]"
                     placeholder="Email"
                     {...field}
                   />
@@ -103,7 +103,7 @@ export const ContactUsForm = () => {
               <FormItem>
                 <FormControl>
                   <Textarea
-                    className="w-full min-h-[120px] rounded-[8px] border-none bg-white/10 px-3 py-3 text-slate-800 placeholder:text-slate-800/60 focus:bg-white/15 md:min-h-[154px] md:px-[14px] md:py-[10px]"
+                    className="w-full min-h-[120px] rounded-[8px] border border-slate-300 bg-slate-100 px-3 py-3 text-slate-800 placeholder:text-slate-500 focus:bg-white focus:border-primary md:min-h-[154px] md:px-[14px] md:py-[10px]"
                     placeholder="What we can help you with?"
                     {...field}
                   />
@@ -158,9 +158,9 @@ export const ContactUsForm = () => {
               Ask our moderators and community on Discord
             </div>
             <div className="flex w-full items-center gap-[8px] lg:hidden">
-              <div className="h-[1px] w-full bg-white/20" />
-              <div className="text-[12px] font-medium text-slate-800/60">or</div>
-              <div className="h-[1px] w-full bg-white/20" />
+              <div className="h-[1px] w-full bg-slate-300" />
+              <div className="text-[12px] font-medium text-slate-500">or</div>
+              <div className="h-[1px] w-full bg-slate-300" />
             </div>
             <Button
               type="submit"
